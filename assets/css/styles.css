@@ -6,13 +6,9 @@ body {
 }
 
 .titles{
-    text-align: center;
-}
-
-h1, h2 {
     margin-top: 50px;
     margin-bottom: 30px;
-    color: #333;
+    text-align: center;
 }
 
 .container{

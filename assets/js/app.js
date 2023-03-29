@@ -7,18 +7,16 @@ let groupA = [
   { team: "Golden", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 }
 ];
 
-// let grupoB = [
-//   { team: "Impersiva", PJ: 10, PG: 8, PE: 1, PP: 3, GF: 10, GC: 5, GD: 0, Pts: 0 },
-//   { team: "Estella", PJ: 10, PG: 7, PE: 1, PP: 3, GF: 8, GC: 5, GD: 0, Pts: 0 },
-//   { team: "Cancheritos", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 },
-//   { team: "El Valle", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 },
-//   { team: "Spencer", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 },
-//   { team: "Amistad", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 }
-// ];
+let grupoB = [
+  { team: "Impersiva", PJ: 10, PG: 8, PE: 1, PP: 3, GF: 10, GC: 5, GD: 0, Pts: 0 },
+  { team: "Estella", PJ: 10, PG: 7, PE: 1, PP: 3, GF: 8, GC: 5, GD: 0, Pts: 0 },
+  { team: "Cancheritos", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 },
+  { team: "El Valle", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 },
+  { team: "Spencer", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 },
+  { team: "Amistad", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 }
+];
 
-let bodyTableA = document.getElementById("groupA");
-
-function processGroup(team, index) {
+function createRow(team, index){
     let row = document.createElement("tr");
 
     let celdaPos = document.createElement("td");
@@ -61,8 +59,17 @@ function processGroup(team, index) {
     celdaPuntos.textContent = team.Pts;
     row.appendChild(celdaPuntos);
 
+    return row;
+}
 
-    bodyTableA.appendChild(row);
+function processGroupA(team, index) {
+    let bodyTableA = document.getElementById("groupA");
+    bodyTableA.appendChild(createRow(team, index));
+};
+
+function processGroupB(team, index) {
+    let bodyTableB = document.getElementById("groupB");
+    bodyTableB.appendChild(createRow(team, index));
 };
 
 function calculatePoints(team){
@@ -94,4 +101,8 @@ function sortByPointsAndGoals(a, b) {
 
 groupA.forEach(calculatePoints);
 groupA.sort(sortByPointsAndGoals);
-groupA.forEach(processGroup);
+groupA.forEach(processGroupA);
+
+grupoB.forEach(calculatePoints);
+grupoB.sort(sortByPointsAndGoals);
+grupoB.forEach(processGroupB);
