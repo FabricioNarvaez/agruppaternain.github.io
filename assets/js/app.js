@@ -2,7 +2,7 @@ let groupA = [
   { team: "Los Panas",      PJ: 0, PG: 2, PE: 0, PP: 0, GF: 16, GC: 4,  GD: 0, Pts: 0 },
   { team: "Peñarol",        PJ: 0, PG: 1, PE: 0, PP: 1, GF: 6,  GC: 7,  GD: 0, Pts: 0 },
   { team: "Comboloco",      PJ: 0, PG: 1, PE: 0, PP: 0, GF: 5,  GC: 0,  GD: 0, Pts: 0 },
-  { team: "Los Rumberos",   PJ: 0, PG: 0, PE: 0, PP: 1, GF: 0,  GC: 15, GD: 0, Pts: 0 },
+  { team: "Los Rumberos",   PJ: 0, PG: 0, PE: 0, PP: 2, GF: 0,  GC: 15, GD: 0, Pts: 0 },
   { team: "Latin Brothers", PJ: 0, PG: 1, PE: 0, PP: 0, GF: 6,  GC: 0,  GD: 0, Pts: 0 },
   { team: "Golden",         PJ: 0, PG: 0, PE: 0, PP: 2, GF: 1,  GC: 8,  GD: 0, Pts: 0 }
 ];
