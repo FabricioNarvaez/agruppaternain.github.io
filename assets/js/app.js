@@ -1,13 +1,31 @@
 let grupoA = [
-  { equipo: "Real Madrid", PJ: 10, PG: 8, PE: 1, PP: 3, GF: 10, GC: 5, GD: 0, Pts: 0 },
-  { equipo: "Barcelona", PJ: 10, PG: 7, PE: 1, PP: 3, GF: 8, GC: 5, GD: 0, Pts: 0 },
-  { equipo: "Atletico de Madrid", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 }
+  { equipo: "Los Panas", PJ: 10, PG: 8, PE: 1, PP: 3, GF: 10, GC: 5, GD: 0, Pts: 0 },
+  { equipo: "Peñarol", PJ: 10, PG: 7, PE: 1, PP: 3, GF: 8, GC: 5, GD: 0, Pts: 0 },
+  { equipo: "Comboloco", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 },
+  { equipo: "Los Rumberos", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 },
+  { equipo: "Latin Brothers", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 },
+  { equipo: "Golden", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 }
 ];
+
+// let grupoB = [
+//   { equipo: "Impersiva", PJ: 10, PG: 8, PE: 1, PP: 3, GF: 10, GC: 5, GD: 0, Pts: 0 },
+//   { equipo: "Estella", PJ: 10, PG: 7, PE: 1, PP: 3, GF: 8, GC: 5, GD: 0, Pts: 0 },
+//   { equipo: "Cancheritos", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 },
+//   { equipo: "El Valle", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 },
+//   { equipo: "Spencer", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 },
+//   { equipo: "Amistad", PJ: 10, PG: 6, PE: 1, PP: 5, GF: 5, GC: 5, GD: 0, Pts: 0 }
+// ];
 
 let cuerpoTabla = document.querySelector("tbody");
 
-function procesarGrupo(equipo) {
+function procesarGrupo(equipo, index) {
+  console.log(index)
     let fila = document.createElement("tr");
+
+    let celdaPos = document.createElement("td");
+    celdaPos.textContent = index + 1;
+    fila.appendChild(celdaPos);
+
     let celdaEquipo = document.createElement("td");
     celdaEquipo.textContent = equipo.equipo;
     fila.appendChild(celdaEquipo);
