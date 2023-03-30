@@ -1,28 +1,35 @@
-body {
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
-    font-family: 'Kanit', sans-serif;
+html{
+    background: rgb(48,56,81);
+background: linear-gradient(0deg, rgba(48,56,81,1) 0%, rgba(95,117,134,1) 100%);
+background-size: 100% 100%;
+  background-attachment: fixed;
 }
 
-.titles{
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: "Kanit", sans-serif;
+}
+
+.titles {
     margin-top: 40px;
     text-align: center;
     font-weight: bold;
 }
 
-.container{
+.container {
     width: 70%;
     margin: 0 auto;
 }
 
 table {
+    color: #333;
     width: 100%;
     margin: 0 auto;
     border-collapse: collapse;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(161, 161, 161, 0.822);
 }
 
 table thead th {
@@ -62,7 +69,7 @@ table tbody tr:hover {
         width: 100%;
     }
 
-    table thead th{
+    table thead th {
         font-size: 12px;
         width: 5px !important;
     }
@@ -71,7 +78,7 @@ table tbody tr:hover {
         padding: 5px;
     }
 
-    .container{
+    .container {
         width: 90%;
         margin: 0 auto;
     }
