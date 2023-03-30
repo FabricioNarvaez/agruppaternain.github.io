@@ -57,6 +57,7 @@ function createRow(team, index){
 
     let celdaPuntos = document.createElement("td");
     celdaPuntos.textContent = team.Pts;
+    celdaPuntos.style.fontWeight = "bold";
     row.appendChild(celdaPuntos);
 
     return row;
