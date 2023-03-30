@@ -3,12 +3,13 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     color: #333;
+    font-family: 'Kanit', sans-serif;
 }
 
 .titles{
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 40px;
     text-align: center;
+    font-weight: bold;
 }
 
 .container{
@@ -27,14 +28,14 @@ table {
 table thead th {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 5px;
     text-align: left;
     font-size: 18px;
     border: 1px solid #ddd;
 }
 
 table tbody td {
-    padding: 10px;
+    padding: 6px;
     border: 1px solid #ddd;
 }
 
@@ -66,7 +67,6 @@ table tbody tr:hover {
         width: 5px !important;
     }
 
-    table thead th,
     table tbody td {
         padding: 5px;
     }
