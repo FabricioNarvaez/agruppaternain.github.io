@@ -53,6 +53,12 @@ function createRow(team, index){
 
     let celdaGD = document.createElement("td");
     celdaGD.textContent = team.GD;
+    celdaGD.style.fontWeight = "bold";
+    if(team.GD > 0){
+      celdaGD.style.color = "green";
+    }else if(team.GD < 0){
+      celdaGD.style.color = "red";
+    }
     row.appendChild(celdaGD);
 
     let celdaPuntos = document.createElement("td");
