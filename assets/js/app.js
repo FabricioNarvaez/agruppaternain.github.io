@@ -57,6 +57,7 @@ function createRow(team, index){
 
     let celdaPuntos = document.createElement("td");
     celdaPuntos.textContent = team.Pts;
+    celdaPuntos.style.fontWeight = "bold";
     row.appendChild(celdaPuntos);
 
     return row;
@@ -74,10 +75,7 @@ function processGroupB(team, index) {
 
 function calculatePointsGoalsMatches(team){
     let puntos = team.PG * 3;
-    if(team.PE){
-        puntos += team.PE;
-    }
-    team.Pts = puntos;
+    team.Pts = team.PE ? (puntos + team.PE) : puntos;
 
     let gd = team.GF - team.GC;
     team.GD = gd > 0 ? `+${gd}` : gd;
@@ -99,7 +97,7 @@ function sortByPointsAndGoals(a, b) {
         return 0;
       }
     }
-  }
+}
 
 groupA.forEach(calculatePointsGoalsMatches);
 groupA.sort(sortByPointsAndGoals);
