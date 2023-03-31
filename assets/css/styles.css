@@ -1,6 +1,5 @@
 html{
-    background: rgb(48,56,81);
-    background: linear-gradient(0deg, rgba(48,56,81,1) 0%, rgba(95,117,134,1) 100%);
+    background: #EDEEF0;
     background-size: 100% 100%;
     background-attachment: fixed;
 }
@@ -8,28 +7,39 @@ html{
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
-    color: #ffffff;
     font-family: "Kanit", sans-serif;
 }
 
+h1, h2{
+    margin: 0px;
+}
+
 .titles {
-    margin-top: 40px;
     text-align: center;
     font-weight: bold;
 }
 
 .container {
+    background: #fff;
     width: 70%;
-    margin: 0 auto;
+    margin: 40px auto;
+    padding: 20px 0px 40px 0px;
+    box-shadow: 0 0 10px rgba(161, 161, 161, 0.822);
+    border-radius: 10px;
+}
+
+.containerGroup{
+    width: 70%;
+    margin: 20px auto;
 }
 
 table {
     color: #333;
     width: 100%;
-    margin: 0 auto;
+    margin: 10px auto;
     border-collapse: collapse;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(161, 161, 161, 0.822);
+    box-shadow: 0 0 10px rgba(161, 161, 161, 0.568);
 }
 
 table thead th {
@@ -54,7 +64,17 @@ table tbody tr:hover {
     background-color: #ddd;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1350px) {
+    .container {
+        width: 80%;
+    }
+
+    .containerGroup {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
     body {
         font-size: 14px;
     }
@@ -78,8 +98,8 @@ table tbody tr:hover {
         padding: 5px;
     }
 
-    .container {
-        width: 90%;
-        margin: 0 auto;
+    .container,
+    .containerGroup{
+        width: 95%;
     }
 }
