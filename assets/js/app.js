@@ -69,7 +69,7 @@ function createRow(team, index){
     return row;
 }
 
-function processGroupA(team, index) {
+export function processGroupA(team, index) {
     let bodyTableA = document.getElementById("groupA");
     bodyTableA.appendChild(createRow(team, index));
 };
@@ -79,7 +79,7 @@ function processGroupB(team, index) {
     bodyTableB.appendChild(createRow(team, index));
 };
 
-function calculatePointsGoalsMatches(team){
+export function calculatePointsGoalsMatches(team){
     let puntos = team.PG * 3;
     team.Pts = team.PE ? (puntos + team.PE) : puntos;
 
@@ -89,7 +89,7 @@ function calculatePointsGoalsMatches(team){
     team.PJ = team.PG + team.PE + team.PP;
 }
 
-function sortByPointsAndGoals(a, b) {
+export function sortByPointsAndGoals(a, b) {
     if (a.Pts > b.Pts) {
       return -1;
     } else if (a.Pts < b.Pts) {
@@ -105,9 +105,9 @@ function sortByPointsAndGoals(a, b) {
     }
 }
 
-groupA.forEach(calculatePointsGoalsMatches);
-groupA.sort(sortByPointsAndGoals);
-groupA.forEach(processGroupA);
+// groupA.forEach(calculatePointsGoalsMatches);
+// groupA.sort(sortByPointsAndGoals);
+// groupA.forEach(processGroupA);
 
 grupoB.forEach(calculatePointsGoalsMatches);
 grupoB.sort(sortByPointsAndGoals);
