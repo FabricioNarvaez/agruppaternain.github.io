@@ -1,9 +1,9 @@
 let groupA = [
-  { team: "Los Panas",      PG: 2, PE: 0, PP: 0, GF: 16, GC: 4},
+  { team: "Los Panas",      PG: 3, PE: 0, PP: 0, GF: 20, GC: 5},
   { team: "Peñarol",        PG: 1, PE: 0, PP: 2, GF: 8,  GC: 12},
   { team: "Comboloco",      PG: 2, PE: 0, PP: 0, GF: 10,  GC: 2},
   { team: "Los Rumberos",   PG: 1, PE: 0, PP: 2, GF: 10,  GC: 15},
-  { team: "Latin Brothers", PG: 1, PE: 0, PP: 0, GF: 6,  GC: 0},
+  { team: "Latin Brothers", PG: 1, PE: 0, PP: 1, GF: 7,  GC: 4},
   { team: "Golden",         PG: 0, PE: 0, PP: 3, GF: 1,  GC: 18}
 ];
 
