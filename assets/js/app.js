@@ -9,10 +9,10 @@ let groupA = [
 
 let grupoB = [
   { team: "Impersiva",      PG: 1, PE: 0, PP: 2, GF: 6,  GC: 9},
-  { team: "Estella",        PG: 0, PE: 1, PP: 1, GF: 2,  GC: 3},
+  { team: "Estella",        PG: 0, PE: 2, PP: 1, GF: 3,  GC: 4},
   { team: "Cancheritos",    PG: 0, PE: 1, PP: 2, GF: 3,  GC: 9},
   { team: "El Valle",       PG: 2, PE: 0, PP: 1, GF: 11,  GC: 5},
-  { team: "Spencer",        PG: 2, PE: 0, PP: 0, GF: 8,  GC: 3},
+  { team: "Spencer",        PG: 2, PE: 1, PP: 0, GF: 9,  GC: 4},
   { team: "Amistad",        PG: 2, PE: 0, PP: 1, GF: 7,  GC: 8}
 ];
 
