@@ -1,21 +1,3 @@
-let groupA = [
-  { team: "Los Panas",      PG: 2, PE: 0, PP: 0, GF: 16, GC: 4},
-  { team: "Peñarol",        PG: 1, PE: 0, PP: 1, GF: 6,  GC: 7},
-  { team: "Comboloco",      PG: 1, PE: 0, PP: 0, GF: 5,  GC: 0},
-  { team: "Los Rumberos",   PG: 0, PE: 0, PP: 2, GF: 0,  GC: 15},
-  { team: "Latin Brothers", PG: 1, PE: 0, PP: 0, GF: 6,  GC: 0},
-  { team: "Golden",         PG: 0, PE: 0, PP: 2, GF: 1,  GC: 8}
-];
-
-let grupoB = [
-  { team: "Impersiva",      PG: 1, PE: 0, PP: 1, GF: 4,  GC: 5},
-  { team: "Estella",        PG: 0, PE: 1, PP: 1, GF: 2,  GC: 3},
-  { team: "Cancheritos",    PG: 0, PE: 1, PP: 1, GF: 1,  GC: 6},
-  { team: "El Valle",       PG: 1, PE: 0, PP: 1, GF: 7,  GC: 3},
-  { team: "Spencer",        PG: 2, PE: 0, PP: 0, GF: 8,  GC: 3},
-  { team: "Amistad",        PG: 1, PE: 0, PP: 1, GF: 4,  GC: 6}
-];
-
 function createRow(team, index){
     let row = document.createElement("tr");
 
