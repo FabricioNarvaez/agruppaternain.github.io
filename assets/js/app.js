@@ -74,7 +74,7 @@ export function processGroupA(team, index) {
     bodyTableA.appendChild(createRow(team, index));
 };
 
-function processGroupB(team, index) {
+export function processGroupB(team, index) {
     let bodyTableB = document.getElementById("groupB");
     bodyTableB.appendChild(createRow(team, index));
 };
@@ -104,11 +104,3 @@ export function sortByPointsAndGoals(a, b) {
       }
     }
 }
-
-// groupA.forEach(calculatePointsGoalsMatches);
-// groupA.sort(sortByPointsAndGoals);
-// groupA.forEach(processGroupA);
-
-grupoB.forEach(calculatePointsGoalsMatches);
-grupoB.sort(sortByPointsAndGoals);
-grupoB.forEach(processGroupB);

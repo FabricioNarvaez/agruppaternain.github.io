@@ -102,4 +102,9 @@ table tbody tr:hover {
     .containerGroup{
         width: 95%;
     }
+
+    .container {
+        margin: 20px auto;
+        padding: 10px 0px 5px 0px;
+    }
 }
