@@ -1,8 +1,8 @@
 import { calculatePointsGoalsMatches, processGroupA, processGroupB, sortByPointsAndGoals} from './app.js';
-const urlApi = 'http://localhost:3900/api';
+import { url } from './url.js';
 
-async function connectApiAndLoadData() {
-    const response = await fetch(`${urlApi}/teams`);
+(async ()=> {
+    const response = await fetch(`${url}/api/teams`);
     const {teamsGroupA, teamsGroupB} = await response.json();
     console.log("La conexión con la API se ha realizado correctamente");
     teamsGroupA.forEach(calculatePointsGoalsMatches);
@@ -12,6 +12,4 @@ async function connectApiAndLoadData() {
     teamsGroupB.forEach(calculatePointsGoalsMatches);
     teamsGroupB.sort(sortByPointsAndGoals);
     teamsGroupB.forEach(processGroupB);
-}
-
-connectApiAndLoadData();
+})();

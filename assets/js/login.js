@@ -1,9 +1,8 @@
-const urlApiLogin = 'http://localhost:3900/login';
-const email = "******"
-const username = "*****";
-const password = "*****";
+const urlLogin = `http://localhost:3900/login`;
+const email = "***";
+const password = "***";
 
-fetch(urlApiLogin, {
+fetch(urlLogin, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
