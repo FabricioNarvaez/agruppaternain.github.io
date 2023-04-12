@@ -1,7 +1,8 @@
 import { url } from './url.js';
 const urlLogin = `${url}/login`;
-const email = "tekendefabri@gmail";
-const password = "1234";
+import { userEmail, userPassword} from './loginuser.js';
+const email = `${userEmail}`;
+const password = `${userPassword}`;
 
 fetch(urlLogin, {
     method: 'POST',
