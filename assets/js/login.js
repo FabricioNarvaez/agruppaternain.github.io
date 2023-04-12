@@ -1,6 +1,7 @@
-const urlLogin = `http://localhost:3900/login`;
-const email = "***";
-const password = "***";
+import { url } from './url.js';
+const urlLogin = `${url}/login`;
+const email = "tekendefabri@gmail";
+const password = "1234";
 
 fetch(urlLogin, {
     method: 'POST',
