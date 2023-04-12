@@ -17,8 +17,14 @@ fetch(urlLogin, {
         errorElement.textContent = 'Usuario o contraseña incorrectos.';
         const loginForm = document.getElementById('login-form');
         loginForm.appendChild(errorElement);
+    }else{
+        return response.json();
     }
-    return response.json();
 })
-.then(data => console.log(data))
+.then(data => {
+    if(data){
+        document.cookie = `token=${data.token}; path=/;`;
+        window.location.href = "admin.html";
+    }
+})
 .catch(error => console.error('There was a problem with the fetch operation:', error));
