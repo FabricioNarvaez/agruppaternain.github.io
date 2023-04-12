@@ -15,8 +15,8 @@ fetch(urlLogin, {
     if (!response.ok) {
         const errorElement = document.createElement('p');
         errorElement.textContent = 'Usuario o contraseña incorrectos.';
-        const loginForm = document.getElementById('login-form');
-        loginForm.appendChild(errorElement);
+        const error = document.getElementById('credentials-error');
+        error.appendChild(errorElement);
     }else{
         return response.json();
     }
