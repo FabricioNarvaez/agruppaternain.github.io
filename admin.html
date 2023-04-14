@@ -12,23 +12,26 @@
 <body>
     <div class="container container-index">
         <h1>Nuevos datos</h1>
-        <div class="container_select">
-            <div class="local">
-                <select id="ocionesLocal" class="selector">
-                    <option value="groupA">Grupo A</option>
-                    <option value="groupB">Grupo B</option>
-                </select>
-                <input class="goals" type="text" id="equipoLocal" placeholder="Goles Local">
+        <form id="login-form" action="#" method="POST">
+            <div class="container_select">
+                <div class="local">
+                    <select id="ocionesLocal" class="selector">
+                        <option value="groupA">Grupo A</option>
+                        <option value="groupB">Grupo B</option>
+                    </select>
+                    <input class="goals" type="text" id="equipoLocal" placeholder="Goles Local">
+                </div>
+                <h3>vs</h3>
+                <div class="visitante">
+                    <select id="ocionesVisitante" class="selector">
+                        <option value="groupA">Grupo A</option>
+                        <option value="groupB">Grupo B</option>
+                    </select>
+                    <input class="goals" type="text" id="equipoVisitante" placeholder="Goles Visitante">
+                </div>
             </div>
-            <h3>vs</h3>
-            <div class="visitante">
-                <select id="ocionesVisitante" class="selector">
-                    <option value="groupA">Grupo A</option>
-                    <option value="groupB">Grupo B</option>
-                </select>
-                <input class="goals" type="text" id="equipoVisitante" placeholder="Goles Visitante">
-            </div>
-        </div>
+            <button type="submit">Enviar</button>
+        </form>
     </div>
     <script src="assets/js/validateToken.js" type="module"></script>
 </body>
