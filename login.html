@@ -13,17 +13,17 @@
 <body>
     <div class="container container-index">
         <h1>Login</h1>
-        <form id="login-form" action="#" method="POST" class="form">
-            <div class="form-username">
-                <label for="username">Usuario:</label>
-                <input type="text" id="username" name="username">
+        <div id="login-form" class="form">
+            <div class="form-email">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
             </div>
             <div class="form-password">
                 <label for="password">Contraseña:</label>
                 <input type="password" id="password" name="password">
             </div>
-            <button type="submit">Iniciar Sesión</button>
-        </form>
+            <button id="login-button" type="button">Iniciar Sesión</button>
+        </div>
         <div id="credentials-error"></div>
     </div>
     <script src="assets/js/login.js" type="module"></script>
