@@ -4,7 +4,6 @@ import { url } from './url.js';
 (async ()=> {
     const response = await fetch(`${url}/api/teams`);
     const {teamsGroupA, teamsGroupB} = await response.json();
-    console.log("La conexión con la API se ha realizado correctamente");
     teamsGroupA.forEach(calculatePointsGoalsMatches);
     teamsGroupA.sort(sortByPointsAndGoals);
     teamsGroupA.forEach(processGroupA);

@@ -109,6 +109,10 @@ table tbody tr:hover {
     justify-content: flex-start;
 }
 
+.title-admin{
+    margin-top: 20px;
+}
+
 @media screen and (max-width: 1350px) {
     .container {
         width: 80%;
