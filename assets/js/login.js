@@ -2,7 +2,7 @@ import { url } from './url.js';
 const urlLogin = `${url}/login`;
 import { userEmail, userPassword} from './loginuser.js';
 const email = `${userEmail}`;
-const password = `${userPassword}4`;
+const password = `${userPassword}`;
 
 fetch(urlLogin, {
     method: 'POST',

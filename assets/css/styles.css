@@ -80,6 +80,35 @@ table tbody tr:hover {
     margin: 0 auto;
 }
 
+.container_select{
+    display: grid;
+    grid-template-columns: 1fr 0.25fr 1fr;
+    align-items: center;
+}
+
+.selector{
+    height: 25px;
+    width: 200px;
+}
+
+.local,
+.visitante{
+    display: flex;
+    gap: 10px;
+}
+
+.goals{
+    width: 92px;
+}
+
+.local{
+    justify-content: flex-end;
+}
+
+.visitante{
+    justify-content: flex-start;
+}
+
 @media screen and (max-width: 1350px) {
     .container {
         width: 80%;

@@ -10,7 +10,26 @@
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>In admin</h1>
+    <div class="container container-index">
+        <h1>Nuevos datos</h1>
+        <div class="container_select">
+            <div class="local">
+                <select id="ocionesLocal" class="selector">
+                    <option value="groupA">Grupo A</option>
+                    <option value="groupB">Grupo B</option>
+                </select>
+                <input class="goals" type="text" id="equipoLocal" placeholder="Goles Local">
+            </div>
+            <h3>vs</h3>
+            <div class="visitante">
+                <select id="ocionesVisitante" class="selector">
+                    <option value="groupA">Grupo A</option>
+                    <option value="groupB">Grupo B</option>
+                </select>
+                <input class="goals" type="text" id="equipoVisitante" placeholder="Goles Visitante">
+            </div>
+        </div>
+    </div>
     <script src="assets/js/validateToken.js" type="module"></script>
 </body>
 </html>
