@@ -23,6 +23,7 @@ loginButton.addEventListener("click", () => {
                 errorElement.id = "error-id";
                 errorElement.textContent = "Email o contraseña incorrectos.";
                 const error = document.getElementById("credentials-error");
+                errorElement.style.color = "red";
                 error.appendChild(errorElement);
             } else {
                 return response.json();
