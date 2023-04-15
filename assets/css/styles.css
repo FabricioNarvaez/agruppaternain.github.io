@@ -109,8 +109,8 @@ table tbody tr:hover {
     justify-content: flex-start;
 }
 
-.title-admin{
-    margin-top: 20px;
+.title-admin, .send-button{
+    margin: 20px 0;
 }
 
 @media screen and (max-width: 1350px) {
