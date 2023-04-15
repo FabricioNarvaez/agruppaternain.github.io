@@ -25,8 +25,8 @@ import { url } from './url.js';
     });
 })();
 
-const send = document.getElementById('send');
-send.addEventListener('click', async () => {
+const sendButton = document.getElementById('send');
+sendButton.addEventListener('click', async () => {
     const error = document.getElementById("error-id");
     if (error) {
         error.remove();
@@ -50,7 +50,7 @@ send.addEventListener('click', async () => {
         return;
     }else{
         if(goalsLocalA === goalsVisitanteA){
-            const responseLocal = await fetch(`${url}/api/team/a/${localA}`, {
+            const putDraw = {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -60,19 +60,10 @@ send.addEventListener('click', async () => {
                     GF: goalsLocalA,
                     GC: goalsVisitanteA,
                 })
-            });
+            }
+            const responseLocal = await fetch(`${url}/api/team/a/${localA}`, putDraw);
             const dataLocal = await responseLocal.json();
-            const responseVisitante = await fetch(`${url}/api/team/a/${visitanteA}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    PE: 1,
-                    GF: goalsLocalA,
-                    GC: goalsVisitanteA,
-                })
-            });
+            const responseVisitante = await fetch(`${url}/api/team/a/${visitanteA}`, putDraw);
             const dataVisitante = await responseVisitante.json();
             if(dataLocal.status === "Updated" && dataVisitante.status === "Updated"){
                 alert("Resultados actualizados");
