@@ -49,23 +49,36 @@ send.addEventListener('click', async () => {
         error.appendChild(errorElement);
         return;
     }else{
-        const response = await fetch(`${url}/api/matches`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                localA,
-                visitanteA,
-                localB,
-                visitanteB,
-                goalsLocalA,
-                goalsVisitanteA,
-                goalsLocalB,
-                goalsVisitanteB
-            })
-        });
-        const data = await response.json();
-        console.log(data);
+        if(goalsLocalA === goalsVisitanteA){
+            const responseLocal = await fetch(`${url}/api/team/a/${localA}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    PE: 1,
+                    GF: goalsLocalA,
+                    GC: goalsVisitanteA,
+                })
+            });
+            const dataLocal = await responseLocal.json();
+            const responseVisitante = await fetch(`${url}/api/team/a/${visitanteA}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    PE: 1,
+                    GF: goalsLocalA,
+                    GC: goalsVisitanteA,
+                })
+            });
+            const dataVisitante = await responseVisitante.json();
+            if(dataLocal.status === "Updated" && dataVisitante.status === "Updated"){
+                alert("Resultados actualizados");
+                location.reload()
+            }
+        }
+        
     }
 });
