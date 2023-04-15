@@ -25,11 +25,58 @@ import { url } from './url.js';
     });
 })();
 
-function checkResponse(dataLocal, dataVisitante){
-    if(dataLocal.status === "Updated" && dataVisitante.status === "Updated"){
-        alert("Resultados actualizados");
-        location.reload()
+function updatePutValues(goalsLocal, goalsVisitante){
+    let putLocal, putVisitante;
+    if(goalsLocal === goalsVisitante){
+        putLocal = putVisitante = {
+            method: 'PUT',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                PE: 1,
+                GF: goalsLocal,
+                GC: goalsVisitante,
+            })
+        }
+    }else if(goalsLocal > goalsVisitante){
+        putLocal = {
+            method: 'PUT',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                PG: 1,
+                GF: goalsLocal,
+                GC: goalsVisitante,
+            })
+        }
+        putVisitante = {
+            method: 'PUT',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                PP: 1,
+                GF: goalsVisitante,
+                GC: goalsLocal,
+            })
+        }
+    }else{
+        putLocal = {
+            method: 'PUT',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                PP: 1,
+                GF: goalsLocal,
+                GC: goalsVisitante,
+            })
+        }
+        putVisitante = {
+            method: 'PUT',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                PG: 1,
+                GF: goalsVisitante,
+                GC: goalsLocal,
+            })
+        }
     }
+    return [putLocal, putVisitante];
 }
 
 const sendButton = document.getElementById('send');
@@ -57,67 +104,26 @@ sendButton.addEventListener('click', async () => {
         error.appendChild(errorElement);
         return;
     }else{
-        let putLocalA, putVisitanteA;
-        if(goalsLocalA === goalsVisitanteA){
-            putLocalA = putVisitanteA = {
-                method: 'PUT',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({
-                    PE: 1,
-                    GF: goalsLocalA,
-                    GC: goalsVisitanteA,
-                })
-            }
-        }else if(goalsLocalA > goalsVisitanteA){
-            putLocalA = {
-                method: 'PUT',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({
-                    PG: 1,
-                    GF: goalsLocalA,
-                    GC: goalsVisitanteA,
-                })
-            }
-            putVisitanteA = {
-                method: 'PUT',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({
-                    PP: 1,
-                    GF: goalsVisitanteA,
-                    GC: goalsLocalA,
-                })
-            }
-        }else{
-            putLocalA = {
-                method: 'PUT',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({
-                    PP: 1,
-                    GF: goalsLocalA,
-                    GC: goalsVisitanteA,
-                })
-            }
-            putVisitanteA = {
-                method: 'PUT',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({
-                    PG: 1,
-                    GF: goalsVisitanteA,
-                    GC: goalsLocalA,
-                })
-            }
-        }
+        const [putLocalA, putVisitanteA] = updatePutValues(goalsLocalA, goalsVisitanteA);
+        const [putLocalB, putVisitanteB] = updatePutValues(goalsLocalB, goalsVisitanteB);
 
-        const [responseLocalA, responseVisitanteA] = await Promise.all([
+        const [responseLocalA, responseVisitanteA, responseLocalB, responseVisitanteB] = await Promise.all([
             fetch(`${url}/api/team/a/${localA}`, putLocalA),
-            fetch(`${url}/api/team/a/${visitanteA}`, putVisitanteA)
+            fetch(`${url}/api/team/a/${visitanteA}`, putVisitanteA),
+            fetch(`${url}/api/team/b/${localB}`, putLocalB),
+            fetch(`${url}/api/team/b/${visitanteB}`, putVisitanteB)
         ]);
 
-        const [dataLocalA, dataVisitanteA] = await Promise.all([
+        const [dataLocalA, dataVisitanteA, dataLocalB, dataVisitanteB] = await Promise.all([
             responseLocalA.json(),
-            responseVisitanteA.json()
+            responseVisitanteA.json(),
+            responseLocalB.json(),
+            responseVisitanteB.json()
         ]);
 
-        checkResponse(dataLocalA, dataVisitanteA);
+        if(dataLocalA.status === "Updated" && dataVisitanteA.status === "Updated" && dataLocalB.status === "Updated" && dataVisitanteB.status === "Updated"){
+            alert("Resultados actualizados");
+            location.reload()
+        }
     }
 });
