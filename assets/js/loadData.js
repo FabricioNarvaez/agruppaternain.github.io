@@ -94,6 +94,28 @@ sendButton.addEventListener('click', async () => {
             });
             const dataVisitante = await responseVisitante.json();
             checkResponse(dataLocal, dataVisitante);
+        }else{
+            const responseLocal = await fetch(`${url}/api/team/a/${localA}`, {
+                method: 'PUT',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    PP: 1,
+                    GF: goalsLocalA,
+                    GC: goalsVisitanteA,
+                })
+            });
+            const dataLocal = await responseLocal.json();
+            const responseVisitante = await fetch(`${url}/api/team/a/${visitanteA}`, {
+                method: 'PUT',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    PG: 1,
+                    GF: goalsVisitanteA,
+                    GC: goalsLocalA,
+                })
+            });
+            const dataVisitante = await responseVisitante.json();
+            checkResponse(dataLocal, dataVisitante);
         }
         
     }
