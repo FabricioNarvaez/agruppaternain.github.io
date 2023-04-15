@@ -25,6 +25,13 @@ import { url } from './url.js';
     });
 })();
 
+function checkResponse(dataLocal, dataVisitante){
+    if(dataLocal.status === "Updated" && dataVisitante.status === "Updated"){
+        alert("Resultados actualizados");
+        location.reload()
+    }
+}
+
 const sendButton = document.getElementById('send');
 sendButton.addEventListener('click', async () => {
     const error = document.getElementById("error-id");
@@ -40,10 +47,11 @@ sendButton.addEventListener('click', async () => {
     const goalsLocalB = document.getElementById('goalsLocalB').value;
     const goalsVisitanteB = document.getElementById('goalsVisitanteB').value;
 
-    if(localA === "" || visitanteA === "" || localB === "" || visitanteB === "" || goalsLocalA === "" || goalsVisitanteA === "" || goalsLocalB === "" || goalsVisitanteB === ""){
+    if(localA === "" || visitanteA === "" || localB === "" || visitanteB === "" || goalsLocalA === "" || goalsVisitanteA === "" || goalsLocalB === "" || goalsVisitanteB === "" ||
+    localA === visitanteA || localB === visitanteB){
         const errorElement = document.createElement("p");
         errorElement.id = "error-id";
-        errorElement.textContent = "Faltan datos.";
+        errorElement.textContent = "Faltan datos o no son correctos. Compruebe que ha introducido todos los datos y que son correctos.";
         errorElement.style.color = "red";
         const error = document.getElementById("data-error");
         error.appendChild(errorElement);
@@ -52,9 +60,7 @@ sendButton.addEventListener('click', async () => {
         if(goalsLocalA === goalsVisitanteA){
             const putDraw = {
                 method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
                     PE: 1,
                     GF: goalsLocalA,
@@ -65,10 +71,29 @@ sendButton.addEventListener('click', async () => {
             const dataLocal = await responseLocal.json();
             const responseVisitante = await fetch(`${url}/api/team/a/${visitanteA}`, putDraw);
             const dataVisitante = await responseVisitante.json();
-            if(dataLocal.status === "Updated" && dataVisitante.status === "Updated"){
-                alert("Resultados actualizados");
-                location.reload()
-            }
+            checkResponse(dataLocal, dataVisitante);
+        }else if(goalsLocalA > goalsVisitanteA){
+            const responseLocal = await fetch(`${url}/api/team/a/${localA}`, {
+                method: 'PUT',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    PG: 1,
+                    GF: goalsLocalA,
+                    GC: goalsVisitanteA,
+                })
+            });
+            const dataLocal = await responseLocal.json();
+            const responseVisitante = await fetch(`${url}/api/team/a/${visitanteA}`, {
+                method: 'PUT',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    PP: 1,
+                    GF: goalsVisitanteA,
+                    GC: goalsLocalA,
+                })
+            });
+            const dataVisitante = await responseVisitante.json();
+            checkResponse(dataLocal, dataVisitante);
         }
         
     }
