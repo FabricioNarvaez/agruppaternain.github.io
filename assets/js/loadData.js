@@ -57,8 +57,9 @@ sendButton.addEventListener('click', async () => {
         error.appendChild(errorElement);
         return;
     }else{
+        let putLocalA, putVisitanteA;
         if(goalsLocalA === goalsVisitanteA){
-            const putDraw = {
+            putLocalA = putVisitanteA = {
                 method: 'PUT',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -67,13 +68,8 @@ sendButton.addEventListener('click', async () => {
                     GC: goalsVisitanteA,
                 })
             }
-            const responseLocal = await fetch(`${url}/api/team/a/${localA}`, putDraw);
-            const dataLocal = await responseLocal.json();
-            const responseVisitante = await fetch(`${url}/api/team/a/${visitanteA}`, putDraw);
-            const dataVisitante = await responseVisitante.json();
-            checkResponse(dataLocal, dataVisitante);
         }else if(goalsLocalA > goalsVisitanteA){
-            const responseLocal = await fetch(`${url}/api/team/a/${localA}`, {
+            putLocalA = {
                 method: 'PUT',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -81,9 +77,8 @@ sendButton.addEventListener('click', async () => {
                     GF: goalsLocalA,
                     GC: goalsVisitanteA,
                 })
-            });
-            const dataLocal = await responseLocal.json();
-            const responseVisitante = await fetch(`${url}/api/team/a/${visitanteA}`, {
+            }
+            putVisitanteA = {
                 method: 'PUT',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -91,11 +86,9 @@ sendButton.addEventListener('click', async () => {
                     GF: goalsVisitanteA,
                     GC: goalsLocalA,
                 })
-            });
-            const dataVisitante = await responseVisitante.json();
-            checkResponse(dataLocal, dataVisitante);
+            }
         }else{
-            const responseLocal = await fetch(`${url}/api/team/a/${localA}`, {
+            putLocalA = {
                 method: 'PUT',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -103,9 +96,8 @@ sendButton.addEventListener('click', async () => {
                     GF: goalsLocalA,
                     GC: goalsVisitanteA,
                 })
-            });
-            const dataLocal = await responseLocal.json();
-            const responseVisitante = await fetch(`${url}/api/team/a/${visitanteA}`, {
+            }
+            putVisitanteA = {
                 method: 'PUT',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -113,10 +105,19 @@ sendButton.addEventListener('click', async () => {
                     GF: goalsVisitanteA,
                     GC: goalsLocalA,
                 })
-            });
-            const dataVisitante = await responseVisitante.json();
-            checkResponse(dataLocal, dataVisitante);
+            }
         }
-        
+
+        const [responseLocalA, responseVisitanteA] = await Promise.all([
+            fetch(`${url}/api/team/a/${localA}`, putLocalA),
+            fetch(`${url}/api/team/a/${visitanteA}`, putVisitanteA)
+        ]);
+
+        const [dataLocalA, dataVisitanteA] = await Promise.all([
+            responseLocalA.json(),
+            responseVisitanteA.json()
+        ]);
+
+        checkResponse(dataLocalA, dataVisitanteA);
     }
 });
