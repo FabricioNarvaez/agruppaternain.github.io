@@ -2,6 +2,7 @@ import { calculatePointsGoalsMatches, processGroupA, processGroupB, sortByPoints
 import { url } from './url.js';
 
 (async ()=> {
+    
     const response = await fetch(`${url}/api/teams`);
     const {teamsGroupA, teamsGroupB} = await response.json();
     teamsGroupA.forEach(calculatePointsGoalsMatches);
