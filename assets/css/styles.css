@@ -19,6 +19,26 @@ h1, h2{
     font-weight: bold;
 }
 
+.buttons{
+    text-align: center;
+    font-size: 16px;
+    margin: 20px auto;
+    background-color: #EDEEF0;
+    width: 130px;
+    border: 1px solid rgb(146, 146, 146);
+    border-radius: 10px;
+}
+
+.buttons:hover{
+    background-color: #DADCE0;
+}
+
+.buttons a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
 .container {
     background: #fff;
     width: 70%;
