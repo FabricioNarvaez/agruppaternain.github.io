@@ -4,7 +4,7 @@ let groupA = [
   { team: "Comboloco",      PG: 4, PE: 0, PP: 0, GF: 22,  GC: 3},
   { team: "Los Rumberos",   PG: 1, PE: 0, PP: 3, GF: 13,  GC: 26},
   { team: "Latin Brothers", PG: 2, PE: 0, PP: 2, GF: 14,   GC: 10},
-  { team: "Golden",         PG: 0, PE: 0, PP: 4, GF: 2,   GC: 22}
+  { team: "Golden",         PG: 0, PE: 0, PP: 5, GF: 2,   GC: 30}
 ];
 
 let grupoB = [
