@@ -29,6 +29,7 @@ function createRow(team, index){
     row.appendChild(celdaPos);
 
     let celdaTeam = document.createElement("td");
+    celdaTeam.style.width = "280px";
     let difPos = team.lastPos - pos;
     let leftText = document.createElement("span");
     leftText.textContent = team.team;
@@ -37,44 +38,26 @@ function createRow(team, index){
     leftText.style.textAlign = "left";
 
     let rightText = document.createElement("span");
+    let triangle = document.createElement("span");
+    triangle.style.display = "inline-block";
+    triangle.style.width = "0";
+    triangle.style.height = "0";
+    triangle.style.borderLeft = "5px solid transparent";
+    triangle.style.borderRight = "5px solid transparent";
+    triangle.style.marginRight = "5px";
+    let difPosSpan = document.createElement("span");
+    difPosSpan.style.marginRight = "5px";
     if(difPos < 0){
-      let triangulo = document.createElement("span");
-      triangulo.style.display = "inline-block";
-      triangulo.style.width = "0";
-      triangulo.style.height = "0";
-      triangulo.style.borderLeft = "5px solid transparent";
-      triangulo.style.borderRight = "5px solid transparent";
-      triangulo.style.borderTop = "5px solid red";
-      triangulo.style.marginRight = "5px";
-
-      let difPosSpan = document.createElement("span");
+      triangle.style.borderTop = "5px solid red";
       difPosSpan.textContent = `${Math.abs(difPos)}`;
-      difPosSpan.style.marginRight = "5px";
-
-
-      rightText.appendChild(triangulo);
-      rightText.appendChild(difPosSpan);
       rightText.style.color = "red";
     }else if(difPos > 0){
-      let triangulo = document.createElement("span");
-      triangulo.style.display = "inline-block";
-      triangulo.style.width = "0";
-      triangulo.style.height = "0";
-      triangulo.style.borderLeft = "5px solid transparent";
-      triangulo.style.borderRight = "5px solid transparent";
-      triangulo.style.borderBottom = "5px solid green";
-      triangulo.style.marginRight = "5px";
-
-      let difPosSpan = document.createElement("span");
+      triangle.style.borderBottom = "5px solid green";
       difPosSpan.textContent = `${Math.abs(difPos)}`;
-      difPosSpan.style.marginRight = "5px";
-
-
-      rightText.appendChild(triangulo);
-      rightText.appendChild(difPosSpan);
       rightText.style.color = "green";
     }
-
+    rightText.appendChild(triangle);
+    rightText.appendChild(difPosSpan);
     rightText.style.display = "inline-block";
     rightText.style.width = "50%";
     rightText.style.textAlign = "right";
