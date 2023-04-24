@@ -8,12 +8,12 @@ let groupA = [
 ];
 
 let grupoB = [
-  { team: "Impersiva",      PG: 2, PE: 0, PP: 2, GF: 9,   GC: 11},
+  { team: "Impersiva",      PG: 2, PE: 0, PP: 3, GF: 9,   GC: 14},
   { team: "Estella",        PG: 0, PE: 2, PP: 2, GF: 4,   GC: 7},
   { team: "Cancheritos",    PG: 0, PE: 1, PP: 4, GF: 7,   GC: 16},
   { team: "El Valle",       PG: 2, PE: 0, PP: 2, GF: 12,  GC: 7},
   { team: "Spencer",        PG: 4, PE: 1, PP: 0, GF: 15,   GC: 7},
-  { team: "Amistad",        PG: 3, PE: 0, PP: 1, GF: 10,   GC: 9}
+  { team: "Amistad",        PG: 4, PE: 0, PP: 1, GF: 13,   GC: 9}
 ];
 
 function createRow(team, index){
