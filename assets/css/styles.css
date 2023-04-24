@@ -64,6 +64,11 @@ table tbody tr:hover {
     background-color: #ddd;
 }
 
+.actualizado{
+    font-size: 12px;
+    text-align: right;
+}
+
 @media screen and (max-width: 1350px) {
     .container {
         width: 80%;
