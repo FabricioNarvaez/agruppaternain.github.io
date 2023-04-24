@@ -20,7 +20,12 @@ function createRow(team, index){
     let row = document.createElement("tr");
 
     let celdaPos = document.createElement("td");
-    celdaPos.textContent = index + 1;
+    let pos = index + 1;
+    if(pos <= 2){
+      celdaPos.style.borderLeft = "4px solid";
+      celdaPos.style.borderLeftColor = "#0b95dd";
+    }
+    celdaPos.textContent = pos;
     row.appendChild(celdaPos);
 
     let celdaTeam = document.createElement("td");
@@ -64,6 +69,8 @@ function createRow(team, index){
     let celdaPuntos = document.createElement("td");
     celdaPuntos.textContent = team.Pts;
     celdaPuntos.style.fontWeight = "bold";
+    celdaPuntos.style.color = "white";
+    celdaPuntos.style.backgroundColor = "#818181";
     row.appendChild(celdaPuntos);
 
     return row;
