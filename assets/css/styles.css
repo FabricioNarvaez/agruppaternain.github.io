@@ -144,3 +144,12 @@ table tbody tr:hover {
         width: 95%;
     }
 }
+
+@media screen and (max-width: 565px) {
+    .nav-item a{
+        font-size: 14px;
+    }
+    .nav-item:last-child {
+        display: none;
+    }
+}
