@@ -19,6 +19,47 @@ h1, h2{
     font-weight: bold;
 }
 
+.nav{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item{
+    padding: 5px 10px;
+    border: 0.25px solid #333;
+    height: auto;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.active{
+    background-color: #0b95dd;
+}
+
+.active a{
+    color: #fff;
+}
+
+.nav-item:hover{
+    box-shadow: 0 0 10px rgba(161, 161, 161, 0.822);
+}
+
+.nav-item:last-child {
+    font-size: 14px;
+    margin: 0px 0px 0px auto;
+    border: none;
+}
+
+.updated{
+    margin: 0;
+}
+
 .container {
     background: #fff;
     width: 70%;
@@ -62,11 +103,6 @@ table tbody tr:nth-child(odd) {
 
 table tbody tr:hover {
     background-color: #ddd;
-}
-
-.actualizado{
-    font-size: 12px;
-    text-align: right;
 }
 
 @media screen and (max-width: 1350px) {
