@@ -24,8 +24,8 @@ scorers.forEach((scorer, index) => {
     }
     row.appendChild(positionField);
 
-    row.appendChild(appendField(scorer.team));
     row.appendChild(appendField(scorer.name));
+    row.appendChild(appendField(scorer.team));
     row.appendChild(appendField(scorer.goals));
     row.children[3].classList.add("lastColumnRows");
 
