@@ -19,17 +19,17 @@ const grupoB = [
 function createRow(team, index){
     const row = document.createElement("tr");
 
-    const celdaPos = document.createElement("td");
+    const positionField = document.createElement("td");
     const pos = index + 1;
     if(pos <= 2){
-      celdaPos.style.borderLeft = "4px solid";
-      celdaPos.style.borderLeftColor = "#0b95dd";
+      positionField.style.borderLeft = "4px solid";
+      positionField.style.borderLeftColor = "#0b95dd";
     }
-    celdaPos.textContent = pos;
-    row.appendChild(celdaPos);
+    positionField.textContent = pos;
+    row.appendChild(positionField);
 
-    const celdaTeam = document.createElement("td");
-    celdaTeam.style.width = "280px";
+    const teamField = document.createElement("td");
+    teamField.style.width = "280px";
     const difPos = team.lastPos - pos;
     const leftText = document.createElement("span");
     leftText.textContent = team.team;
@@ -61,43 +61,43 @@ function createRow(team, index){
     rightText.style.display = "inline-block";
     rightText.style.width = "50%";
     rightText.style.textAlign = "right";
-    celdaTeam.appendChild(leftText);
-    celdaTeam.appendChild(rightText);
-    row.appendChild(celdaTeam);
+    teamField.appendChild(leftText);
+    teamField.appendChild(rightText);
+    row.appendChild(teamField);
 
-    const celdaPJ = document.createElement("td");
-    celdaPJ.textContent = team.PJ;
-    row.appendChild(celdaPJ);
+    const PJField = document.createElement("td");
+    PJField.textContent = team.PJ;
+    row.appendChild(PJField);
     
-    const celdaPG = document.createElement("td");
-    celdaPG.textContent = team.PG;
-    row.appendChild(celdaPG);
+    const PGField = document.createElement("td");
+    PGField.textContent = team.PG;
+    row.appendChild(PGField);
 
-    const celdaPE = document.createElement("td");
-    celdaPE.textContent = team.PE;
-    row.appendChild(celdaPE);
+    const PEField = document.createElement("td");
+    PEField.textContent = team.PE;
+    row.appendChild(PEField);
     
-    const celdaPP = document.createElement("td");
-    celdaPP.textContent = team.PP;
-    row.appendChild(celdaPP);
+    const PPField = document.createElement("td");
+    PPField.textContent = team.PP;
+    row.appendChild(PPField);
 
-    const celdaGF = document.createElement("td");
-    celdaGF.textContent = team.GF;
-    row.appendChild(celdaGF);
+    const GFField = document.createElement("td");
+    GFField.textContent = team.GF;
+    row.appendChild(GFField);
     
-    const celdaGC = document.createElement("td");
-    celdaGC.textContent = team.GC;
-    row.appendChild(celdaGC);
+    const GCField = document.createElement("td");
+    GCField.textContent = team.GC;
+    row.appendChild(GCField);
 
-    const celdaGD = document.createElement("td");
-    celdaGD.textContent = team.GD;
-    celdaGD.style.fontWeight = "bold";
+    const GDField = document.createElement("td");
+    GDField.textContent = team.GD;
+    GDField.style.fontWeight = "bold";
     if(team.GD > 0){
-      celdaGD.style.color = "green";
+      GDField.style.color = "green";
     }else if(team.GD < 0){
-      celdaGD.style.color = "red";
+      GDField.style.color = "red";
     }
-    row.appendChild(celdaGD);
+    row.appendChild(GDField);
 
     const pointsField = document.createElement("td");
     pointsField.textContent = team.Pts;
@@ -118,8 +118,8 @@ function processGroupB(team, index) {
 };
 
 function calculatePointsGoalsMatches(team){
-    const puntos = team.PG * 3;
-    team.Pts = team.PE ? (puntos + team.PE) : puntos;
+    const points = team.PG * 3;
+    team.Pts = team.PE ? (points + team.PE) : points;
 
     const gd = team.GF - team.GC;
     team.GD = gd > 0 ? `+${gd}` : gd;
