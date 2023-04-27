@@ -16,13 +16,12 @@ function appendSpan(value, difPos, isLeft = true){
         difPosSpan.style.marginRight = "5px";
         if(difPos < 0){
             triangle.classList.add("redTriangle");
-            difPosSpan.textContent = `${Math.abs(difPos)}`;
             span.style.color = "red";
         }else if(difPos > 0){
             triangle.classList.add("greenTriangle");
-            difPosSpan.textContent = `${Math.abs(difPos)}`;
             span.style.color = "green";
         }
+        if(difPos !== 0) difPosSpan.textContent = `${Math.abs(difPos)}`;
         span.appendChild(triangle);
         span.appendChild(difPosSpan);
         span.classList.add("rightText");
