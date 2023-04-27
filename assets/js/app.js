@@ -22,8 +22,7 @@ function createRow(team, index){
     const positionField = document.createElement("td");
     const pos = index + 1;
     if(pos <= 2){
-      positionField.style.borderLeft = "4px solid";
-      positionField.style.borderLeftColor = "#0b95dd";
+      positionField.classList.add("qualifiedToChampions");
     }
     positionField.textContent = pos;
     row.appendChild(positionField);
@@ -33,34 +32,25 @@ function createRow(team, index){
     const difPos = team.lastPos - pos;
     const leftText = document.createElement("span");
     leftText.textContent = team.team;
-    leftText.style.display = "inline-block";
-    leftText.style.width = "50%";
-    leftText.style.textAlign = "left";
+    leftText.classList.add("leftText");
 
     const rightText = document.createElement("span");
     const triangle = document.createElement("span");
-    triangle.style.display = "inline-block";
-    triangle.style.width = "0";
-    triangle.style.height = "0";
-    triangle.style.borderLeft = "5px solid transparent";
-    triangle.style.borderRight = "5px solid transparent";
-    triangle.style.marginRight = "5px";
+    triangle.classList.add("triangle");
     const difPosSpan = document.createElement("span");
     difPosSpan.style.marginRight = "5px";
     if(difPos < 0){
-      triangle.style.borderTop = "5px solid red";
+      triangle.classList.add("redTriangle");
       difPosSpan.textContent = `${Math.abs(difPos)}`;
       rightText.style.color = "red";
     }else if(difPos > 0){
-      triangle.style.borderBottom = "5px solid green";
+      triangle.classList.add("greenTriangle");
       difPosSpan.textContent = `${Math.abs(difPos)}`;
       rightText.style.color = "green";
     }
     rightText.appendChild(triangle);
     rightText.appendChild(difPosSpan);
-    rightText.style.display = "inline-block";
-    rightText.style.width = "50%";
-    rightText.style.textAlign = "right";
+    rightText.classList.add("rightText");
     teamField.appendChild(leftText);
     teamField.appendChild(rightText);
     row.appendChild(teamField);
