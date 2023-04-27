@@ -1,5 +1,4 @@
-import { appendField } from "./common.js";
-import { sortByGoals } from "./common.js";
+import { appendField, sortByGoals } from "./common.js";
 
 const scorers = [
     { team: "Peñarol", name: "Rhuan Gomez", goals: 9 },

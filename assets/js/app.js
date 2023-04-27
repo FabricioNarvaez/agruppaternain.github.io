@@ -1,5 +1,4 @@
-import { appendField } from "./common.js";
-import { sortByGoals } from "./common.js";
+import { appendField, sortByGoals, appendSpan } from "./common.js";
 
 const groupA = [
   { team: "Los Panas",      PG: 4, PE: 0, PP: 0, GF: 23,  GC: 6, lastPos: 1},
@@ -31,29 +30,8 @@ function createRow(team, index){
     const teamField = document.createElement("td");
     teamField.style.width = "280px";
     const difPos = team.lastPos - pos;
-    const leftText = document.createElement("span");
-    leftText.textContent = team.team;
-    leftText.classList.add("leftText");
-
-    const rightText = document.createElement("span");
-    const triangle = document.createElement("span");
-    triangle.classList.add("triangle");
-    const difPosSpan = document.createElement("span");
-    difPosSpan.style.marginRight = "5px";
-    if(difPos < 0){
-      triangle.classList.add("redTriangle");
-      difPosSpan.textContent = `${Math.abs(difPos)}`;
-      rightText.style.color = "red";
-    }else if(difPos > 0){
-      triangle.classList.add("greenTriangle");
-      difPosSpan.textContent = `${Math.abs(difPos)}`;
-      rightText.style.color = "green";
-    }
-    rightText.appendChild(triangle);
-    rightText.appendChild(difPosSpan);
-    rightText.classList.add("rightText");
-    teamField.appendChild(leftText);
-    teamField.appendChild(rightText);
+    teamField.appendChild(appendSpan(team.team));
+    teamField.appendChild(appendSpan("", difPos, false));
     row.appendChild(teamField);
 
     row.appendChild(appendField(team.PJ));
