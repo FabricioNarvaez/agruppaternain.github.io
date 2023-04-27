@@ -1,3 +1,6 @@
+import { appendField } from "./common.js";
+import { sortByGoals } from "./common.js";
+
 const scorers = [
     { team: "Peñarol", name: "Rhuan Gomez", goals: 9 },
     { team: "Panas", name: "Ronis Benitez", goals: 10 },
@@ -5,16 +8,6 @@ const scorers = [
     { team: "El Valle", name: "Joel Villena", goals: 5 },
     { team: "Comboloco", name: "Yesid Salcedo", goals: 4 },
 ];
-
-function sortByGoals(a, b){
-    if(a.goals > b.goals){
-        return -1;
-    }else if(a.goals < b.goals){
-        return 1;
-    }else{
-        return 0;
-    }
-}
 
 scorers.sort(sortByGoals);
 scorers.forEach((scorer, index) => {
@@ -31,18 +24,10 @@ scorers.forEach((scorer, index) => {
     }
     row.appendChild(positionField);
 
-    const playerField = document.createElement("td");
-    playerField.textContent = scorer.name;
-    row.appendChild(playerField);
-
-    const teamField = document.createElement("td");
-    teamField.textContent = scorer.team;
-    row.appendChild(teamField);
-
-    const goalsField = document.createElement("td");
-    goalsField.textContent = scorer.goals;
-    goalsField.classList.add("lastColumnRows");
-    row.appendChild(goalsField);
+    row.appendChild(appendField(scorer.team));
+    row.appendChild(appendField(scorer.name));
+    row.appendChild(appendField(scorer.goals));
+    row.children[3].classList.add("lastColumnRows");
 
     scorrersTable.appendChild(row);
 });

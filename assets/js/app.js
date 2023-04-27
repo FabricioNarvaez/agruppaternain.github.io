@@ -1,3 +1,5 @@
+import { appendField } from "./common.js";
+
 const groupA = [
   { team: "Los Panas",      PG: 4, PE: 0, PP: 0, GF: 23,  GC: 6, lastPos: 1},
   { team: "Peñarol",        PG: 2, PE: 0, PP: 3, GF: 21,  GC: 21, lastPos: 3},
@@ -19,13 +21,11 @@ const grupoB = [
 function createRow(team, index){
     const row = document.createElement("tr");
 
-    const positionField = document.createElement("td");
     const pos = index + 1;
+    row.appendChild(appendField(pos));
     if(pos <= 2){
-      positionField.classList.add("qualifiedToChampions");
+      row.children[0].classList.add("qualifiedToChampions");
     }
-    positionField.textContent = pos;
-    row.appendChild(positionField);
 
     const teamField = document.createElement("td");
     teamField.style.width = "280px";
@@ -55,44 +55,23 @@ function createRow(team, index){
     teamField.appendChild(rightText);
     row.appendChild(teamField);
 
-    const PJField = document.createElement("td");
-    PJField.textContent = team.PJ;
-    row.appendChild(PJField);
-    
-    const PGField = document.createElement("td");
-    PGField.textContent = team.PG;
-    row.appendChild(PGField);
+    row.appendChild(appendField(team.PJ));
+    row.appendChild(appendField(team.PG));
+    row.appendChild(appendField(team.PE));
+    row.appendChild(appendField(team.PP));
+    row.appendChild(appendField(team.GF));
+    row.appendChild(appendField(team.GC));
 
-    const PEField = document.createElement("td");
-    PEField.textContent = team.PE;
-    row.appendChild(PEField);
-    
-    const PPField = document.createElement("td");
-    PPField.textContent = team.PP;
-    row.appendChild(PPField);
-
-    const GFField = document.createElement("td");
-    GFField.textContent = team.GF;
-    row.appendChild(GFField);
-    
-    const GCField = document.createElement("td");
-    GCField.textContent = team.GC;
-    row.appendChild(GCField);
-
-    const GDField = document.createElement("td");
-    GDField.textContent = team.GD;
-    GDField.style.fontWeight = "bold";
+    row.appendChild(appendField(team.GD));
+    row.children[8].style.fontWeight = "bold";
     if(team.GD > 0){
-      GDField.style.color = "green";
+      row.children[8].style.color = "green";
     }else if(team.GD < 0){
-      GDField.style.color = "red";
+      row.children[8].style.color = "red";
     }
-    row.appendChild(GDField);
 
-    const pointsField = document.createElement("td");
-    pointsField.textContent = team.Pts;
-    pointsField.classList.add("lastColumnRows");
-    row.appendChild(pointsField);
+    row.appendChild(appendField(team.Pts));
+    row.children[9].classList.add("lastColumnRows");
 
     return row;
 }
