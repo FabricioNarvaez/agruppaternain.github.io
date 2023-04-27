@@ -21,23 +21,23 @@ scorers.forEach((scorer, index) => {
     const scorrersTable = document.getElementById("scorersTable");
     const row = document.createElement("tr");
 
-    const celdaPos = document.createElement("td");
+    const positionField = document.createElement("td");
     const pos = index + 1;
     if(pos === 1){
-        celdaPos.style.background = "url(https://e00-marca.uecdn.es/assets/v31/img/estaticas/trofeos/first-mobile.svg) no-repeat center center";
-        celdaPos.style.backgroundSize = "auto 100%";
+        positionField.style.background = "url(https://e00-marca.uecdn.es/assets/v31/img/estaticas/trofeos/first-mobile.svg) no-repeat center center";
+        positionField.style.backgroundSize = "auto 100%";
     }else{
-        celdaPos.textContent = pos;
+        positionField.textContent = pos;
     }
-    row.appendChild(celdaPos);
+    row.appendChild(positionField);
 
-    const celdaPlayer = document.createElement("td");
-    celdaPlayer.textContent = scorer.name;
-    row.appendChild(celdaPlayer);
+    const playerField = document.createElement("td");
+    playerField.textContent = scorer.name;
+    row.appendChild(playerField);
 
-    const celdaTeam = document.createElement("td");
-    celdaTeam.textContent = scorer.team;
-    row.appendChild(celdaTeam);
+    const teamField = document.createElement("td");
+    teamField.textContent = scorer.team;
+    row.appendChild(teamField);
 
     const goalsField = document.createElement("td");
     goalsField.textContent = scorer.goals;
