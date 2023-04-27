@@ -1,4 +1,6 @@
-let groupA = [
+import { appendField, sortByGoals, appendSpan } from "./common.js";
+
+const groupA = [
   { team: "Los Panas",      PG: 4, PE: 0, PP: 0, GF: 23,  GC: 6, lastPos: 1},
   { team: "Peñarol",        PG: 2, PE: 0, PP: 3, GF: 21,  GC: 21, lastPos: 3},
   { team: "Comboloco",      PG: 4, PE: 0, PP: 0, GF: 22,  GC: 3, lastPos: 2},
@@ -7,7 +9,7 @@ let groupA = [
   { team: "Golden",         PG: 0, PE: 0, PP: 5, GF: 2,   GC: 30, lastPos: 6}
 ];
 
-let grupoB = [
+const grupoB = [
   { team: "Impersiva",      PG: 2, PE: 0, PP: 3, GF: 9,   GC: 14, lastPos: 4},
   { team: "Estella",        PG: 0, PE: 2, PP: 3, GF: 5,   GC: 10, lastPos: 5},
   { team: "Cancheritos",    PG: 0, PE: 1, PP: 4, GF: 7,   GC: 16, lastPos: 6},
@@ -17,113 +19,57 @@ let grupoB = [
 ];
 
 function createRow(team, index){
-    let row = document.createElement("tr");
+    const row = document.createElement("tr");
 
-    let celdaPos = document.createElement("td");
-    let pos = index + 1;
+    const pos = index + 1;
+    row.appendChild(appendField(pos));
     if(pos <= 2){
-      celdaPos.style.borderLeft = "4px solid";
-      celdaPos.style.borderLeftColor = "#0b95dd";
+      row.children[0].classList.add("qualifiedToChampions");
     }
-    celdaPos.textContent = pos;
-    row.appendChild(celdaPos);
 
-    let celdaTeam = document.createElement("td");
-    celdaTeam.style.width = "280px";
-    let difPos = team.lastPos - pos;
-    let leftText = document.createElement("span");
-    leftText.textContent = team.team;
-    leftText.style.display = "inline-block";
-    leftText.style.width = "50%";
-    leftText.style.textAlign = "left";
+    const teamField = document.createElement("td");
+    teamField.style.width = "280px";
+    const difPos = team.lastPos - pos;
+    teamField.appendChild(appendSpan(team.team));
+    teamField.appendChild(appendSpan("", difPos, false));
+    row.appendChild(teamField);
 
-    let rightText = document.createElement("span");
-    let triangle = document.createElement("span");
-    triangle.style.display = "inline-block";
-    triangle.style.width = "0";
-    triangle.style.height = "0";
-    triangle.style.borderLeft = "5px solid transparent";
-    triangle.style.borderRight = "5px solid transparent";
-    triangle.style.marginRight = "5px";
-    let difPosSpan = document.createElement("span");
-    difPosSpan.style.marginRight = "5px";
-    if(difPos < 0){
-      triangle.style.borderTop = "5px solid red";
-      difPosSpan.textContent = `${Math.abs(difPos)}`;
-      rightText.style.color = "red";
-    }else if(difPos > 0){
-      triangle.style.borderBottom = "5px solid green";
-      difPosSpan.textContent = `${Math.abs(difPos)}`;
-      rightText.style.color = "green";
-    }
-    rightText.appendChild(triangle);
-    rightText.appendChild(difPosSpan);
-    rightText.style.display = "inline-block";
-    rightText.style.width = "50%";
-    rightText.style.textAlign = "right";
-    celdaTeam.appendChild(leftText);
-    celdaTeam.appendChild(rightText);
-    row.appendChild(celdaTeam);
+    row.appendChild(appendField(team.PJ));
+    row.appendChild(appendField(team.PG));
+    row.appendChild(appendField(team.PE));
+    row.appendChild(appendField(team.PP));
+    row.appendChild(appendField(team.GF));
+    row.appendChild(appendField(team.GC));
 
-    let celdaPJ = document.createElement("td");
-    celdaPJ.textContent = team.PJ;
-    row.appendChild(celdaPJ);
-    
-    let celdaPG = document.createElement("td");
-    celdaPG.textContent = team.PG;
-    row.appendChild(celdaPG);
-
-    let celdaPE = document.createElement("td");
-    celdaPE.textContent = team.PE;
-    row.appendChild(celdaPE);
-    
-    let celdaPP = document.createElement("td");
-    celdaPP.textContent = team.PP;
-    row.appendChild(celdaPP);
-
-    let celdaGF = document.createElement("td");
-    celdaGF.textContent = team.GF;
-    row.appendChild(celdaGF);
-    
-    let celdaGC = document.createElement("td");
-    celdaGC.textContent = team.GC;
-    row.appendChild(celdaGC);
-
-    let celdaGD = document.createElement("td");
-    celdaGD.textContent = team.GD;
-    celdaGD.style.fontWeight = "bold";
+    row.appendChild(appendField(team.GD));
+    row.children[8].style.fontWeight = "bold";
     if(team.GD > 0){
-      celdaGD.style.color = "green";
+      row.children[8].style.color = "green";
     }else if(team.GD < 0){
-      celdaGD.style.color = "red";
+      row.children[8].style.color = "red";
     }
-    row.appendChild(celdaGD);
 
-    let celdaPuntos = document.createElement("td");
-    celdaPuntos.textContent = team.Pts;
-    celdaPuntos.style.fontWeight = "bold";
-    celdaPuntos.style.color = "white";
-    celdaPuntos.style.backgroundColor = "#818181";
-    row.appendChild(celdaPuntos);
+    row.appendChild(appendField(team.Pts));
+    row.children[9].classList.add("lastColumnRows");
 
     return row;
 }
 
 function processGroupA(team, index) {
-    let bodyTableA = document.getElementById("groupA");
+    const bodyTableA = document.getElementById("groupA");
     bodyTableA.appendChild(createRow(team, index));
 };
 
 function processGroupB(team, index) {
-    let bodyTableB = document.getElementById("groupB");
+    const bodyTableB = document.getElementById("groupB");
     bodyTableB.appendChild(createRow(team, index));
 };
 
 function calculatePointsGoalsMatches(team){
-    let puntos = team.PG * 3;
-    team.Pts = team.PE ? (puntos + team.PE) : puntos;
+    const points = team.PG * 3;
+    team.Pts = team.PE ? (points + team.PE) : points;
 
-    let gd = team.GF - team.GC;
+    const gd = team.GF - team.GC;
     team.GD = gd > 0 ? `+${gd}` : gd;
 
     team.PJ = team.PG + team.PE + team.PP;
@@ -135,13 +81,7 @@ function sortByPointsAndGoals(a, b) {
     } else if (a.Pts < b.Pts) {
       return 1;
     } else {
-      if (a.GD > b.GD) {
-        return -1;
-      } else if (a.GD < b.GD) {
-        return 1;
-      } else {
-        return 0;
-      }
+      return sortByGoals(a, b);
     }
 }
 
