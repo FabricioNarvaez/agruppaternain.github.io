@@ -105,6 +105,10 @@ table tbody tr:hover {
     background-color: #ddd;
 }
 
+.lastColumnHeader{
+    background-color: #eb9114;
+}
+
 .img-uefa{
     width: 100%;
     height: auto;
