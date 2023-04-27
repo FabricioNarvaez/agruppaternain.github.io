@@ -1,4 +1,5 @@
 import { appendField } from "./common.js";
+import { sortByGoals } from "./common.js";
 
 const groupA = [
   { team: "Los Panas",      PG: 4, PE: 0, PP: 0, GF: 23,  GC: 6, lastPos: 1},
@@ -102,13 +103,7 @@ function sortByPointsAndGoals(a, b) {
     } else if (a.Pts < b.Pts) {
       return 1;
     } else {
-      if (a.GD > b.GD) {
-        return -1;
-      } else if (a.GD < b.GD) {
-        return 1;
-      } else {
-        return 0;
-      }
+      return sortByGoals(a, b);
     }
 }
 
