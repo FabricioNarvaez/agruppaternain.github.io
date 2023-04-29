@@ -4,8 +4,8 @@ const groupA = [
   { team: "Los Panas",      PG: 4, PE: 0, PP: 0, GF: 23,  GC: 6, lastPos: 1},
   { team: "Peñarol",        PG: 2, PE: 0, PP: 3, GF: 21,  GC: 21, lastPos: 3},
   { team: "Comboloco",      PG: 4, PE: 0, PP: 0, GF: 22,  GC: 3, lastPos: 2},
-  { team: "Los Rumberos",   PG: 1, PE: 0, PP: 3, GF: 13,  GC: 26, lastPos: 5},
-  { team: "Latin Brothers", PG: 2, PE: 0, PP: 2, GF: 14,   GC: 10, lastPos: 4},
+  { team: "Los Rumberos",   PG: 1, PE: 0, PP: 4, GF: 14,  GC: 38, lastPos: 5},
+  { team: "Latin Brothers", PG: 3, PE: 0, PP: 2, GF: 26,   GC: 11, lastPos: 3},
   { team: "Golden",         PG: 0, PE: 0, PP: 5, GF: 2,   GC: 30, lastPos: 6}
 ];
 
