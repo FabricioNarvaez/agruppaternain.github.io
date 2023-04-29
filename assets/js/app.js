@@ -18,7 +18,7 @@ const grupoB = [
   { team: "Amistad",        PG: 4, PE: 0, PP: 1, GF: 13,   GC: 9, lastPos: 2}
 ];
 
-function createRow(team, index){
+function createRow(team, index, groupA = false){
     const row = document.createElement("tr");
 
     const pos = index + 1;
@@ -48,8 +48,11 @@ function createRow(team, index){
     }else if(team.GD < 0){
       row.children[8].style.color = "red";
     }
-
-    row.appendChild(appendField(team.Pts));
+    let pts = team.Pts;
+    if(groupA){
+      pts = pts + 3;
+    }
+    row.appendChild(appendField(pts));
     row.children[9].classList.add("lastColumnRows");
 
     return row;
@@ -57,7 +60,7 @@ function createRow(team, index){
 
 function processGroupA(team, index) {
     const bodyTableA = document.getElementById("groupA");
-    bodyTableA.appendChild(createRow(team, index));
+    bodyTableA.appendChild(createRow(team, index, true));
 };
 
 function processGroupB(team, index) {
