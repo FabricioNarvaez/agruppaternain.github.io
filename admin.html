@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="assets/css/styles.css" /><link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container container-index">
+        <h1>Nuevos Resultados</h1>
+        <div class="buttons">
+			<a href="index.html">Ir inicio</a>
+		</div>
+        <div id="results-container">
+            <h2 class="title-admin">Grupo A</h2>
+            <div class="container_select">
+                <div class="local">
+                    <select id="opcionesLocalA" class="selector">
+                        <option value="">Selecciona una opción</option>
+                    </select>
+                    <input class="goals" type="text" id="goalsLocalA" placeholder="Goles Local">
+                </div>
+                <h3>vs</h3>
+                <div class="visitante">
+                    <select id="opcionesVisitanteA" class="selector">
+                        <option value="">Selecciona una opción</option>
+                    </select>
+                    <input class="goals" type="text" id="goalsVisitanteA" placeholder="Goles Visitante">
+                </div>
+            </div>
+            <hr>
+            <h2 class="title-admin">Grupo B</h2>
+            <div class="container_select">
+                <div class="local">
+                    <select id="opcionesLocalB" class="selector">
+                        <option value="">Selecciona una opción</option>
+                    </select>
+                    <input class="goals" type="text" id="goalsLocalB" placeholder="Goles Local">
+                </div>
+                <h3>vs</h3>
+                <div class="visitante">
+                    <select id="opcionesVisitanteB" class="selector">
+                        <option value="">Selecciona una opción</option>
+                    </select>
+                    <input class="goals" type="text" id="goalsVisitanteB" placeholder="Goles Visitante">
+                </div>
+            </div>
+            <button id="send" class="send-button buttons">Enviar</button>
+        </div>
+        <div id="data-error"></div>
+    </div>
+    <div id="cookie-message" class="cookie-container">
+        <p>Utilizamos cookies para mejorar la experiencia del usuario en nuestro sitio web. Al continuar navegando, usted acepta nuestra política de cookies.</p>
+        <button id="accept-cookies" class="accept-cookies">Aceptar</button>
+    </div>
+    <script src="assets/js/cookie.js" type="module"></script>
+    <script src="assets/js/validateToken.js" type="module"></script>
+    <script src="assets/js/loadData.js" type="module"></script>
+</body>
+</html>
