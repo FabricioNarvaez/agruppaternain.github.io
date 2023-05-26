@@ -12,7 +12,7 @@ function createRow(team, index){
     teamField.style.width = "280px";
     const difPos = team.lastPos - pos;
     teamField.appendChild(appendSpan(team.team));
-    // teamField.appendChild(appendSpan("", difPos, false));
+    teamField.appendChild(appendSpan("", difPos, false));
     row.appendChild(teamField);
 
     row.appendChild(appendField(team.PJ));
