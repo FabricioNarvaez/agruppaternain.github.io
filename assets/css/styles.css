@@ -8,34 +8,43 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     font-family: "Kanit", sans-serif;
+    background-color: #fff;
+    height: 100vh;
 }
 
-h1, h2{
+h1, h2, body{
     margin: 0px;
+}
+
+.header{
+    padding: 20px;
+    background-color: #0b95dd;
 }
 
 .titles {
     text-align: center;
     font-weight: bold;
+    color: #333;
 }
 
 .nav{
-    margin-top: 20px;
+    margin: 20px auto 0px auto;
+    text-align: center;
     display: flex;
+    justify-content: center;
     gap: 20px;
 }
 
 .nav-item{
     padding: 5px 10px;
-    border: 0.25px solid #333;
     height: auto;
 }
 
 .nav-item a{
     text-decoration: none;
-    color: #333;
     font-size: 16px;
     font-weight: bold;
+    color: #fff;
 }
 
 .active{
@@ -43,29 +52,28 @@ h1, h2{
 }
 
 .active a{
-    color: #fff;
+    border-bottom: 3px solid #fff;
 }
+
+/* TODO: replace hover efect */
 
 .nav-item:hover{
     box-shadow: 0 0 10px rgba(161, 161, 161, 0.822);
 }
 
-.nav-item:last-child {
-    font-size: 14px;
-    margin: 0px 0px 0px auto;
-    border: none;
+.nav-item .admin{
+    color: #ffb043;
 }
 
-.updated{
-    margin: 0;
+.subtitle{
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .container {
     background: #fff;
     width: 70%;
-    margin: 40px auto;
-    padding: 20px 0px 40px 0px;
-    box-shadow: 0 0 10px rgba(161, 161, 161, 0.822);
+    margin: 30px auto;
     border-radius: 10px;
 }
 
@@ -226,8 +234,5 @@ table tbody tr:hover {
 
     .nav-item a{
         font-size: 14px;
-    }
-    .nav-item:last-child {
-        display: none;
     }
 }
