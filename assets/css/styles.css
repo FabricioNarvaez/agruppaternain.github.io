@@ -260,8 +260,7 @@ table tbody tr:hover {
         padding: 5px;
     }
 
-    .container,
-    .containerGroup {
+    .container{
         width: 95%;
     }
 

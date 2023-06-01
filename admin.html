@@ -36,48 +36,50 @@
 			</div>
 		</div>
 	</div>
-    <div class="container container-index">
-        <h1>Nuevos Resultados</h1>
-        <div class="buttons">
-			<a href="index.html">Ir inicio</a>
-		</div>
-        <div id="results-container">
-            <h2 class="title-admin">Grupo A</h2>
-            <div class="container_select">
-                <div class="local">
-                    <select id="opcionesLocalA" class="selector">
-                        <option value="">Selecciona una opción</option>
-                    </select>
-                    <input class="goals" type="text" id="goalsLocalA" placeholder="Goles Local">
-                </div>
-                <h3>vs</h3>
-                <div class="visitante">
-                    <select id="opcionesVisitanteA" class="selector">
-                        <option value="">Selecciona una opción</option>
-                    </select>
-                    <input class="goals" type="text" id="goalsVisitanteA" placeholder="Goles Visitante">
-                </div>
+    <div class="container">
+		<div class="containerGroup">
+			<h2 class="subtitle">Nuevos Resultados</h2>
+            <div class="buttons">
+                <a href="index.html">Ir inicio</a>
             </div>
-            <hr>
-            <h2 class="title-admin">Grupo B</h2>
-            <div class="container_select">
-                <div class="local">
-                    <select id="opcionesLocalB" class="selector">
-                        <option value="">Selecciona una opción</option>
-                    </select>
-                    <input class="goals" type="text" id="goalsLocalB" placeholder="Goles Local">
+            <div id="results-container">
+                <h2 class="title-admin">Grupo A</h2>
+                <div class="container_select">
+                    <div class="local">
+                        <select id="opcionesLocalA" class="selector">
+                            <option value="">Selecciona una opción</option>
+                        </select>
+                        <input class="goals" type="text" id="goalsLocalA" placeholder="Goles Local">
+                    </div>
+                    <h3>vs</h3>
+                    <div class="visitante">
+                        <select id="opcionesVisitanteA" class="selector">
+                            <option value="">Selecciona una opción</option>
+                        </select>
+                        <input class="goals" type="text" id="goalsVisitanteA" placeholder="Goles Visitante">
+                    </div>
                 </div>
-                <h3>vs</h3>
-                <div class="visitante">
-                    <select id="opcionesVisitanteB" class="selector">
-                        <option value="">Selecciona una opción</option>
-                    </select>
-                    <input class="goals" type="text" id="goalsVisitanteB" placeholder="Goles Visitante">
+                <hr>
+                <h2 class="title-admin">Grupo B</h2>
+                <div class="container_select">
+                    <div class="local">
+                        <select id="opcionesLocalB" class="selector">
+                            <option value="">Selecciona una opción</option>
+                        </select>
+                        <input class="goals" type="text" id="goalsLocalB" placeholder="Goles Local">
+                    </div>
+                    <h3>vs</h3>
+                    <div class="visitante">
+                        <select id="opcionesVisitanteB" class="selector">
+                            <option value="">Selecciona una opción</option>
+                        </select>
+                        <input class="goals" type="text" id="goalsVisitanteB" placeholder="Goles Visitante">
+                    </div>
                 </div>
+                <button id="send" class="send-button buttons">Enviar</button>
             </div>
-            <button id="send" class="send-button buttons">Enviar</button>
+            <div id="data-error"></div>
         </div>
-        <div id="data-error"></div>
     </div>
     <div id="cookie-message" class="cookie-container">
         <p>Utilizamos cookies para mejorar la experiencia del usuario en nuestro sitio web. Al continuar navegando, usted acepta nuestra política de cookies.</p>
