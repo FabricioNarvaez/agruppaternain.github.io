@@ -1,5 +1,5 @@
 import { url } from './url.js';
-const urlToken = `${url}/token`;
+const urlToken = `${url}token`;
 
 const cookies = document.cookie.split(";");
 let token;

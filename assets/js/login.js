@@ -1,5 +1,5 @@
 import { url } from "./url.js";
-const urlLogin = `${url}/login`;
+const urlLogin = `${url}login`;
 
 const loginButton = document.getElementById("login-button");
 loginButton.addEventListener("click", () => {

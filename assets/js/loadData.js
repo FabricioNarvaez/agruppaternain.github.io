@@ -1,7 +1,7 @@
 import { url } from './url.js';
 
 (async ()=> {
-    const response = await fetch(`${url}/api/teams`);
+    const response = await fetch(`${url}api/teams`);
     const {teamsGroupA, teamsGroupB} = await response.json();
 
     const selectLocalA = document.getElementById('opcionesLocalA');
