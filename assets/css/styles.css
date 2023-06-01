@@ -228,11 +228,11 @@ table tbody tr:hover {
 
 @media screen and (max-width: 1350px) {
     .container {
-        width: 80%;
+        width: 90%;
     }
 
     .containerGroup {
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -247,12 +247,12 @@ table tbody tr:hover {
         font-size: 20px;
     }
     table {
-        font-size: 12px;
+        font-size: 14px;
         width: 100%;
     }
 
     table thead th {
-        font-size: 12px;
+        font-size: 14px;
         width: 5px !important;
     }
 
