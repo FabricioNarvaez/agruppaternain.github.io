@@ -210,7 +210,7 @@ table tbody tr:hover {
     line-height: 1.5;
 }
 
-.cookie-container button {
+.button {
     display: block;
     margin: 10px auto 0;
     padding: 5px 10px;
