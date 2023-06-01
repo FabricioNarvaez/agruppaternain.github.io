@@ -20,9 +20,9 @@ fetch(urlToken, {
 })
 .then((response) => {
   if (!response.ok) {
-      window.location.href = "login.html";
+    window.location.href = "login.html";
   }else{
-      return response.json();
+    return response.json();
   }
 })
 .then((data) => console.log(data))
