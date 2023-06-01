@@ -25,9 +25,7 @@ function getCookie(name) {
 function checkCookie() {
   const cookieAccepted = getCookie('cookieAccepted');
   if (!cookieAccepted) {
-    cookieMessage.style.display = 'block';
-  }else{
-    cookieMessage.style.display = 'none';
+    cookieMessage.classList.remove('hidden');
   }
 }
 

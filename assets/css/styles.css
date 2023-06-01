@@ -226,6 +226,10 @@ table tbody tr:hover {
     background-color: #0062cc;
 }
 
+.hidden{
+    display: none;
+}
+
 @media screen and (max-width: 1350px) {
     .container {
         width: 90%;
