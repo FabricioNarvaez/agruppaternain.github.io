@@ -15,35 +15,35 @@
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
+	<div class="header">
+		<div class="titles">
+			<h1>Agrupación Amigos por el Deporte</h1>
+		</div>
+		<div class="nav">
+			<div class="nav-item">
+				<a href="index.html">INICIO</a>
+			</div>	
+			<div class="nav-item active">
+				<a href="champions.html">CHAMPIONS</a>
+			</div>	
+			<div class="nav-item">
+				<a href="uefa.html">UEFA</a>
+			</div>	
+			<div class="nav-item">
+				<a href="scorer.html">PICHICHI</a>
+			</div>
+			<div class="nav-item">
+				<a class="admin" href="admin.html">ADMIN</a>
+			</div>
+		</div>
+	</div>
 	<div class="container">
 		<div class="containerGroup">
-			<div class="titles">
-				<h1>Agrupación Amigos por el Deporte</h1>
-				<h2>Tabla de Clasificación</h2>
-			</div>
-			<div class="nav">
-				<div class="nav-item">
-					<a href="index.html">Inicio</a>
-				</div>	
-				<div class="nav-item active">
-					<a href="champions.html">Champions</a>
-				</div>	
-				<div class="nav-item">
-					<a href="uefa.html">UEFA</a>
-				</div>		
-				<div class="nav-item">
-					<a href="scorer.html">Pichichi</a>
-				</div>
-				<div class="nav-item">
-					<p class="updated">Actualizado 02/05/2023 18:35</p>
-				</div>
-			</div>
-			<hr>
+			<picture>
+				<source media="(min-width: 900px)" srcset="assets/img/champions-pc.jpg">
+				<img src="assets/img/champions-mobile.jpg" alt="UEFA" title="Eliminatorias de la sección de Champions" class="img-uefa">
+			</picture>
 		</div>
-		<picture>
-            <source media="(min-width: 900px)" srcset="assets/img/champions-pc.jpg">
-            <img src="assets/img/champions-mobile.jpg" alt="UEFA" title="Eliminatorias de la sección de Champions" class="img-uefa">
-        </picture>
 	</div>
 </body>
 </html>
