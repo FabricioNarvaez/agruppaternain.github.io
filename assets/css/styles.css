@@ -193,6 +193,7 @@ table tbody tr:hover {
     display: inline-block;
     width: 50%;
     text-align: left;
+    font-weight: bold;
 }
 
 .rightText {
