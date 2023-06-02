@@ -15,28 +15,35 @@
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class="header">
+	<header class="header">
 		<div class="title">
 			<h1>Agrupación Amigos por el Deporte</h1>
 		</div>
-		<div class="nav">
-			<div class="nav-item">
-				<a href="index.html" title="Página de inicio">INICIO</a>
-			</div>	
-			<div class="nav-item">
-				<a href="champions.html" title="Página del grupo Champions">CHAMPIONS</a>
-			</div>	
-			<div class="nav-item active">
-				<a href="uefa.html" title="Página del grupo UEFA">UEFA</a>
-			</div>	
-			<div class="nav-item">
-				<a href="scorer.html" title="Página de los goleadores del torneo">PICHICHI</a>
+		<nav class="navbar">
+			<div class="menuIcon">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
 			</div>
-			<div class="nav-item">
-				<a class="admin" href="admin.html" title="Página de administrador">ADMIN</a>
-			</div>
-		</div>
-	</div>
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html" title="Página de inicio">INICIO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="champions.html" title="Página del grupo Champions">CHAMPIONS</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="uefa.html" title="Página del grupo UEFA">UEFA</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="scorer.html" title="Página de los goleadores del torneo">PICHICHI</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link admin" href="admin.html" title="Página de administrador">ADMIN</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
 	<div class="container">
 		<div class="containerGroup">
 			<picture>
@@ -50,5 +57,6 @@
         <button id="accept-cookies" class="accept-cookies button">Aceptar</button>
     </div>
     <script src="assets/js/cookie.js" type="module"></script>
+	<script src="assets/js/navMenu.js"></script>
 </body>
 </html>
