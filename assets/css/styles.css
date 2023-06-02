@@ -29,17 +29,26 @@ body {
     color: #333;
 }
 
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.nav-menu li{
+    list-style: none;
+}
+
+.nav-menu {
+    padding: 0;
+}
+
 .navbar {
     margin: 20px auto 0px auto;
     text-align: center;
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-.nav-item {
-    padding: 5px 10px;
-    height: auto;
 }
 
 .nav-item a {
@@ -66,7 +75,7 @@ body {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 2px;
+    top: 25px;
     width: 0;
     height: 3px;
     background-color: #fff;
