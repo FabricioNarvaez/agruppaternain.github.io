@@ -329,7 +329,7 @@ table tbody tr:hover {
     .nav-menu{
         position: fixed;
         left: -100%;
-        top: 120px;
+        top: 116px;
         gap: 0;
         flex-direction: column;
         background-color: #818181;
