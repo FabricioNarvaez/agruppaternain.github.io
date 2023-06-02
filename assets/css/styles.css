@@ -79,7 +79,7 @@ body {
 
 .subtitle {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .container {
@@ -160,6 +160,16 @@ table tbody tr:hover {
 
 .qualifiedToUEFA{
     border-left: 4px solid #eb9114;
+}
+
+.legend{
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+}
+
+.legendText{
+    margin: 0 10px;
 }
 
 .triangle {
