@@ -1,4 +1,4 @@
-import { calculatePointsGoalsMatches, processGroupA, processGroupB, sortByPointsAndGoals} from './app.js';
+import { calculatePointsGoalsMatches, processGroupA, processGroupB, sortByPointsAndGoals} from './groupsTables.js';
 import { url } from './url.js';
 
 const tableBodyA = document.getElementById('groupA');
