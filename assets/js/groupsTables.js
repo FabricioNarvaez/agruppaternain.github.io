@@ -6,6 +6,8 @@ function createRow(team, index){
     row.appendChild(appendField(pos));
     if(pos <= 2){
       row.children[0].classList.add("qualifiedToChampions");
+    }else{
+      row.children[0].classList.add("qualifiedToUEFA");
     }
 
     const teamField = document.createElement("td");

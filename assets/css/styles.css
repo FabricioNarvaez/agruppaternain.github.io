@@ -158,6 +158,10 @@ table tbody tr:hover {
     border-left: 4px solid #0b95dd;
 }
 
+.qualifiedToUEFA{
+    border-left: 4px solid #eb9114;
+}
+
 .triangle {
     display: inline-block;
     width: 0;
