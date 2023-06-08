@@ -1,15 +1,14 @@
-html {
-    background: #edeef0;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+html,
+body {
+    background-color: #fff;
+    height: 100%;
+    margin: 0;
 }
 
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     font-family: "Kanit", sans-serif;
-    background-color: #fff;
-    height: 100vh;
 }
 
 h1,
@@ -29,13 +28,13 @@ body {
     color: #333;
 }
 
-.nav-menu{
+.nav-menu {
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
 
-.nav-item{
+.nav-item {
     list-style: none;
 }
 
@@ -43,13 +42,13 @@ body {
     padding: 0;
 }
 
-.menuIcon{
+.menuIcon {
     display: none;
     cursor: pointer;
     padding-bottom: 10px;
 }
 
-.bar{
+.bar {
     display: block;
     width: 25px;
     height: 3px;
@@ -183,17 +182,17 @@ table tbody tr:hover {
     border-left: 4px solid #0b95dd;
 }
 
-.qualifiedToUEFA{
+.qualifiedToUEFA {
     border-left: 4px solid #eb9114;
 }
 
-.legend{
+.legend {
     margin-top: 18px;
     display: flex;
     gap: 10px;
 }
 
-.legendText{
+.legendText {
     margin: 0 10px;
 }
 
@@ -262,7 +261,7 @@ table tbody tr:hover {
     cursor: pointer;
 }
 
-#credentials-error{
+#credentials-error {
     color: red;
 }
 
@@ -270,7 +269,7 @@ table tbody tr:hover {
     background-color: #0062cc;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
@@ -308,7 +307,7 @@ table tbody tr:hover {
         padding: 5px;
     }
 
-    .container{
+    .container {
         width: 95%;
     }
 
@@ -317,21 +316,21 @@ table tbody tr:hover {
         padding: 10px 0px 5px 0px;
     }
 
-    .menuIcon{
+    .menuIcon {
         display: block;
     }
 
-    .menuIcon.activated .bar:nth-child(2){
+    .menuIcon.activated .bar:nth-child(2) {
         opacity: 0;
     }
-    .menuIcon.activated .bar:nth-child(1){
+    .menuIcon.activated .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
-    .menuIcon.activated .bar:nth-child(3){
+    .menuIcon.activated .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .nav-menu{
+    .nav-menu {
         position: fixed;
         left: -100%;
         top: 107px;
@@ -343,12 +342,12 @@ table tbody tr:hover {
         transition: 0.3s;
     }
 
-    .nav-item{
+    .nav-item {
         width: auto;
         margin: 13px auto;
     }
 
-    .nav-menu.activated{
+    .nav-menu.activated {
         left: 0;
     }
 }
