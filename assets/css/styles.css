@@ -35,7 +35,7 @@ body {
     gap: 30px;
 }
 
-.nav-menu li{
+.nav-item{
     list-style: none;
 }
 
@@ -67,7 +67,7 @@ body {
     gap: 20px;
 }
 
-.nav-item a {
+.nav-link {
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
@@ -344,7 +344,8 @@ table tbody tr:hover {
     }
 
     .nav-item{
-        margin: 16px 0;
+        width: auto;
+        margin: 13px auto;
     }
 
     .nav-menu.activated{
