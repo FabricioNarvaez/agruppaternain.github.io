@@ -19,7 +19,7 @@ body {
 }
 
 .header {
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     background-color: #0b95dd;
 }
 
@@ -46,6 +46,7 @@ body {
 .menuIcon{
     display: none;
     cursor: pointer;
+    padding-bottom: 10px;
 }
 
 .bar{
@@ -329,7 +330,7 @@ table tbody tr:hover {
     .nav-menu{
         position: fixed;
         left: -100%;
-        top: 116px;
+        top: 107px;
         gap: 0;
         flex-direction: column;
         background-color: #818181;
