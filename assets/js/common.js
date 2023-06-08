@@ -39,4 +39,15 @@ function sortByGoals(a, b){
     }
 }
 
-export { appendField, sortByGoals, appendSpan };
+function checkCookies(cookieString){
+    const cookies = document.cookie.split(";");
+    for (let cookie of cookies) {
+        const cookieTrimed = cookie.trim();
+        if (cookieTrimed.startsWith(cookieString)) {
+            return cookieTrimed.substring(cookieString.length, cookieTrimed.length);
+        }
+    }
+    return false;
+}
+
+export { appendField, sortByGoals, appendSpan, checkCookies };

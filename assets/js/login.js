@@ -1,18 +1,13 @@
 import { url } from "./url.js";
-const urlLogin = `${url}login`;
+import { checkCookies } from './common.js';
 
+const urlLogin = `${url}login`;
 const loginButton = document.getElementById("login-button");
 
 loginButton.addEventListener("click", () => {
-    const cookies = document.cookie.split(";");
-    let cookiesAcepted = false;
-    for (let cookie of cookies) {
-        const cookieTrimed = cookie.trim();
-        if(cookieTrimed.startsWith("cookieAccepted=")){
-            cookiesAcepted = cookieTrimed.substring("token=".length, cookieTrimed.length);
-        };
-    }
+    let cookiesAcepted = checkCookies("cookieAccepted=");
     const error = document.getElementById("error-id");
+    
     if (error) {
         error.remove();
     }

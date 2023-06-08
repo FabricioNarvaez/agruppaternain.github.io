@@ -1,15 +1,8 @@
 import { url } from './url.js';
+import { checkCookies } from './common.js';
+
 const urlToken = `${url}token`;
-
-const cookies = document.cookie.split(";");
-let token;
-
-for (let cookie of cookies) {
-  const cookieTrimed = cookie.trim();
-  if (cookieTrimed.startsWith("token=")) {
-    token = cookieTrimed.substring("token=".length, cookieTrimed.length);
-  }
-}
+let token = checkCookies("token=");
 
 fetch(urlToken, {
   method: 'POST',
