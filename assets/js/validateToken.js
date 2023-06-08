@@ -4,10 +4,10 @@ const urlToken = `${url}token`;
 const cookies = document.cookie.split(";");
 let token;
 
-for (let i = 0; i < cookies.length; i++) {
-  const cookie = cookies[i].trim();
-  if (cookie.startsWith("token=")) {
-    token = cookie.substring("token=".length, cookie.length);
+for (let cookie of cookies) {
+  const cookieTrimed = cookie.trim();
+  if (cookieTrimed.startsWith("token=")) {
+    token = cookieTrimed.substring("token=".length, cookieTrimed.length);
   }
 }
 
