@@ -15,10 +15,10 @@ scorers.forEach((scorer, index) => {
 
     const positionField = document.createElement("td");
     const pos = index + 1;
-    if(pos === 1){
+    if (pos === 1) {
         positionField.style.background = "url(https://e00-marca.uecdn.es/assets/v31/img/estaticas/trofeos/first-mobile.svg) no-repeat center center";
         positionField.style.backgroundSize = "auto 100%";
-    }else{
+    } else {
         positionField.textContent = pos;
     }
     row.appendChild(positionField);
