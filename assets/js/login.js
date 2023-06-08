@@ -1,5 +1,5 @@
 import { url } from "./url.js";
-import { checkCookies } from './common.js';
+import { checkCookies } from "./common.js";
 
 const urlLogin = `${url}login`;
 const loginButton = document.getElementById("login-button");
@@ -10,7 +10,7 @@ loginButton.addEventListener("click", () => {
     const errorMessage = document.getElementById("error-message");
 
     if (!cookiesAcepted) {
-        error.classList.remove('hidden');
+        error.classList.remove("hidden");
         errorMessage.innerHTML = "No se han aceptado las cookies. Las cookies son necesarias para el correcto funcionamiento de esta sección.";
     } else {
         error.classList.add("hidden");
@@ -26,7 +26,7 @@ loginButton.addEventListener("click", () => {
         })
             .then((response) => {
                 if (!response.ok) {
-                    error.classList.remove('hidden');
+                    error.classList.remove("hidden");
                     errorMessage.innerHTML = "Email o contraseña incorrectos.";
                 } else {
                     return response.json();
