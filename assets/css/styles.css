@@ -262,6 +262,10 @@ table tbody tr:hover {
     cursor: pointer;
 }
 
+#credentials-error{
+    color: red;
+}
+
 .cookie-container button:hover {
     background-color: #0062cc;
 }

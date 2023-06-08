@@ -6,19 +6,14 @@ const loginButton = document.getElementById("login-button");
 
 loginButton.addEventListener("click", () => {
     let cookiesAcepted = checkCookies("cookieAccepted=");
-    const error = document.getElementById("error-id");
-    
-    if (error) {
-        error.remove();
-    }
+    const error = document.getElementById("credentials-error");
+    const errorMessage = document.getElementById("error-message");
+
     if (!cookiesAcepted) {
-        const errorElement = document.createElement("p");
-        errorElement.id = "error-id";
-        errorElement.textContent = "No se han aceptado las cookies. Las cookies son necesarias para el correcto funcionamiento de esta sección.";
-        const error = document.getElementById("credentials-error");
-        errorElement.style.color = "red";
-        error.appendChild(errorElement);
+        error.classList.remove('hidden');
+        errorMessage.innerHTML = "No se han aceptado las cookies. Las cookies son necesarias para el correcto funcionamiento de esta sección.";
     } else {
+        error.classList.add("hidden");
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
@@ -31,12 +26,8 @@ loginButton.addEventListener("click", () => {
         })
             .then((response) => {
                 if (!response.ok) {
-                    const errorElement = document.createElement("p");
-                    errorElement.id = "error-id";
-                    errorElement.textContent = "Email o contraseña incorrectos.";
-                    const error = document.getElementById("credentials-error");
-                    errorElement.style.color = "red";
-                    error.appendChild(errorElement);
+                    error.classList.remove('hidden');
+                    errorMessage.innerHTML = "Email o contraseña incorrectos.";
                 } else {
                     return response.json();
                 }
