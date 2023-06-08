@@ -4,24 +4,24 @@ function appendField(value) {
     return field;
 }
 
-function appendSpan(value, difPos, isLeft = true){
+function appendSpan(value, difPos, isLeft = true) {
     const span = document.createElement("span");
-    if(isLeft){
+    if (isLeft) {
         span.textContent = value;
         span.classList.add("leftText");
-    }else{
+    } else {
         const triangle = document.createElement("span");
         triangle.classList.add("triangle");
         const difPosSpan = document.createElement("span");
         difPosSpan.style.marginRight = "5px";
-        if(difPos < 0){
+        if (difPos < 0) {
             triangle.classList.add("redTriangle");
             span.style.color = "red";
-        }else if(difPos > 0){
+        } else if (difPos > 0) {
             triangle.classList.add("greenTriangle");
             span.style.color = "green";
         }
-        if(difPos !== 0) difPosSpan.textContent = `${Math.abs(difPos)}`;
+        if (difPos !== 0) difPosSpan.textContent = `${Math.abs(difPos)}`;
         span.appendChild(triangle);
         span.appendChild(difPosSpan);
         span.classList.add("rightText");
@@ -29,22 +29,25 @@ function appendSpan(value, difPos, isLeft = true){
     return span;
 }
 
-function sortByGoals(a, b){
-    if(a.goals > b.goals || a.GD > b.GD){
+function sortByGoals(a, b) {
+    if (a.goals > b.goals || a.GD > b.GD) {
         return -1;
-    }else if(a.goals < b.goals || a.GD < b.GD){
+    } else if (a.goals < b.goals || a.GD < b.GD) {
         return 1;
-    }else{
+    } else {
         return 0;
     }
 }
 
-function checkCookies(cookieString){
+function checkCookies(cookieString) {
     const cookies = document.cookie.split(";");
     for (let cookie of cookies) {
         const cookieTrimed = cookie.trim();
         if (cookieTrimed.startsWith(cookieString)) {
-            return cookieTrimed.substring(cookieString.length, cookieTrimed.length);
+            return cookieTrimed.substring(
+                cookieString.length,
+                cookieTrimed.length
+            );
         }
     }
     return false;
