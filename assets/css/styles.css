@@ -330,10 +330,14 @@ table tbody tr:hover {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .header {
+        height: 149px;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 107px;
+        top: 149px;
         gap: 0;
         flex-direction: column;
         background-color: #818181;
