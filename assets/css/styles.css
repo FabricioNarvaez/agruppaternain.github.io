@@ -269,6 +269,49 @@ table tbody tr:hover {
     background-color: #0062cc;
 }
 
+.form{
+    text-align: center;
+}
+
+.input-field {
+    padding: 12px 5px;
+}
+
+.input-field input {
+    font-size: 16px;
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px 1px;
+    border: 0;
+    border-bottom: 1px solid #726e6e;
+    outline: none;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.input-field input:focus {
+    border-color: #ffb043;
+}
+
+.buttons{
+    border: none;
+    margin-top: 25px;
+    padding: 13px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #e8e9ec;
+    color: #777;
+    border-radius: 4px;
+    outline: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.buttons:hover {
+    background: #d8d8d8;
+}
+
 .hidden {
     display: none;
 }
