@@ -397,4 +397,8 @@ table tbody tr:hover {
     .nav-menu.activated {
         left: 0;
     }
+
+    .input-field input {
+        width: 300px;
+    }
 }
