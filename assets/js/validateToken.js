@@ -1,6 +1,9 @@
 import { url } from "./url.js";
 import { checkCookies } from "./common.js";
 
+
+const adminContainer = document.getElementById("adminContainer");
+const adminLoader = document.getElementById("admin-loader");
 const urlToken = `${url}token`;
 let token = checkCookies("token=");
 
@@ -15,6 +18,8 @@ fetch(urlToken, {
         if (!response.ok) {
             window.location.href = "login.html";
         } else {
+            adminContainer.classList.remove("hidden");
+            adminLoader.remove();
             return response.json();
         }
     })
