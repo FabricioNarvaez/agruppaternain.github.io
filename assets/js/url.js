@@ -1,1 +1,1 @@
-export const url = 'https://backend-paternain-adyadww4b-fabricionarvaez.vercel.app/';
+export const url = 'https://backend-paternain.vercel.app/';
