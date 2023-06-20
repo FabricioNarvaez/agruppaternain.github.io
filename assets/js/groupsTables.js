@@ -1,4 +1,4 @@
-import { appendField, sortByGoals, appendSpan } from "./common.js";
+import { appendField, sortByGoals } from "./common.js";
 function createRow(team, index) {
     let row = document.createElement("tr");
 
@@ -11,10 +11,30 @@ function createRow(team, index) {
     }
 
     const teamField = document.createElement("td");
-    teamField.style.width = "280px";
+    const imgSrc = team.logo ? team.logo : "assets/img/default.png";
     const difPos = team.lastPos - pos;
-    teamField.appendChild(appendSpan(team.team));
-    teamField.appendChild(appendSpan("", difPos, false));
+    let className = "";
+    let color = "";
+    if(difPos <0 ){
+        className = "redTriangle";
+        color = "red";
+    } else if(difPos > 0) {
+        className = "greenTriangle";
+        color = "green";
+    }
+    const htmlTemplate = `
+        <div class="flexAlignCenter spaceBetween">
+            <div class="flexAlignCenter">
+                <img src="${imgSrc}" style="width: 50px">
+                <span>${team.team}</span>
+            </div>
+            <div class="flexAlignCenter">
+                <span class="triangle ${className}"></span>
+                <span style="color: ${color}"> ${Math.abs(difPos)}</span>
+            </div>
+        </div>
+    `;
+    teamField.innerHTML = htmlTemplate;
     row.appendChild(teamField);
 
     row.appendChild(appendField(team.PJ));
