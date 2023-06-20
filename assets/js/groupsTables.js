@@ -38,14 +38,11 @@ function createRow(team, index) {
     return row;
 }
 
-export function processGroupA(team, index) {
-    let bodyTableA = document.getElementById("groupA");
-    bodyTableA.appendChild(createRow(team, index));
-}
-
-export function processGroupB(team, index) {
-    let bodyTableB = document.getElementById("groupB");
-    bodyTableB.appendChild(createRow(team, index));
+export function processGroup(group, groupId){
+    group.forEach((team, index) => {
+        const bodyTable = document.getElementById(groupId);
+        bodyTable.appendChild(createRow(team, index));
+    })
 }
 
 export function calculatePointsGoalsMatches(team) {

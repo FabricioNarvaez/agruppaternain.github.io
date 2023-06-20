@@ -1,7 +1,6 @@
 import {
     calculatePointsGoalsMatches,
-    processGroupA,
-    processGroupB,
+    processGroup,
     sortByPointsAndGoals,
 } from "./groupsTables.js";
 import { url } from "./url.js";
@@ -17,9 +16,9 @@ const loaderRowB = document.getElementById("loader-rowB");
 
     teamsGroupA.forEach(calculatePointsGoalsMatches);
     teamsGroupA.sort(sortByPointsAndGoals);
-    teamsGroupA.forEach(processGroupA);
+    processGroup(teamsGroupA, "groupA");
 
     teamsGroupB.forEach(calculatePointsGoalsMatches);
     teamsGroupB.sort(sortByPointsAndGoals);
-    teamsGroupB.forEach(processGroupB);
+    processGroup(teamsGroupB, "groupB");
 })();
