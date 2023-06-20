@@ -12,15 +12,19 @@ function createRow(team, index) {
 
     const teamField = document.createElement("td");
     const imgSrc = team.logo ? team.logo : "assets/img/default.png";
-    const difPos = team.lastPos - pos;
-    let className = "";
-    let color = "";
-    if(difPos <0 ){
-        className = "redTriangle";
-        color = "red";
-    } else if(difPos > 0) {
-        className = "greenTriangle";
-        color = "green";
+    const calculateDifPos = team.lastPos - pos;
+    let difPos = "";
+    if(calculateDifPos != 0){
+        var className = "";
+        var color = "";
+        if(calculateDifPos < 0 ){
+            className = "redTriangle";
+            color = "red";
+        } else if(calculateDifPos > 0) {
+            className = "greenTriangle";
+            color = "green";
+        }
+        difPos = Math.abs(calculateDifPos);
     }
     const htmlTemplate = `
         <div class="flexAlignCenter spaceBetween">
@@ -30,7 +34,7 @@ function createRow(team, index) {
             </div>
             <div class="flexAlignCenter">
                 <span class="triangle ${className}"></span>
-                <span style="color: ${color}"> ${Math.abs(difPos)}</span>
+                <span style="color: ${color}">${difPos}</span>
             </div>
         </div>
     `;
