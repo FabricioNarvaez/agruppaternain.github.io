@@ -236,7 +236,8 @@ table tbody tr:hover {
     text-align: right;
 }
 
-.img-uefa {
+.img-uefa,
+.img-champions {
     width: 100%;
     height: auto;
 }
