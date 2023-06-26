@@ -11,7 +11,7 @@ function createRow(team, index) {
     }
 
     const teamField = document.createElement("td");
-    const imgSrc = team.logo ? team.logo : "assets/img/default.png";
+    const imgSrc = team.logo || "assets/img/default.png";
     const calculateDifPos = team.lastPos - pos;
     let difPos = "";
     if(calculateDifPos != 0){
