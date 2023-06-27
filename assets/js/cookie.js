@@ -1,5 +1,5 @@
 const cookieMessage = document.getElementById("cookie-message");
-const acceptCookiesBtn = document.getElementById("accept-cookies");
+const acceptCookiesBtn = document.getElementById("acceptCookies");
 
 function setCookie(name, value, days) {
     const expires = new Date();
