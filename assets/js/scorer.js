@@ -1,7 +1,7 @@
 import { appendField, sortByGoals } from "./common.js";
 import { url } from "./url.js";
 
-const loaderScorers = document.getElementById("loader-scorers");
+const loaderScorers = document.getElementById("loaderScorers");
 
 (async () => {
     const response = await fetch(`${url}players/scorers`);
