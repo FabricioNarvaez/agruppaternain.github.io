@@ -5,8 +5,8 @@ import {
 } from "./groupsTables.js";
 import { url } from "./url.js";
 
-const loaderRowA = document.getElementById("loader-rowA");
-const loaderRowB = document.getElementById("loader-rowB");
+const loaderRowA = document.getElementById("loaderRowA");
+const loaderRowB = document.getElementById("loaderRowB");
 
 (async () => {
     const response = await fetch(`${url}api/teams`);
