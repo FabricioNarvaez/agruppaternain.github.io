@@ -111,7 +111,7 @@ sendButton.addEventListener("click", async () => {
         errorElement.textContent =
             "Faltan datos o no son correctos. Compruebe que ha introducido todos los datos y que son correctos.";
         errorElement.style.color = "red";
-        const error = document.getElementById("data-error");
+        const error = document.getElementById("dataError");
         error.appendChild(errorElement);
         return;
     } else {
