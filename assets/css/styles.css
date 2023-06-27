@@ -237,7 +237,7 @@ table tbody tr:hover {
     height: auto;
 }
 
-.cookie-container {
+.cookieContainer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -248,7 +248,7 @@ table tbody tr:hover {
     z-index: 9999;
 }
 
-.cookie-container p {
+.cookieContainer p {
     margin: 0;
     padding: 0 10px;
     font-size: 16px;
@@ -271,7 +271,7 @@ table tbody tr:hover {
     color: red;
 }
 
-.cookie-container button:hover {
+.cookieContainer button:hover {
     background-color: #0062cc;
 }
 

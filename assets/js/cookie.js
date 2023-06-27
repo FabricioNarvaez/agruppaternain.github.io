@@ -1,4 +1,4 @@
-const cookieMessage = document.getElementById("cookie-message");
+const cookieMessage = document.getElementById("cookieMessage");
 const acceptCookiesBtn = document.getElementById("acceptCookies");
 
 function setCookie(name, value, days) {
