@@ -79,6 +79,7 @@ function updatePutValues(goalsLocal, goalsVisitante) {
     return [putLocal, putVisitante];
 }
 
+//TODO: Change the way to send data to backend
 const sendButton = document.getElementById("send");
 sendButton.addEventListener("click", async () => {
     const error = document.getElementById("error-id");
