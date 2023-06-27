@@ -1,5 +1,5 @@
 const menuIcon = document.querySelector(".menuIcon");
-const navMenu = document.querySelector(".nav-menu");
+const navMenu = document.querySelector(".navMenu");
 
 menuIcon.addEventListener("click", () => {
     menuIcon.classList.toggle("activated");

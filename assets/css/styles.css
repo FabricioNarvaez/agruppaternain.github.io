@@ -28,7 +28,7 @@ body {
     color: #333;
 }
 
-.nav-menu {
+.navMenu {
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -38,7 +38,7 @@ body {
     list-style: none;
 }
 
-.nav-menu {
+.navMenu {
     padding: 0;
 }
 
@@ -384,7 +384,7 @@ table tbody tr:hover {
         height: 149px;
     }
 
-    .nav-menu {
+    .navMenu {
         position: fixed;
         left: -100%;
         top: 149px;
@@ -401,7 +401,7 @@ table tbody tr:hover {
         margin: 13px auto;
     }
 
-    .nav-menu.activated {
+    .navMenu.activated {
         left: 0;
     }
 
