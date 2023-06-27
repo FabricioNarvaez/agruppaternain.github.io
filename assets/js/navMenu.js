@@ -6,7 +6,7 @@ menuIcon.addEventListener("click", () => {
     navMenu.classList.toggle("activated");
 });
 
-document.querySelectorAll(".nav-link").forEach((n) =>
+document.querySelectorAll(".navLink").forEach((n) =>
     n.addEventListener("click", () => {
         menuIcon.classList.remove("activated");
         navMenu.classList.remove("activated");
