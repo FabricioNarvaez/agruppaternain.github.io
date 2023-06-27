@@ -34,7 +34,7 @@ body {
     gap: 30px;
 }
 
-.nav-item {
+.navItem {
     list-style: none;
 }
 
@@ -77,16 +77,16 @@ body {
     border-bottom: 3px solid #fff;
 }
 
-.nav-item .admin {
+.navItem .admin {
     color: #ffb043;
 }
 
-.nav-item {
+.navItem {
     position: relative;
     color: #fff;
 }
 
-.nav-item::after {
+.navItem::after {
     content: "";
     position: absolute;
     left: 0;
@@ -97,7 +97,7 @@ body {
     transition: width 0.2s ease;
 }
 
-.nav-item:hover:not(.active)::after {
+.navItem:hover:not(.active)::after {
     width: 100%;
 }
 
@@ -396,7 +396,7 @@ table tbody tr:hover {
         transition: 0.3s;
     }
 
-    .nav-item {
+    .navItem {
         width: auto;
         margin: 13px auto;
     }
