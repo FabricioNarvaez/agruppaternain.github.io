@@ -108,14 +108,9 @@ body {
 
 .container {
     background: #fff;
-    width: 70%;
+    width: 50%;
     margin: 30px auto;
     border-radius: 10px;
-}
-
-.containerGroup {
-    width: 70%;
-    margin: 20px auto;
 }
 
 .loader {
@@ -329,15 +324,11 @@ table tbody tr:hover {
 
 @media screen and (max-width: 1350px) {
     .container {
-        width: 90%;
-    }
-
-    .containerGroup {
-        width: 100%;
+        width: 70%;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     body {
         font-size: 14px;
     }
@@ -363,6 +354,11 @@ table tbody tr:hover {
 
     .container {
         width: 95%;
+    }
+
+    .containerImages{
+        width: 100%;
+        padding: 0px !important;
     }
 
     .container {
