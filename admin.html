@@ -76,12 +76,8 @@
 			<h2 class="subtitle">Admin</h2>
             <div class="adminFlex">
                 <h2>Local: </h2>
-                <select class="select">
+                <select id="local" class="select">
                     <option value="" disabled selected>Elige un equipo Local</option>
-                    <option value="one" disabled="disabled">Barcelona</option>
-                    <option value="two">Bayern</option>
-                    <option value="two">PSG</option>
-                    <option value="three">Osasuna</option>
                 </select>
             </div>
             <svg id="addLocalScorrer" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -92,12 +88,8 @@
             </svg>
             <div class="adminFlex">
                 <h2>Visitante: </h2>
-                <select class="select">
+                <select id="visitor" class="select">
                     <option value="" disabled selected>Elige un equipo Visitante</option>
-                    <option value="one" disabled="disabled">Barcelona</option>
-                    <option value="two">Bayern</option>
-                    <option value="two">PSG</option>
-                    <option value="three">Osasuna</option>
                 </select>
             </div>
             <svg id="addVisitorScorrer" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -121,7 +113,6 @@
         $(document).ready(function() {
           $('.select').select2();
         });
-        </script>
-        
+    </script>
 </body>
 </html>
