@@ -1,45 +1,25 @@
 import { url } from "./url.js";
-
-(async () => {
+$(document).ready(async function() {
+    $('.select').select2();
     const response = await fetch(`${url}api/teams`);
     const { teamsGroupA, teamsGroupB } = await response.json();
     const teamsCollection = teamsGroupA.concat(teamsGroupB);
-    const local = document.getElementById("local");
-    const visitor = document.getElementById("visitor");
-
-    teamsCollection.forEach(team => {
-        const newOptionLocal = document.createElement('option');
-        newOptionLocal.value = team.team;
-        newOptionLocal.text = team.team;
-        local.add(newOptionLocal);
-
-        const newOptionVisitor = document.createElement('option');
-        newOptionVisitor.value = team.team;
-        newOptionVisitor.text = team.team;
-        visitor.add(newOptionVisitor);
+    const local = $("#local");
+    const visitor = $("#visitor");
+  
+    teamsCollection.forEach(function(team) {
+      const newOptionLocal = $("<option></option>").val(team.team).text(team.team);
+      local.append(newOptionLocal);
+  
+      const newOptionVisitor = $("<option></option>").val(team.team).text(team.team);
+      visitor.append(newOptionVisitor);
     });
 
+    $('#local').on('change', function() {
+        console.log($(this).val());
+    });
+});
 
-    // const selectLocalA = document.getElementById("opcionesLocalA");
-    // const selectVisitanteA = document.getElementById("opcionesVisitanteA");
-    // teamsGroupA.forEach((team) => {
-    //     const option = document.createElement("option");
-    //     option.value = team._id;
-    //     option.textContent = team.team;
-    //     selectLocalA.appendChild(option);
-    //     selectVisitanteA.appendChild(option.cloneNode(true));
-    // });
-
-    // const selectLocalB = document.getElementById("opcionesLocalB");
-    // const selectVisitanteB = document.getElementById("opcionesVisitanteB");
-    // teamsGroupB.forEach((team) => {
-    //     const option = document.createElement("option");
-    //     option.value = team._id;
-    //     option.textContent = team.team;
-    //     selectLocalB.appendChild(option);
-    //     selectVisitanteB.appendChild(option.cloneNode(true));
-    // });
-})();
 
 //TODO: Change the way to send data to backend
 // function updatePutValues(goalsLocal, goalsVisitante) {
