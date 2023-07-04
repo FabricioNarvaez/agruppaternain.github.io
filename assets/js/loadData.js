@@ -1,25 +1,71 @@
 import { url } from "./url.js";
-$(document).ready(async function() {
-    $('.select').select2();
+$(document).ready(async function () {
+    $(".select").select2();
     const response = await fetch(`${url}api/teams`);
     const { teamsGroupA, teamsGroupB } = await response.json();
     const teamsCollection = teamsGroupA.concat(teamsGroupB);
     const local = $("#local");
     const visitor = $("#visitor");
-  
-    teamsCollection.forEach(function(team) {
-      const newOptionLocal = $("<option></option>").val(team.team).text(team.team);
-      local.append(newOptionLocal);
-  
-      const newOptionVisitor = $("<option></option>").val(team.team).text(team.team);
-      visitor.append(newOptionVisitor);
+
+    teamsCollection.forEach(function (team) {
+        const newOptionLocal = $("<option></option>")
+            .val(team.team)
+            .text(team.team);
+        local.append(newOptionLocal);
+
+        const newOptionVisitor = $("<option></option>")
+            .val(team.team)
+            .text(team.team);
+        visitor.append(newOptionVisitor);
     });
 
-    $('#local').on('change', function() {
+    $("#local").change(function () {
         console.log($(this).val());
     });
-});
 
+    var selectLocalCounter = 0;
+    var selectVisitorCounter = 0;
+
+    function addPlayer(selectLocalCounter){
+        const div = $("<div>", {
+            class: "adminFlex",
+        });
+
+        var selectElement = $("<select>", {
+            id: `player${selectLocalCounter}`,
+            class: "select",
+        }).append(
+            $("<option>", {
+                value: "",
+                disabled: true,
+                selected: true,
+                text: "Selecciona un jugador",
+            })
+        );
+
+        var inputElement = $("<input>", {
+            type: "number",
+            class: "adminInput",
+            value: "0",
+        });
+
+        div.append(selectElement, inputElement);
+        return div;
+    }
+
+    $("#addLocalScorrer").click(function () {
+        var adminFlexDiv = addPlayer(selectLocalCounter);
+        $(".localPlayersAndGoals").append(adminFlexDiv);
+        $(`#player${selectLocalCounter}`).select2();
+        selectLocalCounter++;
+    });
+    $("#addVisitorScorrer").click(function () {
+        var adminFlexDiv = addPlayer(selectVisitorCounter);
+        $(".visitorPlayersAndGoals").append(adminFlexDiv);
+        $(`#player${selectVisitorCounter}`).select2();
+        selectVisitorCounter++;
+    });
+});
 
 //TODO: Change the way to send data to backend
 // function updatePutValues(goalsLocal, goalsVisitante) {
