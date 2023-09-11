@@ -8,25 +8,20 @@ $(document).ready(async function () {
     const visitor = $("#visitor");
 
     teamsCollection.forEach(function (team) {
-        const newOptionLocal = $("<option></option>")
-            .val(team.team)
-            .text(team.team);
+        const newOptionLocal = createOption(team.team);
         local.append(newOptionLocal);
 
-        const newOptionVisitor = $("<option></option>")
-            .val(team.team)
-            .text(team.team);
+        const newOptionVisitor = createOption(team.team);
         visitor.append(newOptionVisitor);
-    });
-
-    $("#local").change(function () {
-        console.log($(this).val());
     });
 
     var selectLocalCounter = 0;
     var selectVisitorCounter = 0;
 
     function addPlayer(selectLocalCounter){
+        const teamSelected = $("#local").val();
+        const teamFounded = teamsCollection.find(team => team.team === teamSelected);
+        const teamPlayers = teamFounded.players;
         const div = $("<div>", {
             class: "adminFlex",
         });
@@ -49,6 +44,10 @@ $(document).ready(async function () {
             value: "0",
         });
 
+        for (const name in teamPlayers){
+            const newPlayer = createOption(name);
+            selectElement.append(newPlayer);
+        }
         div.append(selectElement, inputElement);
         return div;
     }
@@ -65,6 +64,12 @@ $(document).ready(async function () {
         $(`#player${selectVisitorCounter}`).select2();
         selectVisitorCounter++;
     });
+
+    function createOption(name){
+        return $("<option></option>")
+            .val(name)
+            .text(name);
+    }
 });
 
 //TODO: Change the way to send data to backend
