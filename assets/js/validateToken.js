@@ -23,7 +23,6 @@ fetch(urlToken, {
             return response.json();
         }
     })
-    .then((data) => console.log(data))
     .catch((error) =>
         console.error("There was an error with the request:", error)
     );
