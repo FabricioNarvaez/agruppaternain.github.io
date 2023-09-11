@@ -367,7 +367,7 @@ table tbody tr:hover {
     }
 
     table thead th {
-        font-size: 14px;
+        font-size: 12px;
         width: 5px !important;
     }
 
@@ -430,5 +430,11 @@ table tbody tr:hover {
 
     .inputField input {
         width: 300px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .flexAlignCenter{
+        font-size: 11px;
     }
 }
