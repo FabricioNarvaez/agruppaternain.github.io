@@ -191,6 +191,10 @@ table tbody tr:hover {
     align-items: center;
 }
 
+.teamIndexLogo{
+    width: 50px
+}
+
 .spaceBetween{
     justify-content: space-between;
     margin-right: 10px;
@@ -436,5 +440,9 @@ table tbody tr:hover {
 @media screen and (max-width: 500px) {
     .flexAlignCenter{
         font-size: 11px;
+    }
+
+    .teamIndexLogo{
+        width: 45px;
     }
 }
