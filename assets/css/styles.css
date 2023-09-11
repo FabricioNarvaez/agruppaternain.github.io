@@ -198,6 +198,7 @@ table tbody tr:hover {
 .spaceBetween{
     justify-content: space-between;
     margin-right: 10px;
+    width: 300px;
 }
 
 .lastColumnHeader {
@@ -434,6 +435,10 @@ table tbody tr:hover {
 
     .inputField input {
         width: 300px;
+    }
+
+    .spaceBetween{
+        width: auto;
     }
 }
 
