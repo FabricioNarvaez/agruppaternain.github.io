@@ -43,99 +43,95 @@
 				<span class="bar"></span>
 				<span class="bar"></span>
 			</div>
-			<ul class="nav-menu">
-				<li class="nav-item active">
-					<a class="nav-link" href="/" title="Página de inicio">INICIO</a>
+			<ul class="navMenu">
+				<li class="navItem active">
+					<a class="navLink" href="/" title="Página de inicio">INICIO</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="champions.html" title="Página del grupo Champions">CHAMPIONS</a>
+				<li class="navItem">
+					<a class="navLink" href="champions.html" title="Página del grupo Champions">CHAMPIONS</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="uefa.html" title="Página del grupo UEFA">UEFA</a>
+				<li class="navItem">
+					<a class="navLink" href="uefa.html" title="Página del grupo UEFA">UEFA</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="scorer.html" title="Página de los goleadores del torneo">PICHICHI</a>
+				<li class="navItem">
+					<a class="navLink" href="scorer.html" title="Página de los goleadores del torneo">PICHICHI</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="rules.html" title="Página de las reglas del torneo">REGLAMENTO</a>
+				<li class="navItem">
+					<a class="navLink" href="rules.html" title="Página de las reglas del torneo">REGLAMENTO</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link admin" href="admin.html" title="Página de administrador">ADMIN</a>
+				<li class="navItem">
+					<a class="navLink admin" href="admin.html" title="Página de administrador">ADMIN</a>
 				</li>
+				<!-- TODO: Add upcoming matches -->
 			</ul>
 		</nav>
 	</header>
 	<div class="container">
-		<div class="containerGroup">
-			<h2 class="subtitle">Tabla de Clasificación</h2>
-			<h2>Grupo A</h2>
-			<table>
-				<thead>
-					<tr>
-						<th>Pos</th>
-						<th>Equipo</th>
-						<th>PJ</th>
-						<th>PG</th>
-						<th>PE</th>
-						<th>PP</th>
-						<th>GF</th>
-						<th>GC</th>
-						<th>GD</th>
-						<th class="lastColumnHeader">Pts.</th>
-					</tr>
-				</thead>
-				<tbody id="groupA">
-					<tr id="loader-rowA">
-					  <td colspan="10" class="loader-cell">
+		<h2 class="subtitle">Tabla de Clasificación</h2>
+		<h2>Grupo A</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Pos</th>
+					<th class="spaceBetween">Equipo</th>
+					<th>PJ</th>
+					<th>PG</th>
+					<th>PE</th>
+					<th>PP</th>
+					<th>GF</th>
+					<th>GC</th>
+					<th>GD</th>
+					<th class="lastColumnHeader">Pts.</th>
+				</tr>
+			</thead>
+			<tbody id="groupA">
+				<tr id="loaderRowA">
+					<td colspan="10">
+					<div class="loader"></div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>Grupo B</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Pos</th>
+					<th class="spaceBetween">Equipo</th>
+					<th>PJ</th>
+					<th>PG</th>
+					<th>PE</th>
+					<th>PP</th>
+					<th>GF</th>
+					<th>GC</th>
+					<th>GD</th>
+					<th class="lastColumnHeader">Pts.</th>
+				</tr>
+			</thead>
+			<tbody id="groupB">
+				<tr id="loaderRowB">
+					<td colspan="10">
 						<div class="loader"></div>
-					  </td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="containerGroup">
-			<h2>Grupo B</h2>
-			<table>
-				<thead>
-					<tr>
-						<th>Pos</th>
-						<th>Equipo</th>
-						<th>PJ</th>
-						<th>PG</th>
-						<th>PE</th>
-						<th>PP</th>
-						<th>GF</th>
-						<th>GC</th>
-						<th>GD</th>
-						<th class="lastColumnHeader">Pts.</th>
-					</tr>
-				</thead>
-				<tbody id="groupB">
-					<tr id="loader-rowB">
-						<td colspan="10" class="loader-cell">
-						  <div class="loader"></div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<div class="legend">
-				<div class="qualifiedToChampions">
-					<p class="legendText">Champions</p>
-				</div>
-				<div class="qualifiedToUEFA">
-					<p class="legendText">UEFA</p>
-				</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="legend">
+			<div class="qualifiedToChampions">
+				<p class="legendText">Champions</p>
+			</div>
+			<div class="qualifiedToUEFA">
+				<p class="legendText">UEFA</p>
 			</div>
 		</div>
-		
 	</div>
-    <div id="cookie-message" class="cookie-container hidden">
+    <div id="cookieMessage" class="cookieContainer hidden">
         <p>Utilizamos cookies para mejorar la experiencia del usuario en nuestro sitio web. Al continuar navegando, usted acepta nuestra política de cookies.</p>
-        <button id="accept-cookies" class="accept-cookies button">Aceptar</button>
+        <button id="acceptCookies" class="acceptCookies button">Aceptar</button>
     </div>
     <script src="assets/js/cookie.js" type="module"></script>
 	<script src="assets/js/groupsTables.js" type="module"></script>
-	<script src="assets/js/api.js" type="module"></script>
+	<script src="assets/js/app.js" type="module"></script>
 	<script src="assets/js/navMenu.js"></script>
 </body>
 </html>

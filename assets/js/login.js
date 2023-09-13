@@ -2,12 +2,12 @@ import { url } from "./url.js";
 import { checkCookies } from "./common.js";
 
 const urlLogin = `${url}login`;
-const loginButton = document.getElementById("login-button");
+const loginButton = document.getElementById("loginButton");
 
 loginButton.addEventListener("click", () => {
     let cookiesAcepted = checkCookies("cookieAccepted=");
-    const error = document.getElementById("credentials-error");
-    const errorMessage = document.getElementById("error-message");
+    const error = document.getElementById("credentialsError");
+    const errorMessage = document.getElementById("errorMessage");
 
     if (!cookiesAcepted) {
         error.classList.remove("hidden");

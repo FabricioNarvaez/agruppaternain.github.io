@@ -3,7 +3,7 @@ import { checkCookies } from "./common.js";
 
 
 const adminContainer = document.getElementById("adminContainer");
-const adminLoader = document.getElementById("admin-loader");
+const adminLoader = document.getElementById("adminLoader");
 const urlToken = `${url}token`;
 let token = checkCookies("token=");
 
@@ -23,7 +23,6 @@ fetch(urlToken, {
             return response.json();
         }
     })
-    .then((data) => console.log(data))
     .catch((error) =>
         console.error("There was an error with the request:", error)
     );

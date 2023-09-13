@@ -39,48 +39,46 @@
 				<span class="bar"></span>
 				<span class="bar"></span>
 			</div>
-			<ul class="nav-menu">
-				<li class="nav-item">
-					<a class="nav-link" href="/" title="Página de inicio">INICIO</a>
+			<ul class="navMenu">
+				<li class="navItem">
+					<a class="navLink" href="/" title="Página de inicio">INICIO</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="champions.html" title="Página del grupo Champions">CHAMPIONS</a>
+				<li class="navItem">
+					<a class="navLink" href="champions.html" title="Página del grupo Champions">CHAMPIONS</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="uefa.html" title="Página del grupo UEFA">UEFA</a>
+				<li class="navItem">
+					<a class="navLink" href="uefa.html" title="Página del grupo UEFA">UEFA</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="scorer.html" title="Página de los goleadores del torneo">PICHICHI</a>
+				<li class="navItem">
+					<a class="navLink" href="scorer.html" title="Página de los goleadores del torneo">PICHICHI</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="rules.html" title="Página de las reglas del torneo">REGLAMENTO</a>
+				<li class="navItem">
+					<a class="navLink" href="rules.html" title="Página de las reglas del torneo">REGLAMENTO</a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link admin" href="admin.html" title="Página de administrador">ADMIN</a>
+				<li class="navItem active">
+					<a class="navLink admin" href="admin.html" title="Página de administrador">ADMIN</a>
 				</li>
 			</ul>
 		</nav>
 	</header>
     <div class="container">
-        <div class="containerGroup">
-			<h2 class="subtitle">Login</h2>
-            <div id="login-form" class="form">
-                <div class="input-field">
-                    <input id="email" type="email" placeholder="Email" name="email">
-                </div>
-                <div class="input-field">
-                    <input id="password" type="password" placeholder="Password" name="password">
-                </div>
-                <button id="login-button" class="buttons" type="button">Iniciar Sesión</button>
-            </div>
-        </div>
-        <div id="credentials-error" class="hidden">
-			<p id="error-message"></p>
+		<h2 class="subtitle">Login</h2>
+		<div class="form">
+			<div class="inputField">
+				<input id="email" type="email" placeholder="Email" name="email">
+			</div>
+			<div class="inputField">
+				<input id="password" type="password" placeholder="Password" name="password">
+			</div>
+			<button id="loginButton" class="buttons" type="button">Iniciar Sesión</button>
+		</div>
+        <div id="credentialsError" class="hidden">
+			<p id="errorMessage"></p>
 		</div>
     </div>
-    <div id="cookie-message" class="cookie-container hidden">
+    <div id="cookieMessage" class="cookieContainer hidden">
         <p>Utilizamos cookies para mejorar la experiencia del usuario en nuestro sitio web. Al continuar navegando, usted acepta nuestra política de cookies.</p>
-        <button id="accept-cookies" class="accept-cookies button">Aceptar</button>
+        <button id="acceptCookies" class="acceptCookies button">Aceptar</button>
     </div>
     <script src="assets/js/cookie.js" type="module"></script>
     <script src="assets/js/login.js" type="module"></script>
