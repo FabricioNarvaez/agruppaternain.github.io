@@ -4,7 +4,7 @@ function createRow(team, index) {
 
     const pos = index + 1;
     row.appendChild(appendField(pos));
-    if (pos <= 2) {
+    if (pos <= 4) {
         row.children[0].classList.add("qualifiedToChampions");
     } else {
         row.children[0].classList.add("qualifiedToUEFA");
