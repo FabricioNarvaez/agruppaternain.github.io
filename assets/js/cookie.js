@@ -1,5 +1,6 @@
 const cookieMessage = document.getElementById("cookieMessage");
 const acceptCookiesBtn = document.getElementById("acceptCookies");
+const rejectCookiesBtn = document.getElementById("rejectCookies");
 
 function setCookie(name, value, days) {
     const expires = new Date();
@@ -31,6 +32,11 @@ function checkCookie() {
 
 acceptCookiesBtn.addEventListener("click", () => {
     setCookie("cookieAccepted", true, 30);
+    cookieMessage.style.display = "none";
+});
+
+rejectCookiesBtn.addEventListener("click", () => {
+    setCookie("cookieAccepted", false, 30);
     cookieMessage.style.display = "none";
 });
 

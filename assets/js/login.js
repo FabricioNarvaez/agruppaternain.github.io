@@ -9,7 +9,7 @@ loginButton.addEventListener("click", () => {
     const error = document.getElementById("credentialsError");
     const errorMessage = document.getElementById("errorMessage");
 
-    if (!cookiesAcepted) {
+    if (!cookiesAcepted || cookiesAcepted === "false") {
         error.classList.remove("hidden");
         errorMessage.innerHTML = "No se han aceptado las cookies. Las cookies son necesarias para el correcto funcionamiento de esta sección.";
     } else {
