@@ -295,6 +295,14 @@ table tbody tr:hover {
     cursor: pointer;
 }
 
+.rejectCookies{
+    background-color: rgb(235, 53, 53);
+}
+
+.rejectCookies:hover{
+    background-color: red !important;
+}
+
 #credentialsError {
     color: red;
 }
