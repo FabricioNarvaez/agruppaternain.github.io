@@ -192,6 +192,11 @@ table tbody tr:hover {
     align-items: center;
 }
 
+.flexJustifyCenter{
+    display: flex;
+    justify-content: center;
+}
+
 .teamIndexLogo{
     width: 50px
 }
