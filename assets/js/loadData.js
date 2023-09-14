@@ -18,8 +18,8 @@ $(document).ready(async function () {
     var selectLocalCounter = 0;
     var selectVisitorCounter = 0;
 
-    function addPlayer(selectLocalCounter){
-        const teamSelected = $("#local").val();
+    function addPlayer(selectLocalCounter, selectId){
+        const teamSelected = $(`#${selectId}`).val();
         const teamFounded = teamsCollection.find(team => team.team === teamSelected);
         const teamPlayers = teamFounded.players;
         const div = $("<div>", {
@@ -27,7 +27,7 @@ $(document).ready(async function () {
         });
 
         var selectElement = $("<select>", {
-            id: `player${selectLocalCounter}`,
+            id: `player${selectId}${selectLocalCounter}`,
             class: "select",
         }).append(
             $("<option>", {
@@ -53,15 +53,19 @@ $(document).ready(async function () {
     }
 
     $("#addLocalScorrer").click(function () {
-        var adminFlexDiv = addPlayer(selectLocalCounter);
+        const selectId = 'local';
+        local.prop('disabled', true);
+        const adminFlexDiv = addPlayer(selectLocalCounter, selectId);
         $(".localPlayersAndGoals").append(adminFlexDiv);
-        $(`#player${selectLocalCounter}`).select2();
+        $(`#player${selectId}${selectLocalCounter}`).select2();
         selectLocalCounter++;
     });
     $("#addVisitorScorrer").click(function () {
-        var adminFlexDiv = addPlayer(selectVisitorCounter);
+        const selectId = 'visitor';
+        visitor.prop('disabled', true);
+        const adminFlexDiv = addPlayer(selectVisitorCounter, selectId);
         $(".visitorPlayersAndGoals").append(adminFlexDiv);
-        $(`#player${selectVisitorCounter}`).select2();
+        $(`#player${selectId}${selectVisitorCounter}`).select2();
         selectVisitorCounter++;
     });
 
