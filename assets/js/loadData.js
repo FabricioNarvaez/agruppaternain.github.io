@@ -52,22 +52,22 @@ $(document).ready(async function () {
         return div;
     }
 
-    $("#addLocalScorer").click(function () {
-        const selectId = 'local';
-        local.prop('disabled', true);
-        const adminFlexDiv = addPlayer(selectLocalCounter, selectId);
-        $(".localPlayersAndGoals").append(adminFlexDiv);
-        $(`#player${selectId}${selectLocalCounter}`).select2();
+    $("#addLocalScorer").click(function() {
+        addScorer('local', selectLocalCounter);
         selectLocalCounter++;
     });
+    
     $("#addVisitorScorer").click(function () {
-        const selectId = 'visitor';
-        visitor.prop('disabled', true);
-        const adminFlexDiv = addPlayer(selectVisitorCounter, selectId);
-        $(".visitorPlayersAndGoals").append(adminFlexDiv);
-        $(`#player${selectId}${selectVisitorCounter}`).select2();
+        addScorer('visitor', selectVisitorCounter);
         selectVisitorCounter++;
     });
+
+    function addScorer(selectId, selectCounter){
+        $(`#${selectId}`).prop('disabled', true);
+        const adminFlexDiv = addPlayer(selectCounter, selectId);
+        $(`.${selectId}PlayersAndGoals`).append(adminFlexDiv);
+        $(`#player${selectId}${selectCounter}`).select2();
+    }
 
     function createOption(name){
         return $("<option></option>")
