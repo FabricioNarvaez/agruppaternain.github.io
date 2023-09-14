@@ -141,7 +141,8 @@ body {
     border-radius: 3px;
 }
 
-.addPlayerBtn{
+.addPlayerBtn,
+.removePlayerBtn{
     background: transparent;
     border: none;
 }
