@@ -4,8 +4,12 @@ $(document).ready(async function () {
     const response = await fetch(`${url}api/teams`);
     const { teamsGroupA, teamsGroupB } = await response.json();
     const teamsCollection = teamsGroupA.concat(teamsGroupB);
+
     const local = $("#local");
     const visitor = $("#visitor");
+
+    var selectLocalCounter = 0;
+    var selectVisitorCounter = 0;
 
     teamsCollection.forEach(function (team) {
         const newOptionLocal = createOption(team.team);
@@ -15,20 +19,18 @@ $(document).ready(async function () {
         visitor.append(newOptionVisitor);
     });
 
-    var selectLocalCounter = 0;
-    var selectVisitorCounter = 0;
-
     function addPlayerOption(selectLocalCounter, selectId){
         const teamSelected = $(`#${selectId}`).val();
         const teamFounded = teamsCollection.find(team => team.team === teamSelected);
         const teamPlayers = teamFounded.players;
+        const className = `player${selectId}${selectLocalCounter}`;
         const div = $("<div>", {
             class: "adminFlex",
         });
 
         var selectElement = $("<select>", {
-            id: `player${selectId}${selectLocalCounter}`,
-            class: "select",
+            id: className,
+            class: `select ${className}`,
         }).append(
             $("<option>", {
                 value: "",
@@ -40,7 +42,7 @@ $(document).ready(async function () {
 
         var inputElement = $("<input>", {
             type: "number",
-            class: "adminInput",
+            class: `adminInput ${className}`,
             value: "0",
         });
 
@@ -53,14 +55,35 @@ $(document).ready(async function () {
     }
 
     $("#addLocalScorer").click(function() {
-        addScorer('local', selectLocalCounter);
         selectLocalCounter++;
+        addScorer('local', selectLocalCounter);
     });
     
     $("#addVisitorScorer").click(function () {
-        addScorer('visitor', selectVisitorCounter);
         selectVisitorCounter++;
+        addScorer('visitor', selectVisitorCounter);
     });
+
+    $("#sendMatchDataButton").click(function(){
+        var localGoals = calculateGoals(selectLocalCounter, 'local');
+        var visitorGoals = calculateGoals(selectVisitorCounter, 'visitor');
+        console.log(visitorGoals);
+        console.log(localGoals);
+    });
+
+    function calculateGoals(counter, playerType){
+        const goalsArray = [];
+        for(let i = counter; i>0 ; i--){
+            let playerName;
+            let goals;
+            $(`.player${playerType}${i}`).each(function(index, element) {
+                if(element.localName == 'select')   playerName = element.value;
+                else    goals = element.value;
+            });
+            goalsArray.push({name: playerName, goals: goals});
+        }
+        return goalsArray;
+    }
 
     function addScorer(selectId, selectCounter){
         $(`#${selectId}`).prop('disabled', true);
