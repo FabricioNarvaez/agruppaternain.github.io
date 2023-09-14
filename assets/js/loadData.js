@@ -52,7 +52,7 @@ $(document).ready(async function () {
         return div;
     }
 
-    $("#addLocalScorrer").click(function () {
+    $("#addLocalScorer").click(function () {
         const selectId = 'local';
         local.prop('disabled', true);
         const adminFlexDiv = addPlayer(selectLocalCounter, selectId);
@@ -60,7 +60,7 @@ $(document).ready(async function () {
         $(`#player${selectId}${selectLocalCounter}`).select2();
         selectLocalCounter++;
     });
-    $("#addVisitorScorrer").click(function () {
+    $("#addVisitorScorer").click(function () {
         const selectId = 'visitor';
         visitor.prop('disabled', true);
         const adminFlexDiv = addPlayer(selectVisitorCounter, selectId);
