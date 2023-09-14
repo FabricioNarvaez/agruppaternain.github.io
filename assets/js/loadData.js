@@ -18,7 +18,7 @@ $(document).ready(async function () {
     var selectLocalCounter = 0;
     var selectVisitorCounter = 0;
 
-    function addPlayer(selectLocalCounter, selectId){
+    function addPlayerOption(selectLocalCounter, selectId){
         const teamSelected = $(`#${selectId}`).val();
         const teamFounded = teamsCollection.find(team => team.team === teamSelected);
         const teamPlayers = teamFounded.players;
@@ -64,7 +64,7 @@ $(document).ready(async function () {
 
     function addScorer(selectId, selectCounter){
         $(`#${selectId}`).prop('disabled', true);
-        const adminFlexDiv = addPlayer(selectCounter, selectId);
+        const adminFlexDiv = addPlayerOption(selectCounter, selectId);
         $(`.${selectId}PlayersAndGoals`).append(adminFlexDiv);
         $(`#player${selectId}${selectCounter}`).select2();
     }
