@@ -65,10 +65,29 @@ $(document).ready(async function () {
     });
 
     $("#sendMatchDataButton").click(function(){
-        var localGoals = calculateGoals(selectLocalCounter, 'local');
-        var visitorGoals = calculateGoals(selectVisitorCounter, 'visitor');
-        console.log(visitorGoals);
-        console.log(localGoals);
+        var dataToSend = {
+            local: {
+                team: local.val(),
+                goals: calculateGoals(selectLocalCounter, 'local'),
+            },
+            visitor: {
+                team: visitor.val(),
+                goals:calculateGoals(selectVisitorCounter, 'visitor')
+            }
+        };
+        $.ajax({
+            type: 'PUT',
+            url: `${url}api/update`,
+            data: JSON.stringify(dataToSend),
+            contentType: 'application/json',
+            success: function(response) {
+                alert(response);
+            },
+            error: function(error) {
+                console.error('Error en la solicitud PUT:', error);
+            }
+        });
+        console.log(dataToSend);
     });
 
     function calculateGoals(counter, playerType){
