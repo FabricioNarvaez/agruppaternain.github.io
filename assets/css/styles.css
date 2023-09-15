@@ -141,7 +141,8 @@ body {
     border-radius: 3px;
 }
 
-.addPlayerBtn{
+.addPlayerBtn,
+.removePlayerBtn{
     background: transparent;
     border: none;
 }
@@ -189,6 +190,11 @@ table tbody tr:hover {
 .flexAlignCenter{
     display: flex;
     align-items: center;
+}
+
+.flexJustifyCenter{
+    display: flex;
+    justify-content: center;
 }
 
 .teamIndexLogo{

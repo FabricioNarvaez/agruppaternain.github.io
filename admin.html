@@ -85,12 +85,19 @@
             </div>
             <div class="localPlayersAndGoals">
             </div>
-            <button id="addLocalScorrer" class="addPlayerBtn">
+            <button id="addLocalScorer" class="addPlayerBtn">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
                     <path d="M9 12l6 0" />
                     <path d="M12 9l0 6" />
+                </svg>
+            </button>
+            <button id="removeLocalScorer" class="removePlayerBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-minus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    <path d="M9 12l6 0" />
                 </svg>
             </button>
             <div class="adminFlex">
@@ -101,7 +108,7 @@
             </div>
             <div class="visitorPlayersAndGoals">
             </div>
-            <button id="addVisitorScorrer" class="addPlayerBtn">
+            <button id="addVisitorScorer" class="addPlayerBtn">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
@@ -109,7 +116,17 @@
                     <path d="M12 9l0 6" />
                 </svg>
             </button>
+            <button id="removeVisitorScorer" class="removePlayerBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-minus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    <path d="M9 12l6 0" />
+                </svg>
+            </button>
             <div id="dataError"></div>
+            <div class="flexJustifyCenter">
+                <button id="sendMatchDataButton" class="button" type="button">Enviar</button>
+            </div>
         </div>
     </div>
     <div id="cookieMessage" class="cookieContainer hidden">
