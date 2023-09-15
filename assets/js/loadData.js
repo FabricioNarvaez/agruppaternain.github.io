@@ -19,13 +19,14 @@ $(document).ready(async function () {
         visitor.append(newOptionVisitor);
     });
 
-    function addPlayerOption(selectLocalCounter, selectId){
+    function addPlayerOption(selectCounter, selectId){
         const teamSelected = $(`#${selectId}`).val();
         const teamFounded = teamsCollection.find(team => team.team === teamSelected);
         const teamPlayers = teamFounded.players;
-        const className = `player${selectId}${selectLocalCounter}`;
+        const className = `player${selectId}${selectCounter}`;
         const div = $("<div>", {
-            class: "adminFlex",
+            id: `adminFlex${selectCounter}`,
+            class: "adminFlex"
         });
 
         var selectElement = $("<select>", {
@@ -58,11 +59,21 @@ $(document).ready(async function () {
         selectLocalCounter++;
         addScorer('local', selectLocalCounter);
     });
+
+    $("#removeLocalScorer").click(function() {
+        $(`#adminFlex${selectLocalCounter}`).remove();
+        selectLocalCounter--;
+    })
     
     $("#addVisitorScorer").click(function () {
         selectVisitorCounter++;
         addScorer('visitor', selectVisitorCounter);
     });
+
+    $("#removeVisitorScorer").click(function() {
+        $(`#adminFlex${selectLocalCounter}`).remove();
+        selectLocalCounter--;
+    })
 
     $("#sendMatchDataButton").click(function(){
         var dataToSend = {
