@@ -11,7 +11,7 @@ function createRow(team, index) {
     }
 
     const teamField = document.createElement("td");
-    const imgSrc = team.logo || "assets/img/default.png";
+    const imgSrc = team.logo || "https://res.cloudinary.com/dzd68sxue/image/upload/v1695055988/default_bnoacd.png";
     const calculateDifPos = team.lastPos - pos;
     let difPos = "";
     if(calculateDifPos != 0){
