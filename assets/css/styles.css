@@ -26,6 +26,12 @@ body {
     text-align: center;
     font-weight: bold;
     color: #333;
+    margin-top: -30px;
+    margin-bottom: -50px;
+}
+
+.title img{
+    height: 300px;
 }
 
 .navMenu {
@@ -59,7 +65,7 @@ body {
 }
 
 .navbar {
-    margin: 20px auto 0px auto;
+    margin: 35px auto 0px auto;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -106,11 +112,21 @@ body {
     margin-bottom: 10px;
 }
 
+.matchWeekUl li:first-child{
+    list-style-type: none;
+}
+
 .container {
     background: #fff;
     width: 50%;
     margin: 30px auto;
     border-radius: 10px;
+    padding-bottom: 100px;
+}
+
+.updateDate{
+    font-style: italic;
+    text-align: right;
 }
 
 .loader {
@@ -190,6 +206,11 @@ table tbody tr:hover {
 .flexAlignCenter{
     display: flex;
     align-items: center;
+}
+
+.flexSpaceBetween{
+    display: flex;
+    justify-content: space-between;
 }
 
 .flexJustifyCenter{
@@ -422,14 +443,18 @@ table tbody tr:hover {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .title img{
+        height: 190px;
+    }
+
     .header {
-        height: 149px;
+        height: 195px;
     }
 
     .navMenu {
         position: fixed;
         left: -100%;
-        top: 149px;
+        top: 195px;
         gap: 0;
         flex-direction: column;
         background-color: #818181;
