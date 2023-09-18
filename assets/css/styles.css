@@ -112,6 +112,10 @@ body {
     margin-bottom: 10px;
 }
 
+.matchWeekUl li:first-child{
+    list-style-type: none;
+}
+
 .container {
     background: #fff;
     width: 50%;
@@ -202,6 +206,11 @@ table tbody tr:hover {
 .flexAlignCenter{
     display: flex;
     align-items: center;
+}
+
+.flexSpaceBetween{
+    display: flex;
+    justify-content: space-between;
 }
 
 .flexJustifyCenter{

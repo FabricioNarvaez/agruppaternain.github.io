@@ -32,10 +32,10 @@ function createRow(team, index) {
                 <img src="${imgSrc}" class="teamIndexLogo">
                 <span>${team.team}</span>
             </div>
-            <div class="flexAlignCenter">
+            <!--<div class="flexAlignCenter">
                 <span class="triangle ${className}"></span>
                 <span style="color: ${color}">${difPos}</span>
-            </div>
+            </div>-->
         </div>
     `;
     teamField.innerHTML = htmlTemplate;
