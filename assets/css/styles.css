@@ -172,6 +172,14 @@ body {
     }
 }
 
+.tableGrid{
+    display: grid;
+}
+
+.tableGrid p{
+    margin: 10px;
+}
+
 table {
     color: #333;
     width: 100%;
