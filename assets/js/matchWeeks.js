@@ -12,7 +12,7 @@ const matchWeeksLoader = document.getElementById("matchWeeksLoader");
         matchWeeks.forEach((matchWeek, index) => {
             const matchWeekContainer = document.createElement("div");
             const matchWeekTitle = document.createElement("h3");
-            matchWeekTitle.textContent = matchWeek.matchWeek;
+            matchWeekTitle.textContent = `${matchWeek.matchWeek} (${matchWeek.date})`;
 
             matchWeekContainer.appendChild(matchWeekTitle);
             matchWeekContainer.appendChild(addMatchWeek(matchWeek.matches));
