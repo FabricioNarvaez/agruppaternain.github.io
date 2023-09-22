@@ -29,7 +29,7 @@ function createRow(team, index) {
     const htmlTemplate = `
         <div class="flexAlignCenter spaceBetween">
             <div class="flexAlignCenter">
-                <img src="${imgSrc}" class="teamIndexLogo">
+                <img src="${imgSrc}" class="teamIndexLogo" alt="${team.team}" title="${team.team}">
                 <span>${team.team}</span>
             </div>
             <!--<div class="flexAlignCenter">
