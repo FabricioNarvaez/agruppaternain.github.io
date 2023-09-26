@@ -80,11 +80,11 @@ export function calculatePointsGoalsMatches(team) {
 }
 
 export function sortByPointsAndGoals(a, b) {
-    if (a.Pts > b.Pts) {
-        return -1;
-    } else if (a.Pts < b.Pts) {
-        return 1;
+    if (a.pts !== b.pts) {
+      return b.pts - a.pts;
+    } else if (a.GD !== b.GD) {
+      return b.GD - a.GD;
     } else {
-        return sortByGoals(a, b);
+      return b.GF - a.GF;
     }
 }
