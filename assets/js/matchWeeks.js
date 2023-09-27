@@ -59,13 +59,35 @@ function addMatchWeek(matches){
 
 function createTableCell(local, visitor) {
     const cell = document.createElement("td");
-    const content = `
-        <div class="tableGrid">
-            <p>${local}</p>
+    const content = local.localResult && visitor.visitorResult ? 
+        `<div class="tableGrid">
+            <div class="gridTeamData">
+                <p>${local.local}</p>
+                <div class="matchWeeksResults">
+                    <p>${local.localResult}</p>
+                </div>
+            </div>
             <strong> VS </strong>
-            <p>${visitor}</p>
+            <div class="gridTeamData">
+                <p>${visitor.visitor}</p>
+                <div class="matchWeeksResults">
+                    <p>${visitor.visitorResult}</p>
+                </div>
+            </div>
         </div>
-    `;
+        `
+        :
+        `<div class="tableGrid">
+            <div class="flexJustifyCenter">
+                <p>${local.local}</p>
+            </div>
+            <strong> VS </strong>
+            <div class="flexJustifyCenter">
+                <p>${visitor.visitor}</p>
+            </div>
+        </div>
+        `
+    ;
     cell.innerHTML = content;
     return cell;
 }
@@ -75,7 +97,7 @@ function createMatchWeekRow(match) {
     const hourtd = document.createElement("td");
     hourtd.textContent = match.hour;
     row.appendChild(hourtd);
-    row.appendChild(createTableCell(match.groupA.local, match.groupA.visitor));
-    row.appendChild(createTableCell(match.groupB.local, match.groupB.visitor));
+    row.appendChild(createTableCell(match.groupA, match.groupA));
+    row.appendChild(createTableCell(match.groupB, match.groupB));
     return row;
 }
