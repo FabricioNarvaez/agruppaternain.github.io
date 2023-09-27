@@ -11,7 +11,7 @@ const matchWeeksLoader = document.getElementById("matchWeeksLoader");
     if(matchWeeks.length){
         matchWeeks.forEach((matchWeek, index) => {
             const matchWeekContainer = document.createElement("div");
-            matchWeekContainer.classList.add("week");
+            matchWeekContainer.classList.add("tablesMargin");
             const matchWeekTitle = document.createElement("h3");
             matchWeekTitle.textContent = `${matchWeek.matchWeek} (${matchWeek.date})`;
 
