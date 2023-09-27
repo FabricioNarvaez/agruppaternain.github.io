@@ -38,6 +38,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    z-index: 1000;
 }
 
 .navItem {
@@ -181,6 +182,10 @@ body {
     100% {
         transform: rotate(360deg);
     }
+}
+
+.week{
+    margin-bottom: 50px;
 }
 
 .tableGrid{
@@ -442,16 +447,13 @@ table tbody tr:hover {
 
     .container {
         width: 95%;
+        margin: 0 auto;
+        padding: 225px 0px 5px 0px;
     }
 
     .containerImages{
         width: 100%;
         padding: 0px !important;
-    }
-
-    .container {
-        margin: 0 auto;
-        padding: 10px 0px 5px 0px;
     }
 
     .menuIcon {
@@ -473,7 +475,11 @@ table tbody tr:hover {
     }
 
     .header {
+        position: fixed;
         height: 195px;
+        width: 100%;
+        z-index: 1000;
+        padding-left: 0;
     }
 
     .navMenu {
