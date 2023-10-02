@@ -523,4 +523,19 @@ table tbody tr:hover {
     .teamIndexLogo{
         width: 45px;
     }
+
+    .title,.navbar {
+        margin: 0px;
+    }
+
+    .header {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .navMenu {
+        top: 181px;
+    }
 }
