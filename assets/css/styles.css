@@ -418,6 +418,15 @@ table tbody tr:hover {
     display: none;
 }
 
+.error-404{
+    text-align: center;
+}
+
+.error-404 a{
+    text-decoration: none;
+    height: 20px;
+}
+
 @media screen and (max-width: 1350px) {
     .container {
         width: 70%;
