@@ -16,7 +16,7 @@ fetch(urlToken, {
 })
     .then((response) => {
         if (!response.ok) {
-            window.location.href = "login.html";
+            window.location.href = "login";
         } else {
             adminContainer.classList.remove("hidden");
             adminLoader.remove();
