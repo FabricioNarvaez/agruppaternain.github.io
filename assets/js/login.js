@@ -35,7 +35,7 @@ loginButton.addEventListener("click", () => {
             .then((data) => {
                 if (data) {
                     document.cookie = `token=${data.token}; path=/;`;
-                    window.location.href = "admin.html";
+                    window.location.href = "admin";
                 }
             })
             .catch((error) =>
