@@ -6,37 +6,47 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://www.agrupacionpaternain.es/</loc>
-    <lastmod>2023-10-09T16:02:40+00:00</lastmod>
+    <lastmod>2023-10-10T16:28:47+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://www.agrupacionpaternain.es/champions</loc>
-    <lastmod>2023-10-09T16:02:40+00:00</lastmod>
+    <lastmod>2023-10-10T16:28:47+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.agrupacionpaternain.es/uefa</loc>
-    <lastmod>2023-10-09T16:02:40+00:00</lastmod>
+    <lastmod>2023-10-10T16:28:47+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.agrupacionpaternain.es/scorer</loc>
-    <lastmod>2023-10-09T16:02:40+00:00</lastmod>
+    <lastmod>2023-10-10T16:28:47+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.agrupacionpaternain.es/rules</loc>
-    <lastmod>2023-10-09T16:02:40+00:00</lastmod>
+    <lastmod>2023-10-10T16:28:47+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.agrupacionpaternain.es/matchweeks</loc>
-    <lastmod>2023-10-09T16:02:40+00:00</lastmod>
+    <lastmod>2023-10-10T16:28:47+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.agrupacionpaternain.es/privacy</loc>
+    <lastmod>2023-10-10T16:28:47+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.agrupacionpaternain.es/cookies-policy</loc>
-    <lastmod>2023-10-09T16:02:40+00:00</lastmod>
+    <lastmod>2023-10-10T16:28:47+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.agrupacionpaternain.es/terms</loc>
+    <lastmod>2023-10-10T16:28:47+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>
