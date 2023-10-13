@@ -72,7 +72,6 @@ body {
 .menuIcon {
     display: none;
     cursor: pointer;
-    padding-bottom: 10px;
 }
 
 .bar {
@@ -480,12 +479,12 @@ table tbody tr:hover {
     .container {
         width: 95%;
         margin: 0 auto;
-        padding: 225px 0px 30px 0px;
+        padding: 190px 0px 30px 0px;
     }
 
     .containerImages{
         width: 100%;
-        padding: 195px 0px !important;
+        padding: 136px 0px !important;
     }
 
     .menuIcon {
@@ -503,12 +502,13 @@ table tbody tr:hover {
     }
 
     .title img{
-        height: 190px;
+        height: 130px;
+        margin-bottom: 10px;
     }
 
     .header {
         position: fixed;
-        height: 195px;
+        height: 150px;
         width: 100%;
         z-index: 1000;
         padding-left: 0;
@@ -553,7 +553,12 @@ table tbody tr:hover {
         width: 45px;
     }
 
-    .title,.navbar {
+    .title{
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .navbar {
         margin: 0px;
     }
 
@@ -565,6 +570,6 @@ table tbody tr:hover {
     }
 
     .navMenu {
-        top: 181px;
+        top: 136px;
     }
 }
