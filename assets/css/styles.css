@@ -7,8 +7,10 @@
 html,
 body {
     background-color: var(--white);
-    height: 100%;
+    min-height: 100vh;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
@@ -72,7 +74,6 @@ body {
 .menuIcon {
     display: none;
     cursor: pointer;
-    padding-bottom: 10px;
 }
 
 .bar {
@@ -149,6 +150,7 @@ body {
 }
 
 .container {
+    flex: 1;
     background: var(--white);
     width: 50%;
     margin: 30px auto;
@@ -480,12 +482,12 @@ table tbody tr:hover {
     .container {
         width: 95%;
         margin: 0 auto;
-        padding: 225px 0px 30px 0px;
+        padding: 190px 0px 30px 0px;
     }
 
     .containerImages{
         width: 100%;
-        padding: 195px 0px !important;
+        padding-top: 170px!important;
     }
 
     .menuIcon {
@@ -503,12 +505,13 @@ table tbody tr:hover {
     }
 
     .title img{
-        height: 190px;
+        height: 130px;
+        margin-bottom: 10px;
     }
 
     .header {
         position: fixed;
-        height: 195px;
+        height: 150px;
         width: 100%;
         z-index: 1000;
         padding-left: 0;
@@ -517,7 +520,7 @@ table tbody tr:hover {
     .navMenu {
         position: fixed;
         left: -100%;
-        top: 195px;
+        top: 156px;
         gap: 0;
         flex-direction: column;
         background-color: #818181;
@@ -553,7 +556,12 @@ table tbody tr:hover {
         width: 45px;
     }
 
-    .title,.navbar {
+    .title{
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .navbar {
         margin: 0px;
     }
 
@@ -565,6 +573,10 @@ table tbody tr:hover {
     }
 
     .navMenu {
-        top: 181px;
+        top: 136px;
+    }
+
+    .containerImages{
+        padding: 136px 0px !important;
     }
 }
