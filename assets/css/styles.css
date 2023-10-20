@@ -199,7 +199,9 @@ body {
 }
 
 .containerImages{
-    margin-top: 0px;
+    flex: 1;
+    width: 50%;
+    margin: 0px auto;
 }
 
 .updateDate{
@@ -490,7 +492,8 @@ table tbody tr:hover {
 }
 
 @media screen and (max-width: 1350px) {
-    .container {
+    .container,
+    .containerImages{
         width: 70%;
     }
 }
@@ -522,12 +525,11 @@ table tbody tr:hover {
     .container{
         width: 95%;
         margin: 0 auto;
-        padding: 190px 0px 30px 0px;
+        padding: 30px 0px;
     }
 
     .containerImages{
         width: 100%;
-        padding-top: 170px!important;
     }
 
     .menuIcon {
@@ -550,10 +552,8 @@ table tbody tr:hover {
     }
 
     .header {
-        position: fixed;
         height: 150px;
         width: 100%;
-        z-index: 1000;
         padding-left: 0;
     }
 
@@ -633,9 +633,5 @@ table tbody tr:hover {
 
     .navMenu {
         top: 136px;
-    }
-
-    .containerImages{
-        padding: 136px 0px !important;
     }
 }
