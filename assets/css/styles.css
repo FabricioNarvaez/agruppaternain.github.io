@@ -491,6 +491,19 @@ table tbody tr:hover {
     height: 20px;
 }
 
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1350px) {
     .container,
     .containerImages{
@@ -554,7 +567,8 @@ table tbody tr:hover {
     .header {
         height: 150px;
         width: 100%;
-        padding-left: 0;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .navMenu {
