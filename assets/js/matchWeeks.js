@@ -16,7 +16,7 @@ const matchWeeksLoader = document.getElementById("matchWeeksLoader");
             matchWeekTitle.textContent = `${matchWeek.matchWeek} (${matchWeek.date})`;
 
             matchWeekContainer.appendChild(matchWeekTitle);
-            matchWeekContainer.appendChild(addMatchWeek(matchWeek.matches));
+            matchWeekContainer.appendChild(newDesign(matchWeek.matches));
 
             matchWeeksContent.appendChild(matchWeekContainer);
         });
@@ -29,6 +29,34 @@ const matchWeeksLoader = document.getElementById("matchWeeksLoader");
     }
     
 })();
+
+function newDesign(matches){
+    const container = document.createElement("div");
+    container.classList.add("weekContainer");
+    matches.forEach(matchHour =>{
+        const divRowA = document.createElement("div");
+        divRowA.innerHTML = createRow(matchHour.groupA, matchHour.hour);
+        divRowA.classList.add("matchweek_row");
+        const divRowB = document.createElement("div");
+        divRowB.innerHTML = createRow(matchHour.groupB, matchHour.hour);
+        divRowB.classList.add("matchweek_row");
+        container.appendChild(divRowA);
+        container.appendChild(divRowB);
+    })
+    return container;
+}
+
+function createRow(matchData, hour){
+    const hourOrResult = matchData.localResult ? `${matchData.localResult} - ${matchData.visitorResult}` : `${hour}`;
+    const template = `
+        <p>${matchData.local}</p>
+        <div class="matchHourOrResult">
+            <span>${hourOrResult}</span>
+        </div>
+        <p>${matchData.visitor}</p>
+    `;
+    return template;
+}
 
 function addMatchWeek(matches){
     const table = document.createElement("table");
