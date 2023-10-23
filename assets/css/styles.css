@@ -323,7 +323,7 @@ table tbody tr:hover {
 
 .spaceBetween{
     justify-content: space-between;
-    margin-right: 10px;
+    margin-right: 5px;
     width: 300px;
 }
 
