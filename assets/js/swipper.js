@@ -25,7 +25,7 @@ const swiper_module = document.getElementById("swiper_module");
         spaceBetween: 10,
         pagination: {
           el: '.swiper-pagination',
-          clickable: true,
+          clickable: false,
         },
         navigation: {
           nextEl: '.swiper-button-next',
