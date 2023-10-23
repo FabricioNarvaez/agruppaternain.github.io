@@ -93,6 +93,7 @@ $(document).ready(async function () {
             contentType: 'application/json',
             success: function(response) {
                 alert(response);
+                location.reload();
             },
             error: function(error) {
                 console.error('Error en la solicitud PUT:', error);

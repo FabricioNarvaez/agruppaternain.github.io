@@ -2,6 +2,7 @@
     --blueWeb: #0b95dd;
     --white: #fff;
     --tableHeader: #333;
+    --ligthGrey: #ddd;
     --orange: #ffb043;
 }
 html,
@@ -285,12 +286,12 @@ table thead th {
     padding: 5px;
     text-align: left;
     font-size: 18px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--ligthGrey);
 }
 
 table tbody td {
     padding: 3px 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--ligthGrey);
 }
 
 table tbody tr:nth-child(even) {
@@ -298,7 +299,7 @@ table tbody tr:nth-child(even) {
 }
 
 table tbody tr:hover {
-    background-color: #ddd;
+    background-color: var(--ligthGrey);
 }
 
 .flexAlignCenter{
@@ -504,6 +505,26 @@ table tbody tr:hover {
     cursor: pointer;
 }
 
+.matchweek_row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid var(--ligthGrey);
+}
+
+.matchweek_row p{
+    width: 130px;
+    text-align: center;
+}
+
+.matchHourOrResult{
+    background-color: var(--blueWeb);
+    border-radius: 3px;
+    color: var(--white);
+    font-weight: bold;
+    padding: 4px 6px;
+}
+
 @media screen and (max-width: 1350px) {
     .container,
     .containerImages{
@@ -532,7 +553,8 @@ table tbody tr:hover {
     }
 
     table tbody td {
-        padding: 5px;
+        text-align: center;
+        padding: 3px;
     }
 
     .container{
@@ -626,7 +648,7 @@ table tbody tr:hover {
     }
 
     .teamIndexLogo{
-        width: 45px;
+        width: 40px;
     }
 
     .title{
