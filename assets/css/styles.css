@@ -532,7 +532,8 @@ table tbody tr:hover {
     }
 
     table tbody td {
-        padding: 5px;
+        text-align: center;
+        padding: 3px;
     }
 
     .container{
@@ -626,7 +627,7 @@ table tbody tr:hover {
     }
 
     .teamIndexLogo{
-        width: 45px;
+        width: 40px;
     }
 
     .title{
