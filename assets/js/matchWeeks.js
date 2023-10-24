@@ -6,6 +6,12 @@ const matchWeeksLoader = document.getElementById("matchWeeksLoader");
 (async () => {
     const response = await fetch(`${url}matchweeks/getAll`);
     const { matchWeeks } = await response.json();
+    // TODO: Search better way to do this
+    matchWeeks.sort((a, b) => {
+        const numA = parseInt(a.matchWeek.match(/\d+/)[0]);
+        const numB = parseInt(b.matchWeek.match(/\d+/)[0]);
+        return numA - numB;
+      });
     matchWeeksLoader.remove();
     const matchWeeksContent = document.getElementById("matchWeeksContent");
     if(matchWeeks.length){
@@ -49,11 +55,17 @@ function newDesign(matches){
 function createRow(matchData, hour){
     const hourOrResult = matchData.localResult ? `${matchData.localResult} - ${matchData.visitorResult}` : `${hour}`;
     const template = `
-        <p>${matchData.local}</p>
+        <div class="matchweekTeam">
+            <img src="${matchData.localLogo}" class="teamIndexLogo" alt="${matchData.local}" title="${matchData.local}">
+            <p>${matchData.local}</p>
+        </div>
         <div class="matchHourOrResult">
             <span>${hourOrResult}</span>
         </div>
-        <p>${matchData.visitor}</p>
-    `;
+        <div class="matchweekTeam matchweekTeamVisitor">
+            <p>${matchData.visitor}</p>
+            <img src="${matchData.visitorLogo}" class="teamIndexLogo" alt="${matchData.visitorLogo}" title="${matchData.visitorLogo}">
+        </div>
+        `;
     return template;
 }
