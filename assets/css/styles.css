@@ -302,7 +302,8 @@ table tbody tr:hover {
     background-color: var(--ligthGrey);
 }
 
-.flexAlignCenter{
+.flexAlignCenter,
+.matchweekTeam{
     display: flex;
     align-items: center;
 }
@@ -645,6 +646,24 @@ table tbody tr:hover {
 
     .flexAlignCenter{
         font-size: 11px;
+    }
+
+    .matchweekTeam{
+        flex-direction: column;
+        margin: 3px;
+    }
+
+    .matchweekTeamVisitor img{
+        order: 1;
+    }
+
+    .matchweekTeam p{
+        margin: 3px;
+        width: 69px;
+    }
+
+    .matchweekTeamVisitor p{
+        order: 2;
     }
 
     .teamIndexLogo{
