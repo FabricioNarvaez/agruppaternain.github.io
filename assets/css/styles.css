@@ -599,7 +599,7 @@ table tbody tr:hover {
         top: 116px;
         gap: 0;
         flex-direction: column;
-        background-color: #818181;
+        background-color: #9b9b9b;
         width: 100%;
         text-align: center;
         transition: 0.3s;
