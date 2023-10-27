@@ -559,11 +559,12 @@ table tbody tr:hover {
     .container{
         width: 95%;
         margin: 0 auto;
-        padding: 30px 0px;
+        padding: 170px 0px;
     }
 
     .containerImages{
         width: 100%;
+        padding-top: 151px;
     }
 
     .menuIcon {
@@ -624,9 +625,18 @@ table tbody tr:hover {
 }
 
 @media screen and (max-width: 500px) {
+    .container{
+        padding-top: 150px;
+    }
+
+    .containerImages{
+        padding-top: 120px;
+    }
+
     .home_container{
         padding: 0 20px;
     }
+
     .home_title{
         font-size: 40px;
     }
