@@ -76,7 +76,6 @@ body {
 
 .swiper {
     height: 300px;
-    
 }
 
 .swiper-slide{
@@ -101,7 +100,6 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    z-index: 1000;
 }
 
 .navItem {
@@ -588,7 +586,8 @@ table tbody tr:hover {
     }
 
     .header {
-        height: 150px;
+        position: fixed;
+        height: 130px;
         width: 100%;
         padding-left: 0px;
         padding-right: 0px;
@@ -597,7 +596,7 @@ table tbody tr:hover {
     .navMenu {
         position: fixed;
         left: -100%;
-        top: 156px;
+        top: 116px;
         gap: 0;
         flex-direction: column;
         background-color: #818181;
@@ -680,13 +679,15 @@ table tbody tr:hover {
     }
 
     .header {
+        height: 120px;
         display: grid;
         grid-template-columns: 2fr 1fr;
         align-items: center;
         padding: 0px;
+        z-index: 10;
     }
 
     .navMenu {
-        top: 136px;
+        top: 106px;
     }
 }
