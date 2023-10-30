@@ -126,7 +126,7 @@ body {
 }
 
 .navbar {
-    margin: 35px auto 0px auto;
+    margin: 30px auto 0px auto;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -559,7 +559,7 @@ table tbody tr:hover {
     .container{
         width: 95%;
         margin: 0 auto;
-        padding: 170px 0px;
+        padding: 170px 0px 50px 0px;
     }
 
     .containerImages{
@@ -597,7 +597,7 @@ table tbody tr:hover {
     .navMenu {
         position: fixed;
         left: -100%;
-        top: 116px;
+        top: 136px;
         gap: 0;
         flex-direction: column;
         background-color: #9b9b9b;
