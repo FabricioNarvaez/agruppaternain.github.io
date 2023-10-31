@@ -1,4 +1,4 @@
-import { appendField, sortByGoals } from "./common.js";
+import { appendField } from "./common.js";
 function createRow(team, index) {
     let row = document.createElement("tr");
 
@@ -79,12 +79,14 @@ export function calculatePointsGoalsMatches(team) {
     team.PJ = team.PG + team.PE + team.PP;
 }
 
-export function sortByPointsAndGoals(a, b) {
-    if (a.pts !== b.pts) {
-      return b.pts - a.pts;
-    } else if (a.GD !== b.GD) {
-      return b.GD - a.GD;
-    } else {
-      return b.GF - a.GF;
+export function sortByPointsAndGoals(equipoA, equipoB) {
+    if (equipoB.Pts - equipoA.Pts !== 0) {
+        return equipoB.Pts - equipoA.Pts;
     }
+
+    if (equipoB.GD - equipoA.GD !== 0) {
+        return equipoB.GD - equipoA.GD;
+    }
+
+    return equipoB.GF - equipoA.GF;
 }
