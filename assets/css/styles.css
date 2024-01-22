@@ -546,6 +546,10 @@ table tbody tr:hover {
         width: 100%;
     }
 
+    .pichichi-png{
+        margin-top: 150px;
+    }
+
     table thead th {
         font-size: 12px;
         width: 5px !important;
@@ -560,6 +564,10 @@ table tbody tr:hover {
         width: 95%;
         margin: 0 auto;
         padding: 170px 0px 50px 0px;
+    }
+
+    .pichichi{
+        padding-top: 60px;
     }
 
     .containerImages{
@@ -627,6 +635,14 @@ table tbody tr:hover {
 @media screen and (max-width: 500px) {
     .container{
         padding-top: 150px;
+    }
+
+    .pichichi-png{
+        margin-top: 120px;
+    }
+
+    .pichichi{
+        padding-top: 50px;
     }
 
     .containerImages{
