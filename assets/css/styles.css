@@ -203,6 +203,10 @@ body {
     margin: 0px auto;
 }
 
+.containerImages .subtitle{
+    margin: 30px 0;
+}
+
 .updateDate{
     font-style: italic;
     text-align: right;
@@ -387,6 +391,7 @@ table tbody tr:hover {
 .imgChampions {
     width: 100%;
     height: auto;
+    margin-bottom: -7px;
 }
 
 .cookieContainer {

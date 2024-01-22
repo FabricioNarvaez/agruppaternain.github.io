@@ -1,8 +1,7 @@
 {
     "rewrites": [
       { "source": "/404", "destination": "/404.html" },
-      { "source": "/champions", "destination": "/champions.html" },
-      { "source": "/uefa", "destination": "/uefa.html" },
+      { "source": "/playoffs", "destination": "/playoffs.html" },
       { "source": "/scorer", "destination": "/scorer.html" },
       { "source": "/rules", "destination": "/rules.html" },
       { "source": "/matchweeks", "destination": "/matchweeks.html" },
