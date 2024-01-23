@@ -33,15 +33,6 @@
 		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 	</script>
 	<script defer src="/_vercel/insights/script.js"></script>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-D7JDWVS6PW"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'G-D7JDWVS6PW');
-	</script>
 </head>
 <body>
 	<header class="header">
@@ -118,15 +109,20 @@
 	</div>
 	<footer class="footer">
 		<a href="privacy">Privacidad</a> | <a href="cookies-policy">Cookies</a> | <a href="terms">Términos</a>
-		<p>&copy; 2023 Agrupación Amigos por el Deporte</p>
+		<p>&copy; 2024 Agrupación Amigos por el Deporte</p>
 	</footer>
-    <button id="topButton"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-up-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M11.375 6.22l-5 4a1 1 0 0 0 -.375 .78v6l.006 .112a1 1 0 0 0 1.619 .669l4.375 -3.501l4.375 3.5a1 1 0 0 0 1.625 -.78v-6a1 1 0 0 0 -.375 -.78l-5 -4a1 1 0 0 0 -1.25 0z" stroke-width="0" fill="currentColor"></path>
-</svg></button>
-<div id="cookieMessage" class="cookieContainer hidden">
+    <button id="topButton">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-up-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M11.375 6.22l-5 4a1 1 0 0 0 -.375 .78v6l.006 .112a1 1 0 0 0 1.619 .669l4.375 -3.501l4.375 3.5a1 1 0 0 0 1.625 -.78v-6a1 1 0 0 0 -.375 -.78l-5 -4a1 1 0 0 0 -1.25 0z" stroke-width="0" fill="currentColor"></path>
+        </svg>
+    </button>
+    <div id="cookieMessage" class="cookieContainer hidden">
         <p>Utilizamos cookies para mejorar la experiencia del usuario en nuestro sitio web. Al continuar navegando, usted acepta nuestra <a style="color:black; font-weight: bold;" href="/cookies-policy" title="Página sobre las políticas de cookies de la página.">política de cookies.</a></p>
-        <button id="acceptCookies" class="acceptCookies button">Aceptar</button>
+        <div class="adminFlex" style="width: 200px; margin: 0 auto;">
+            <button id="acceptCookies" class="acceptCookies button">Aceptar</button>
+            <button id="rejectCookies" class="rejectCookies button">Rechazar</button>
+        </div>
     </div>
     <script src="assets/js/cookie.js" type="module" defer></script>
 	<script src="assets/js/navMenu.js" defer></script>

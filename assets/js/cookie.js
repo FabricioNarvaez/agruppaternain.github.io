@@ -32,6 +32,19 @@ function checkCookie() {
 
 acceptCookiesBtn.addEventListener("click", () => {
     setCookie("cookieAccepted", true, 30);
+    const script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-D7JDWVS6PW';
+    script.async = true;
+    document.head.appendChild(script);
+
+    script.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+        dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-D7JDWVS6PW');
+    };
     cookieMessage.style.display = "none";
 });
 
