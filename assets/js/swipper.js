@@ -7,10 +7,11 @@ function addTeamToSwipper(teams, group){
         let swipperElement = document.createElement("div");
         swipperElement.classList.add("swiper-slide");
         const imgSrc = team.logo || "https://res.cloudinary.com/dzd68sxue/image/upload/v1695396332/WEBP/default-bnoacd-1_qnmcps.webp";
+        // TODO: Descomentar los <a>
         const htmlTemplate = `
-            <a title=${team.team} href="team.html?group=${group}&id=${team._id}">
+        <!-- <a title=${team.team} href="team.html?group=${group}&id=${team._id}"> -->
                 <img class="swipper_img" src=${imgSrc} title=${team.team}>
-            </a>
+                <!--  </a> -->
             <span>${team.team}</span>
         `;
         swipperElement.innerHTML = htmlTemplate;
