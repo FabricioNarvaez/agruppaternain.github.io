@@ -15,17 +15,22 @@ const matchWeeksLoader = document.getElementById("matchWeeksLoader");
     matchWeeksLoader.remove();
     const matchWeeksContent = document.getElementById("matchWeeksContent");
     if(matchWeeks.length){
-        matchWeeks.forEach((matchWeek, index) => {
-            const matchWeekContainer = document.createElement("div");
-            matchWeekContainer.classList.add("tablesMargin");
-            const matchWeekTitle = document.createElement("h3");
-            matchWeekTitle.textContent = `${matchWeek.matchWeek} (${matchWeek.date})`;
+        // TODO: Descomentar esto
+        // matchWeeks.forEach((matchWeek, index) => {
+        //     const matchWeekContainer = document.createElement("div");
+        //     matchWeekContainer.classList.add("tablesMargin");
+        //     const matchWeekTitle = document.createElement("h3");
+        //     matchWeekTitle.textContent = `${matchWeek.matchWeek} (${matchWeek.date})`;
 
-            matchWeekContainer.appendChild(matchWeekTitle);
-            matchWeekContainer.appendChild(newDesign(matchWeek.matches));
+        //     matchWeekContainer.appendChild(matchWeekTitle);
+        //     matchWeekContainer.appendChild(newDesign(matchWeek.matches));
 
-            matchWeeksContent.appendChild(matchWeekContainer);
-        });
+        //     matchWeeksContent.appendChild(matchWeekContainer);
+        // });
+        // TODO: Borrar esto
+        const noData = document.createElement("h3");
+        noData.appendChild(appendField("Las jornadas aún no están definidas"));
+        matchWeeksContent.appendChild(noData);
     }else{
         const noData = document.createElement("h3");
         for(let i =0; i<4; i++){
