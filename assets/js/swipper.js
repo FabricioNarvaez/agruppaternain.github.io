@@ -9,9 +9,10 @@ function addTeamToSwipper(teams, group){
         const imgSrc = team.logo || "https://res.cloudinary.com/dzd68sxue/image/upload/v1695396332/WEBP/default-bnoacd-1_qnmcps.webp";
         
         const htmlTemplate = `
-            <a title=${team.team} href="team.html?group=${group}&id=${team._id}">
+            <!--<a title=${team.team} href="team.html?group=${group}&id=${team._id}">
                 <img class="swipper_img" src=${imgSrc} title=${team.team}>
-            </a>
+            </a>-->
+            <img class="swipper_img" src=${imgSrc} title=${team.team}>
             <span>${team.team}</span>
         `;
         swipperElement.innerHTML = htmlTemplate;
