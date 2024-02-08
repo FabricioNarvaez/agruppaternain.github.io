@@ -13,6 +13,7 @@
     flex-wrap: wrap;
     gap: 40px;
     margin: 30px 0;
+    padding: 10px;
     text-decoration: none;
     color: black;
     border-radius: 4px;
@@ -21,51 +22,57 @@
 }
 
 .amazonProduct img {
-    width: 100%; /* Asegura que la imagen ocupe el espacio correcto */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-width: 580px; /* Máximo ancho de la imagen */
+    height: auto;
+    max-width: 580px;
     max-height: 400px;
-    margin: 20px;
+    margin: 20px auto;
 }
 
 .amazonProductDescription {
     padding: 20px;
 }
 
-/* Tipografía */
 .amazonProductTitle {
-    font-size: 24px; /* Tamaño más adecuado para lectura */
-    margin-bottom: 10px; /* Ajuste de margen */
-    border-bottom: 1px solid #ccc; /* Borde más sutil */
+    font-size: 24px; 
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc; 
 }
 
 .amazonProductSubtitle {
-    font-size: 18px; /* Tamaño óptimo para subtítulos */
-    margin-bottom: 15px; /* Espacio antes de la lista */
-    font-weight: bold;
-}
-
-ul {
-    padding-left: 20px; /* Espaciado para la lista */
+    font-size: 18px;
+    margin-bottom: 15px; 
 }
 
 .amazonPrice {
-    font-size: 20px; /* Destaca el precio */
-    margin-top: 20px; /* Espacio antes del precio */
+    font-size: 20px;
+    margin-top: 20px; 
+}
+
+.amazonNavButtons{
+    margin: 30px 0;
+}
+
+.amazonNavButtons a{
+    color: black;
+    text-decoration: none;
+    font-weight: ;
+    border: 1px solid black;
+    padding: 4px 10px;
+    margin: 6px;
 }
 
 button {
-    background-color: #007bff; /* Color de botón vibrante */
-    color: #ffffff; /* Texto blanco para contraste */
-    border: none; /* Sin bordes */
-    padding: 10px 20px; /* Padding generoso */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Indica acción */
-    font-size: 18px; /* Tamaño de texto adecuado */
+    background-color: #007bff; 
+    color: #ffffff; 
+    border: none; 
+    padding: 10px 20px;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 18px;
 }
 
 button:hover {
-    background-color: #0056b3; /* Oscurece el botón al pasar el mouse */
+    background-color: #0056b3;
 }
 
 /* Responsive */
@@ -84,7 +91,6 @@ button:hover {
     }
 
     .amazonProduct img {
-        width: 90%;
         margin: 10px auto;
     }
 }
