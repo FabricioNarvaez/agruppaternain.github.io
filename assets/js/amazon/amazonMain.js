@@ -16,6 +16,7 @@ for(let i = 0; i< amazonCollection.length ; i++){
     productImg.setAttribute("src", randomProduct.imagen);
     productImg.setAttribute("alt", randomProduct.nombre);
     productImg.setAttribute("title", randomProduct.nombre);
+    productImg.classList.add("amazonProductImg");
     productLinkContainer.appendChild(productImg);
 
     const amazonProductDescription = document.createElement("div");
