@@ -1,21 +1,26 @@
 import { amazonProducts } from "./amazonProducts.js";
 
 const amazonProductCollection = document.querySelector(".amazonProductCollection");
-const amazonCollection = Object.values(amazonProducts);
-for(let i = 0; i< amazonCollection.length ; i++){
-    const numKeys = Object.keys(amazonCollection[i]).length;
+const amazonNavButtons = document.querySelector(".amazonNavButtons");
+for(let i = 0; i< amazonProducts.length ; i++){
+    const numKeys = Object.keys(amazonProducts[i].content).length;
     const randomIndex = Math.floor(Math.random() * numKeys) + 1;
-    const section = amazonCollection[i];
-    const randomProduct = section[randomIndex];
+    const section = amazonProducts[i];
+    const randomProduct = section.content[randomIndex];
+
+    const navElement = document.createElement("a");
+    navElement.setAttribute("href", `amazon/${section.file}.html`);
+    navElement.innerHTML = section.category;
+    amazonNavButtons.appendChild(navElement);
 
     const productLinkContainer =  document.createElement("a");
     productLinkContainer.setAttribute("target", "_black");
     productLinkContainer.classList.add("amazonProduct");
 
     const productImg = document.createElement("img");
-    productImg.setAttribute("src", randomProduct.imagen);
-    productImg.setAttribute("alt", randomProduct.nombre);
-    productImg.setAttribute("title", randomProduct.nombre);
+    productImg.setAttribute("src", randomProduct.image);
+    productImg.setAttribute("alt", randomProduct.name);
+    productImg.setAttribute("title", randomProduct.name);
     productImg.classList.add("amazonProductImg");
     productLinkContainer.appendChild(productImg);
 
@@ -24,7 +29,7 @@ for(let i = 0; i< amazonCollection.length ; i++){
 
     const productTitle = document.createElement("h3");
     productTitle.classList.add("amazonProductTitle");
-    productTitle.innerHTML = randomProduct.nombre;
+    productTitle.innerHTML = randomProduct.name;
     amazonProductDescription.appendChild(productTitle);
 
     const productSubtitle = document.createElement("h4");
@@ -33,16 +38,16 @@ for(let i = 0; i< amazonCollection.length ; i++){
     amazonProductDescription.appendChild(productSubtitle);
 
     const ul = document.createElement("ul");
-    for(let i = 1 ; i <= Object.keys(randomProduct.acercaDe).length; i++){
+    for(let i = 1 ; i <= Object.keys(randomProduct.about).length; i++){
         const li = document.createElement("li");
-        li.innerHTML = randomProduct.acercaDe[i];
+        li.innerHTML = randomProduct.about[i];
         ul.appendChild(li);
     }
     amazonProductDescription.appendChild(ul);
 
     const price = document.createElement("p");
     price.classList.add("amazonPrice");
-    price.innerHTML = `<b>Precio: <i>${randomProduct.precio}</i></b>`;
+    price.innerHTML = `<b>price: <i>${randomProduct.price}</i></b>`;
     amazonProductDescription.appendChild(price);
 
     const button = document.createElement("button");
