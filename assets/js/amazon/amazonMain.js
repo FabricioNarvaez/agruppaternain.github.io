@@ -1,15 +1,14 @@
 import { amazonProducts } from "./amazonProducts.js";
 
 const amazonProductCollection = document.querySelector(".amazonProductCollection");
-let productLinkContainer;
-for(let i = 0; i<1 ; i++){
-    const amazonCollection = Object.values(amazonProducts);
-    const numKeys = Object.keys(amazonProducts).length;
+const amazonCollection = Object.values(amazonProducts);
+for(let i = 0; i< amazonCollection.length ; i++){
+    const numKeys = Object.keys(amazonCollection[i]).length;
     const randomIndex = Math.floor(Math.random() * numKeys) + 1;
     const section = amazonCollection[i];
     const randomProduct = section[randomIndex];
 
-    productLinkContainer =  document.createElement("a");
+    const productLinkContainer =  document.createElement("a");
     productLinkContainer.setAttribute("target", "_black");
     productLinkContainer.classList.add("amazonProduct");
 
@@ -50,9 +49,9 @@ for(let i = 0; i<1 ; i++){
     amazonProductDescription.appendChild(button);
 
     productLinkContainer.appendChild(amazonProductDescription);
+    amazonProductCollection.appendChild(productLinkContainer);
 }
 
-amazonProductCollection.appendChild(productLinkContainer);
 // let row = document.createElement("h2");
 // row.innerHTML = "test"
 // amazonProductCollection.appendChild(row)
