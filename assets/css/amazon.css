@@ -30,6 +30,7 @@
 
 .amazonProductDescription {
     padding: 20px;
+    padding-bottom: 0px;
 }
 
 .amazonProductTitle {
@@ -55,7 +56,6 @@
 .amazonNavButtons a{
     color: black;
     text-decoration: none;
-    font-weight: ;
     border: 1px solid black;
     padding: 4px 10px;
     margin: 6px;

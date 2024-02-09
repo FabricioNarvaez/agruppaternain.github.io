@@ -46,7 +46,16 @@ for(let i = 0; i< amazonCollection.length ; i++){
 
     const button = document.createElement("button");
     button.textContent = "Ver más";
+    button.style.display =  "block";
+    button.style.marginBottom =  "10px";
     amazonProductDescription.appendChild(button);
+
+    const imgAmazonLogo = document.createElement("img");
+    imgAmazonLogo.setAttribute("src", "assets/img/svg/Amazon_logo.svg");
+    imgAmazonLogo.setAttribute("alt", "Amazon");
+    imgAmazonLogo.setAttribute("title", "Amazon");
+    imgAmazonLogo.style.width = "90px";
+    amazonProductDescription.appendChild(imgAmazonLogo);
 
     productLinkContainer.appendChild(amazonProductDescription);
     amazonProductCollection.appendChild(productLinkContainer);
