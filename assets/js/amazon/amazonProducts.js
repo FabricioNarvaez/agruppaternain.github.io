@@ -41,6 +41,26 @@ const amazonProducts = [
                 },
                 price: "34,99€",
                 url: "https://www.amazon.es/CHAMPIONS-LEAGUE-BALL-Aficionados-cumplea%25C3%25B1os/dp/B0CRPP67ZW/ref=sr_1_5?crid=3DSOTBG9HMK9N&amp;keywords=balones+de+futbol&amp;qid=1707496092&amp;sprefix=balones+de%252Caps%252C122&amp;sr=8-5&_encoding=UTF8&tag=fabricionarva-21&linkCode=ur2&linkId=41ed9718342b5b87d02a51da669a7b8c&camp=3638&creative=24630",
+            },
+            2: {
+                name: "Adidas IA0952 UCL",
+                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707591927/Amazon/Balones/Adidas-_1__izloue.webp",
+                about: {
+                    1: "Balón de tamaño 5 en material Nailon"
+                },
+                price: "25,00€",
+                url: "https://www.amazon.es/Adidas-IA0952-Recreational-Soccer-Unisex/dp/B0C61SSSB6/ref=sr_1_14?__mk_es_ES=%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591&amp;keywords=balones+de+futbol&amp;qid=1707591239&amp;sr=8-14&_encoding=UTF8&tag=fabricionarva-21&linkCode=ur2&linkId=fa6ecd9f026c5ae4048ed62a271dfe57&camp=3638&creative=24630"
+            },
+            3: {
+                name : "Adidas ULC Lge",
+                image : "https://res.cloudinary.com/dzd68sxue/image/upload/v1707591853/Amazon/Balones/Adidas-2-_1__vwiq8z.webp",
+                about : {
+                    1: "Una pelota sin costuras para entrenamiento y partido",
+                    2: "100% TPU (superficie)",
+                    3: "Construcción sin costuras TSBE"
+                },
+                price: "37,35€",
+                url: "https://www.amazon.es/Adidas-Unisex-Adulto-Ball-Laminated/dp/B0C61X6YCN/ref=pd_sbs_d_sccl_3_2/258-1359620-1181612?pd_rd_w=4KFb7&amp;content-id=amzn1.sym.5361c8f8-f11e-4bfa-91f1-8c7de1eb4cca&amp;pf_rd_p=5361c8f8-f11e-4bfa-91f1-8c7de1eb4cca&amp;pf_rd_r=93KY5FSAP42M1GPCKTZ7&amp;pd_rd_wg=aKgzJ&amp;pd_rd_r=eac02600-8990-43b7-a041-1bc934217d03&amp;pd_rd_i=B0C61X6YCN&amp;psc=1&_encoding=UTF8&tag=fabricionarva-21&linkCode=ur2&linkId=38bcaca491c74439824b0f9e30fe751b&camp=3638&creative=24630"
             }
         },
     }
