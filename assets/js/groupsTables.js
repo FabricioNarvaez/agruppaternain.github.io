@@ -11,16 +11,18 @@ function createRow(team, index) {
     }
 
     const teamField = document.createElement("td");
-    const imgSrc = team.logo || "https://res.cloudinary.com/dzd68sxue/image/upload/v1695396332/WEBP/default-bnoacd-1_qnmcps.webp";
+    const imgSrc =
+        team.logo ||
+        "https://res.cloudinary.com/dzd68sxue/image/upload/v1695396332/WEBP/default-bnoacd-1_qnmcps.webp";
     const calculateDifPos = team.lastPos - pos;
     let difPos = "";
-    if(calculateDifPos != 0){
+    if (calculateDifPos != 0) {
         var className = "";
         var color = "";
-        if(calculateDifPos < 0 ){
+        if (calculateDifPos < 0) {
             className = "redTriangle";
             color = "red";
-        } else if(calculateDifPos > 0) {
+        } else if (calculateDifPos > 0) {
             className = "greenTriangle";
             color = "green";
         }
@@ -62,11 +64,11 @@ function createRow(team, index) {
     return row;
 }
 
-export function processGroup(group, groupId){
+export function processGroup(group, groupId) {
     group.forEach((team, index) => {
         const bodyTable = document.getElementById(groupId);
         bodyTable.appendChild(createRow(team, index));
-    })
+    });
 }
 
 export function calculatePointsGoalsMatches(team) {

@@ -1,20 +1,24 @@
 import { amazonProducts } from "./amazonProducts.js";
 import { loadAmazonNavButtons } from "./amazonCommon.js";
 
-const amazonProductCollection = document.querySelector(".amazonProductCollection");
+const amazonProductCollection = document.querySelector(
+    ".amazonProductCollection"
+);
 
 const urlActual = window.location.href;
-const file = urlActual.substring(urlActual.lastIndexOf('/') + 1);
-const category = file.replace('.html', '');
+const file = urlActual.substring(urlActual.lastIndexOf("/") + 1);
+const category = file.replace(".html", "");
 
-const categoryProducts = amazonProducts.find(object => object.file === category );
+const categoryProducts = amazonProducts.find(
+    (object) => object.file === category
+);
 
-loadAmazonNavButtons(amazonProducts, './');
+loadAmazonNavButtons(amazonProducts, "./");
 
-for(let i = 1; i<= Object.keys(categoryProducts.content).length ; i++){
+for (let i = 1; i <= Object.keys(categoryProducts.content).length; i++) {
     const product = categoryProducts.content[i];
 
-    const productLinkContainer =  document.createElement("a");
+    const productLinkContainer = document.createElement("a");
     productLinkContainer.setAttribute("target", "_black");
     productLinkContainer.setAttribute("href", product.url);
     productLinkContainer.classList.add("amazonProduct");
@@ -40,7 +44,7 @@ for(let i = 1; i<= Object.keys(categoryProducts.content).length ; i++){
     amazonProductDescription.appendChild(productSubtitle);
 
     const ul = document.createElement("ul");
-    for(let i = 1 ; i <= Object.keys(product.about).length; i++){
+    for (let i = 1; i <= Object.keys(product.about).length; i++) {
         const li = document.createElement("li");
         li.innerHTML = product.about[i];
         ul.appendChild(li);
@@ -54,8 +58,8 @@ for(let i = 1; i<= Object.keys(categoryProducts.content).length ; i++){
 
     const button = document.createElement("button");
     button.textContent = "Ver más";
-    button.style.display =  "block";
-    button.style.marginBottom =  "10px";
+    button.style.display = "block";
+    button.style.marginBottom = "10px";
     amazonProductDescription.appendChild(button);
 
     const imgAmazonLogo = document.createElement("img");
@@ -67,4 +71,4 @@ for(let i = 1; i<= Object.keys(categoryProducts.content).length ; i++){
 
     productLinkContainer.appendChild(amazonProductDescription);
     amazonProductCollection.appendChild(productLinkContainer);
-};
+}
