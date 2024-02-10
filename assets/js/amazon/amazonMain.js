@@ -1,17 +1,15 @@
 import { amazonProducts } from "./amazonProducts.js";
+import { loadAmazonNavButtons } from "./amazonCommon.js";
 
 const amazonProductCollection = document.querySelector(".amazonProductCollection");
-const amazonNavButtons = document.querySelector(".amazonNavButtons");
+
+loadAmazonNavButtons(amazonProducts);
+
 for(let i = 0; i< amazonProducts.length ; i++){
     const numKeys = Object.keys(amazonProducts[i].content).length;
     const randomIndex = Math.floor(Math.random() * numKeys) + 1;
     const section = amazonProducts[i];
     const randomProduct = section.content[randomIndex];
-
-    const navElement = document.createElement("a");
-    navElement.setAttribute("href", `amazon/${section.file}.html`);
-    navElement.innerHTML = section.category;
-    amazonNavButtons.appendChild(navElement);
 
     const productLinkContainer =  document.createElement("a");
     productLinkContainer.setAttribute("target", "_black");
@@ -65,8 +63,4 @@ for(let i = 0; i< amazonProducts.length ; i++){
 
     productLinkContainer.appendChild(amazonProductDescription);
     amazonProductCollection.appendChild(productLinkContainer);
-}
-
-// let row = document.createElement("h2");
-// row.innerHTML = "test"
-// amazonProductCollection.appendChild(row)
+};
