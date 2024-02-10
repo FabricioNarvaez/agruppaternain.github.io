@@ -46,7 +46,7 @@ for(let i = 0; i< amazonProducts.length ; i++){
 
     const price = document.createElement("p");
     price.classList.add("amazonPrice");
-    price.innerHTML = `<b>price: <i>${randomProduct.price}</i></b>`;
+    price.innerHTML = `<b>Precio: <i>${randomProduct.price}</i></b>`;
     amazonProductDescription.appendChild(price);
 
     const button = document.createElement("button");

@@ -49,7 +49,7 @@ for(let i = 1; i<= Object.keys(categoryProducts.content).length ; i++){
 
     const price = document.createElement("p");
     price.classList.add("amazonPrice");
-    price.innerHTML = `<b>price: <i>${product.price}</i></b>`;
+    price.innerHTML = `<b>Precio: <i>${product.price}</i></b>`;
     amazonProductDescription.appendChild(price);
 
     const button = document.createElement("button");
