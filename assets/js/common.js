@@ -1,7 +1,8 @@
 function appendField(value, firstScorer = false) {
     const field = document.createElement("td");
     if (firstScorer) {
-        field.style.background = "url(https://e00-marca.uecdn.es/assets/v31/img/estaticas/trofeos/first-mobile.svg) no-repeat center center";
+        field.style.background =
+            "url(https://e00-marca.uecdn.es/assets/v31/img/estaticas/trofeos/first-mobile.svg) no-repeat center center";
         field.style.backgroundSize = "auto 100%";
     } else {
         field.textContent = value;

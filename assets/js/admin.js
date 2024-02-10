@@ -19,14 +19,16 @@ $(document).ready(async function () {
         visitor.append(newOptionVisitor);
     });
 
-    function addPlayerOption(selectCounter, selectId){
+    function addPlayerOption(selectCounter, selectId) {
         const teamSelected = $(`#${selectId}`).val();
-        const teamFounded = teamsCollection.find(team => team.team === teamSelected);
+        const teamFounded = teamsCollection.find(
+            (team) => team.team === teamSelected
+        );
         const teamPlayers = teamFounded.players;
         const className = `player${selectId}${selectCounter}`;
         const div = $("<div>", {
             id: `adminFlex${selectCounter}`,
-            class: "adminFlex"
+            class: "adminFlex",
         });
 
         var selectElement = $("<select>", {
@@ -47,7 +49,7 @@ $(document).ready(async function () {
             value: "0",
         });
 
-        for (const name in teamPlayers){
+        for (const name in teamPlayers) {
             const newPlayer = createOption(name);
             selectElement.append(newPlayer);
         }
@@ -55,77 +57,75 @@ $(document).ready(async function () {
         return div;
     }
 
-    $("#addLocalScorer").click(function() {
+    $("#addLocalScorer").click(function () {
         selectLocalCounter++;
-        addScorer('local', selectLocalCounter);
+        addScorer("local", selectLocalCounter);
     });
 
-    $("#removeLocalScorer").click(function() {
+    $("#removeLocalScorer").click(function () {
         $(`#adminFlex${selectLocalCounter}`).remove();
         selectLocalCounter--;
-    })
-    
+    });
+
     $("#addVisitorScorer").click(function () {
         selectVisitorCounter++;
-        addScorer('visitor', selectVisitorCounter);
+        addScorer("visitor", selectVisitorCounter);
     });
 
-    $("#removeVisitorScorer").click(function() {
+    $("#removeVisitorScorer").click(function () {
         $(`#adminFlex${selectLocalCounter}`).remove();
         selectLocalCounter--;
-    })
+    });
 
-    $("#sendMatchDataButton").click(function(){
+    $("#sendMatchDataButton").click(function () {
         var dataToSend = {
             local: {
                 team: local.val(),
-                goals: calculateGoals(selectLocalCounter, 'local'),
+                goals: calculateGoals(selectLocalCounter, "local"),
             },
             visitor: {
                 team: visitor.val(),
-                goals:calculateGoals(selectVisitorCounter, 'visitor')
-            }
+                goals: calculateGoals(selectVisitorCounter, "visitor"),
+            },
         };
         $.ajax({
-            type: 'PUT',
+            type: "PUT",
             url: `${url}api/update`,
             data: JSON.stringify(dataToSend),
-            contentType: 'application/json',
-            success: function(response) {
+            contentType: "application/json",
+            success: function (response) {
                 alert(response);
                 location.reload();
             },
-            error: function(error) {
-                console.error('Error en la solicitud PUT:', error);
-            }
+            error: function (error) {
+                console.error("Error en la solicitud PUT:", error);
+            },
         });
         console.log(dataToSend);
     });
 
-    function calculateGoals(counter, playerType){
+    function calculateGoals(counter, playerType) {
         const goalsArray = [];
-        for(let i = counter; i>0 ; i--){
+        for (let i = counter; i > 0; i--) {
             let playerName;
             let goals;
-            $(`.player${playerType}${i}`).each(function(index, element) {
-                if(element.localName == 'select')   playerName = element.value;
-                else    goals = element.value;
+            $(`.player${playerType}${i}`).each(function (index, element) {
+                if (element.localName == "select") playerName = element.value;
+                else goals = element.value;
             });
-            goalsArray.push({name: playerName, goals: goals});
+            goalsArray.push({ name: playerName, goals: goals });
         }
         return goalsArray;
     }
 
-    function addScorer(selectId, selectCounter){
-        $(`#${selectId}`).prop('disabled', true);
+    function addScorer(selectId, selectCounter) {
+        $(`#${selectId}`).prop("disabled", true);
         const adminFlexDiv = addPlayerOption(selectCounter, selectId);
         $(`.${selectId}PlayersAndGoals`).append(adminFlexDiv);
         $(`#player${selectId}${selectCounter}`).select2();
     }
 
-    function createOption(name){
-        return $("<option></option>")
-            .val(name)
-            .text(name);
+    function createOption(name) {
+        return $("<option></option>").val(name).text(name);
     }
 });

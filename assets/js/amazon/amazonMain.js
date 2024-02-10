@@ -1,17 +1,19 @@
 import { amazonProducts } from "./amazonProducts.js";
 import { loadAmazonNavButtons } from "./amazonCommon.js";
 
-const amazonProductCollection = document.querySelector(".amazonProductCollection");
+const amazonProductCollection = document.querySelector(
+    ".amazonProductCollection"
+);
 
 loadAmazonNavButtons(amazonProducts, "amazonPages/");
 
-for(let i = 0; i< amazonProducts.length ; i++){
+for (let i = 0; i < amazonProducts.length; i++) {
     const numKeys = Object.keys(amazonProducts[i].content).length;
     const randomIndex = Math.floor(Math.random() * numKeys) + 1;
     const section = amazonProducts[i];
     const randomProduct = section.content[randomIndex];
 
-    const productLinkContainer =  document.createElement("a");
+    const productLinkContainer = document.createElement("a");
     productLinkContainer.setAttribute("target", "_black");
     productLinkContainer.setAttribute("href", randomProduct.url);
     productLinkContainer.classList.add("amazonProduct");
@@ -37,7 +39,7 @@ for(let i = 0; i< amazonProducts.length ; i++){
     amazonProductDescription.appendChild(productSubtitle);
 
     const ul = document.createElement("ul");
-    for(let i = 1 ; i <= Object.keys(randomProduct.about).length; i++){
+    for (let i = 1; i <= Object.keys(randomProduct.about).length; i++) {
         const li = document.createElement("li");
         li.innerHTML = randomProduct.about[i];
         ul.appendChild(li);
@@ -51,8 +53,8 @@ for(let i = 0; i< amazonProducts.length ; i++){
 
     const button = document.createElement("button");
     button.textContent = "Ver más";
-    button.style.display =  "block";
-    button.style.marginBottom =  "10px";
+    button.style.display = "block";
+    button.style.marginBottom = "10px";
     amazonProductDescription.appendChild(button);
 
     const imgAmazonLogo = document.createElement("img");
@@ -64,4 +66,4 @@ for(let i = 0; i< amazonProducts.length ; i++){
 
     productLinkContainer.appendChild(amazonProductDescription);
     amazonProductCollection.appendChild(productLinkContainer);
-};
+}

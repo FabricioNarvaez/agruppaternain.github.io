@@ -8,7 +8,7 @@ const loaderScorers = document.getElementById("loaderScorers");
     const { data } = await response.json();
     loaderScorers.remove();
     const scorrersTable = document.getElementById("scorersTable");
-    if(data && data.length !== 0){
+    if (data && data.length !== 0) {
         //TODO: Descomentar esto
         // data.forEach((player, index) => {
         //     const row = document.createElement("tr");
@@ -23,16 +23,15 @@ const loaderScorers = document.getElementById("loaderScorers");
         // });
         //TODO: Borrar esto
         const row = document.createElement("tr");
-        for(let i =0; i<4; i++){
+        for (let i = 0; i < 4; i++) {
             row.appendChild(appendField("Sin datos"));
         }
         scorrersTable.appendChild(row);
-    }else{
+    } else {
         const row = document.createElement("tr");
-        for(let i =0; i<4; i++){
+        for (let i = 0; i < 4; i++) {
             row.appendChild(appendField("Sin datos"));
         }
         scorrersTable.appendChild(row);
     }
-    
 })();

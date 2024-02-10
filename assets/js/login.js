@@ -11,7 +11,8 @@ loginButton.addEventListener("click", () => {
 
     if (!cookiesAcepted || cookiesAcepted === "false") {
         error.classList.remove("hidden");
-        errorMessage.innerHTML = "No se han aceptado las cookies. Las cookies son necesarias para el correcto funcionamiento de esta sección.";
+        errorMessage.innerHTML =
+            "No se han aceptado las cookies. Las cookies son necesarias para el correcto funcionamiento de esta sección.";
     } else {
         error.classList.add("hidden");
         const email = document.getElementById("email").value;

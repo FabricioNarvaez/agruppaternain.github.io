@@ -11,10 +11,10 @@ const matchWeeksLoader = document.getElementById("matchWeeksLoader");
         const numA = parseInt(a.matchWeek.match(/\d+/)[0]);
         const numB = parseInt(b.matchWeek.match(/\d+/)[0]);
         return numA - numB;
-      });
+    });
     matchWeeksLoader.remove();
     const matchWeeksContent = document.getElementById("matchWeeksContent");
-    if(matchWeeks.length){
+    if (matchWeeks.length) {
         // TODO: Descomentar esto
         // matchWeeks.forEach((matchWeek, index) => {
         //     const matchWeekContainer = document.createElement("div");
@@ -31,20 +31,19 @@ const matchWeeksLoader = document.getElementById("matchWeeksLoader");
         const noData = document.createElement("h3");
         noData.appendChild(appendField("Las jornadas aún no están definidas"));
         matchWeeksContent.appendChild(noData);
-    }else{
+    } else {
         const noData = document.createElement("h3");
-        for(let i =0; i<4; i++){
+        for (let i = 0; i < 4; i++) {
             noData.appendChild(appendField("Sin datos"));
         }
         matchWeeksContent.appendChild(noData);
     }
-    
 })();
 
-function newDesign(matches){
+function newDesign(matches) {
     const container = document.createElement("div");
     container.classList.add("weekContainer");
-    matches.forEach(matchHour =>{
+    matches.forEach((matchHour) => {
         const divRowA = document.createElement("div");
         divRowA.innerHTML = createRow(matchHour.groupA, matchHour.hour);
         divRowA.classList.add("matchweek_row");
@@ -53,12 +52,14 @@ function newDesign(matches){
         divRowB.classList.add("matchweek_row");
         container.appendChild(divRowA);
         container.appendChild(divRowB);
-    })
+    });
     return container;
 }
 
-function createRow(matchData, hour){
-    const hourOrResult = matchData.localResult ? `${matchData.localResult} - ${matchData.visitorResult}` : `${hour}`;
+function createRow(matchData, hour) {
+    const hourOrResult = matchData.localResult
+        ? `${matchData.localResult} - ${matchData.visitorResult}`
+        : `${hour}`;
     const template = `
         <div class="matchweekTeam">
             <img src="${matchData.localLogo}" class="teamIndexLogo" alt="${matchData.local}" title="${matchData.local}">

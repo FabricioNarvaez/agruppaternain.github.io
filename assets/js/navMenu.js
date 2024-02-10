@@ -13,15 +13,18 @@ document.querySelectorAll(".navLink").forEach((n) =>
     })
 );
 
-window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+window.onscroll = function () {
+    if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+    ) {
         document.getElementById("topButton").style.display = "block";
     } else {
         document.getElementById("topButton").style.display = "none";
     }
 };
 
-document.getElementById("topButton").onclick = function() {
+document.getElementById("topButton").onclick = function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 };

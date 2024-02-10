@@ -1,8 +1,8 @@
-const teamTitle = document.getElementById('teamTitle');
+const teamTitle = document.getElementById("teamTitle");
 const params = new URLSearchParams(window.location.search);
-const group= params.get('group');
-const equipoId = params.get('id');
-teamTitle.innerHTML = equipoId + 'grupo'+ group;
+const group = params.get("group");
+const equipoId = params.get("id");
+teamTitle.innerHTML = equipoId + "grupo" + group;
 import { url } from "./url.js";
 
 (async () => {
