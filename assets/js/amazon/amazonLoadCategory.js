@@ -16,6 +16,7 @@ for(let i = 1; i<= Object.keys(categoryProducts.content).length ; i++){
 
     const productLinkContainer =  document.createElement("a");
     productLinkContainer.setAttribute("target", "_black");
+    productLinkContainer.setAttribute("href", product.url);
     productLinkContainer.classList.add("amazonProduct");
 
     const productImg = document.createElement("img");
