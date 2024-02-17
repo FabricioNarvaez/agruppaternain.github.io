@@ -78,6 +78,17 @@ const amazonProducts = [
                 },
                 price: "42,99€",
                 url: "https://www.amazon.es/DimaiGlobal-Zapatillas-Profesionales-Atletismo-Entrenamiento/dp/B0C3H6KRQ3/ref=sr_1_5?crid=6T7OKXOGM5JV&amp;keywords=zapatos%252Bde%252Bfutbol&amp;qid=1707326207&amp;sprefix=zapatos%252B%252Caps%252C112&amp;sr=8-5&amp;th=1&_encoding=UTF8&tag=fabricionarva-21&linkCode=ur2&linkId=d425783c4e299158d4081e3bc8c2e5b6&camp=3638&creative=24630"
+            },
+            2:{
+                name: "PUMA Future Play FG/AG",
+                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1708175985/Amazon/Botas/PUMA-Future-Play-FGAG-_1__mxlszu.webp",
+                about: {
+                    1: "La suela exterior ligera Dynamic Motion System mejora la tracción y la agilidad para cambios impredecibles de ritmo y dirección.",
+                    2: "Aún más adaptable y con mayor soporte, la nueva parte superior combina malla diseñada y material sintético suave para que puedas volverlos locos.",
+                    3: "Las texturas diseñadas en zonas de contacto clave están optimizadas para mejorar el agarre y el control del balón al driblar, pasar y rematar."
+                },
+                price: "39,95€ - 53,96€",
+                url: "https://www.amazon.es/PUMA-Future-Zapatillas-f%25C3%25BAtbol-Orqu%25C3%25ADdea/dp/B0BLHT3BP9/ref=sr_1_20?__mk_es_ES=%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591&amp;crid=3SQ0R5E5BHOB8&amp;keywords=zapatos+de+futbol+11&amp;qid=1708175375&amp;sprefix=zapatos+de+futbol+1%252Caps%252C114&amp;sr=8-20&_encoding=UTF8&tag=fabricionarva-21&linkCode=ur2&linkId=9cefde1054d6ba3d5fc1fcf76157a4a8&camp=3638&creative=24630"
             }
         }
     }
