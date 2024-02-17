@@ -348,6 +348,10 @@ table tbody tr:hover {
     border-left: 4px solid #eb9114;
 }
 
+.notQualified {
+    border-left: 4px solid #ff0000;
+}
+
 .legend {
     display: flex;
     gap: 10px;

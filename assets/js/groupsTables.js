@@ -6,10 +6,12 @@ function createRow(team, index) {
     row.appendChild(appendField(pos));
     if (pos <= 4) {
         row.children[0].classList.add("qualifiedToChampions");
-    } else {
+    } else if(pos < 9){
         row.children[0].classList.add("qualifiedToUEFA");
+    }else{
+        row.children[0].classList.add("notQualified");
     }
-
+    
     const teamField = document.createElement("td");
     const imgSrc =
         team.logo ||
