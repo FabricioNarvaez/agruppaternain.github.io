@@ -5,7 +5,7 @@ const amazonProducts = [
         content: {
             1: {
                 name: "NIKE Nk Merc Lite-Fa22",
-                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707330218/Amazon/Espinilleras_Nike_ssaz4c.webp",
+                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707330218/Amazon/Espinilleras/Espinilleras_Nike_ssaz4c.webp",
                 about: {
                     1: "El diseño anatómico está diseñado para adaptarse a los contornos de la espinilla para una amortiguación específica",
                     2: "La cubierta duradera está unida a una almohadilla de espuma densa para la difusión de impactos",
@@ -16,7 +16,7 @@ const amazonProducts = [
             },
             2: {
                 name: "Nike DN3614-113 Mercurial",
-                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707333020/Amazon/Nike-Mercurial-_1__j3mynr.webp",
+                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707333020/Amazon/Espinilleras/Nike-Mercurial-_1__j3mynr.webp",
                 about: {
                     1: "Diseño ligero y ajuste regular",
                     2: "Ofrece comodidad y libertad de movimiento",
@@ -33,7 +33,7 @@ const amazonProducts = [
         content: {
             1: {
                 name: "CHAMPIONS LEAGUE BALL 2024",
-                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707496313/Amazon/CHAMPIONS_LEAGUE_BALL_2024_xh2p9v.webp",
+                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707496313/Amazon/Balones/CHAMPIONS_LEAGUE_BALL_2024_xh2p9v.webp",
                 about: {
                     1: "Material: material de cubierta de cuero PU, impermeable, anti-extrusión, bola muy profesional",
                     2: "Rendimiento: la exclusiva tecnología de unión térmica de la capa de espuma acolchada puede crear una superficie uniforme y una absorción de agua reducida, , lo que garantiza un rendimiento excelente que no se ve afectado por las condiciones meteorológicas.",
