@@ -5,7 +5,7 @@ const amazonProducts = [
         content: {
             1: {
                 name: "NIKE Nk Merc Lite-Fa22",
-                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707330218/Amazon/Espinilleras_Nike_ssaz4c.webp",
+                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707330218/Amazon/Espinilleras/Espinilleras_Nike_ssaz4c.webp",
                 about: {
                     1: "El diseño anatómico está diseñado para adaptarse a los contornos de la espinilla para una amortiguación específica",
                     2: "La cubierta duradera está unida a una almohadilla de espuma densa para la difusión de impactos",
@@ -16,7 +16,7 @@ const amazonProducts = [
             },
             2: {
                 name: "Nike DN3614-113 Mercurial",
-                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707333020/Amazon/Nike-Mercurial-_1__j3mynr.webp",
+                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707333020/Amazon/Espinilleras/Nike-Mercurial-_1__j3mynr.webp",
                 about: {
                     1: "Diseño ligero y ajuste regular",
                     2: "Ofrece comodidad y libertad de movimiento",
@@ -33,7 +33,7 @@ const amazonProducts = [
         content: {
             1: {
                 name: "CHAMPIONS LEAGUE BALL 2024",
-                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707496313/Amazon/CHAMPIONS_LEAGUE_BALL_2024_xh2p9v.webp",
+                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1707496313/Amazon/Balones/CHAMPIONS_LEAGUE_BALL_2024_xh2p9v.webp",
                 about: {
                     1: "Material: material de cubierta de cuero PU, impermeable, anti-extrusión, bola muy profesional",
                     2: "Rendimiento: la exclusiva tecnología de unión térmica de la capa de espuma acolchada puede crear una superficie uniforme y una absorción de agua reducida, , lo que garantiza un rendimiento excelente que no se ve afectado por las condiciones meteorológicas.",
@@ -64,6 +64,34 @@ const amazonProducts = [
             },
         },
     },
+    {
+        category: "Botas",
+        file: "botas",
+        content: {
+            1:{
+                name: "DimaiGlobal Spike",
+                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1708173975/Amazon/Botas/DimaiGlobal-Spike-_1__x21p0p.webp",
+                about: {
+                    1: "Fabricados con piel K de primera calidad",
+                    2: "El cierre de correa asegura que el zapato se mantenga firmemente en su lugar.",
+                    3: "El zapato alto presenta un cuello elástico en Flyknit que proporciona un ajuste seguro y cómodo"
+                },
+                price: "42,99€",
+                url: "https://www.amazon.es/DimaiGlobal-Zapatillas-Profesionales-Atletismo-Entrenamiento/dp/B0C3H6KRQ3/ref=sr_1_5?crid=6T7OKXOGM5JV&amp;keywords=zapatos%252Bde%252Bfutbol&amp;qid=1707326207&amp;sprefix=zapatos%252B%252Caps%252C112&amp;sr=8-5&amp;th=1&_encoding=UTF8&tag=fabricionarva-21&linkCode=ur2&linkId=d425783c4e299158d4081e3bc8c2e5b6&camp=3638&creative=24630"
+            },
+            2:{
+                name: "PUMA Future Play FG/AG",
+                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1708175985/Amazon/Botas/PUMA-Future-Play-FGAG-_1__mxlszu.webp",
+                about: {
+                    1: "La suela exterior ligera Dynamic Motion System mejora la tracción y la agilidad para cambios impredecibles de ritmo y dirección.",
+                    2: "Aún más adaptable y con mayor soporte, la nueva parte superior combina malla diseñada y material sintético suave para que puedas volverlos locos.",
+                    3: "Las texturas diseñadas en zonas de contacto clave están optimizadas para mejorar el agarre y el control del balón al driblar, pasar y rematar."
+                },
+                price: "39,95€ - 53,96€",
+                url: "https://www.amazon.es/PUMA-Future-Zapatillas-f%25C3%25BAtbol-Orqu%25C3%25ADdea/dp/B0BLHT3BP9/ref=sr_1_20?__mk_es_ES=%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591&amp;crid=3SQ0R5E5BHOB8&amp;keywords=zapatos+de+futbol+11&amp;qid=1708175375&amp;sprefix=zapatos+de+futbol+1%252Caps%252C114&amp;sr=8-20&_encoding=UTF8&tag=fabricionarva-21&linkCode=ur2&linkId=9cefde1054d6ba3d5fc1fcf76157a4a8&camp=3638&creative=24630"
+            }
+        }
+    }
 ];
 
 export { amazonProducts };
