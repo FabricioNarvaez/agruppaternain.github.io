@@ -64,6 +64,23 @@ const amazonProducts = [
             },
         },
     },
+    {
+        category: "Botas",
+        file: "botas",
+        content: {
+            1:{
+                name: "DimaiGlobal Spike",
+                image: "https://res.cloudinary.com/dzd68sxue/image/upload/v1708173975/Amazon/Botas/DimaiGlobal-Spike-_1__x21p0p.webp",
+                about: {
+                    1: "Fabricados con piel K de primera calidad",
+                    2: "El cierre de correa asegura que el zapato se mantenga firmemente en su lugar.",
+                    3: "El zapato alto presenta un cuello elástico en Flyknit que proporciona un ajuste seguro y cómodo"
+                },
+                price: "42,99€",
+                url: "https://www.amazon.es/DimaiGlobal-Zapatillas-Profesionales-Atletismo-Entrenamiento/dp/B0C3H6KRQ3/ref=sr_1_5?crid=6T7OKXOGM5JV&amp;keywords=zapatos%252Bde%252Bfutbol&amp;qid=1707326207&amp;sprefix=zapatos%252B%252Caps%252C112&amp;sr=8-5&amp;th=1&_encoding=UTF8&tag=fabricionarva-21&linkCode=ur2&linkId=d425783c4e299158d4081e3bc8c2e5b6&camp=3638&creative=24630"
+            }
+        }
+    }
 ];
 
 export { amazonProducts };
