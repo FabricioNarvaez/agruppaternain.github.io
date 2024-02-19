@@ -39,13 +39,15 @@ function newDesign(matches) {
     const container = document.createElement("div");
     container.classList.add("weekContainer");
     matches.forEach((matchHour) => {
-        const divRowA = document.createElement("div");
-        divRowA.innerHTML = createRow(matchHour.groupA, matchHour.hour);
-        divRowA.classList.add("matchweek_row");
+        if(matchHour.groupA){
+            const divRowA = document.createElement("div");
+            divRowA.innerHTML = createRow(matchHour.groupA, matchHour.hour);
+            divRowA.classList.add("matchweek_row");
+            container.appendChild(divRowA);
+        }
         const divRowB = document.createElement("div");
         divRowB.innerHTML = createRow(matchHour.groupB, matchHour.hour);
         divRowB.classList.add("matchweek_row");
-        container.appendChild(divRowA);
         container.appendChild(divRowB);
     });
     return container;
