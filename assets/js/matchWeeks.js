@@ -57,10 +57,11 @@ function createRow(matchData, hour) {
     const hourOrResult = matchData.localResult
         ? `${matchData.localResult} - ${matchData.visitorResult}`
         : `${hour}`;
-    const logo = matchData.localLogo ? matchData.localLogo : "https://res.cloudinary.com/dzd68sxue/image/upload/v1695396332/WEBP/default-bnoacd-1_qnmcps.webp";
+    const localLogo = matchData.localLogo ? matchData.localLogo : "https://res.cloudinary.com/dzd68sxue/image/upload/v1695396332/WEBP/default-bnoacd-1_qnmcps.webp";
+    const visitorLogo = matchData.visitorLogo ? matchData.visitorLogo : "https://res.cloudinary.com/dzd68sxue/image/upload/v1695396332/WEBP/default-bnoacd-1_qnmcps.webp";
     const template = `
         <div class="matchweekTeam">
-            <img src="${logo}" class="teamIndexLogo" alt="${matchData.local}" title="${matchData.local}">
+            <img src="${localLogo}" class="teamIndexLogo" alt="${matchData.local}" title="${matchData.local}">
             <p>${matchData.local}</p>
         </div>
         <div class="matchHourOrResult">
@@ -68,7 +69,7 @@ function createRow(matchData, hour) {
         </div>
         <div class="matchweekTeam matchweekTeamVisitor">
             <p>${matchData.visitor}</p>
-            <img src="${logo}" class="teamIndexLogo" alt="${matchData.visitorLogo}" title="${matchData.visitorLogo}">
+            <img src="${visitorLogo}" class="teamIndexLogo" alt="${matchData.visitor}" title="${matchData.visitor}">
         </div>
         `;
     return template;
