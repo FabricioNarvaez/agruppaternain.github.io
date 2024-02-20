@@ -14,23 +14,23 @@ const matchWeeksLoader = document.getElementById("matchWeeksLoader");
     });
     matchWeeksLoader.remove();
     const matchWeeksContent = document.getElementById("matchWeeksContent");
-    // if (matchWeeks.length) {
-    //     matchWeeks.forEach((matchWeek, index) => {
-    //         const matchWeekContainer = document.createElement("div");
-    //         matchWeekContainer.classList.add("tablesMargin");
-    //         const matchWeekTitle = document.createElement("h3");
-    //         matchWeekTitle.textContent = `${matchWeek.matchWeek} (${matchWeek.date})`;
+    if (matchWeeks.length) {
+        matchWeeks.forEach((matchWeek, index) => {
+            const matchWeekContainer = document.createElement("div");
+            matchWeekContainer.classList.add("tablesMargin");
+            const matchWeekTitle = document.createElement("h3");
+            matchWeekTitle.textContent = `${matchWeek.matchWeek} (${matchWeek.date})`;
 
-    //         matchWeekContainer.appendChild(matchWeekTitle);
-    //         matchWeekContainer.appendChild(newDesign(matchWeek.matches));
+            matchWeekContainer.appendChild(matchWeekTitle);
+            matchWeekContainer.appendChild(newDesign(matchWeek.matches));
 
-    //         matchWeeksContent.appendChild(matchWeekContainer);
-    //     });
-    // } else {
+            matchWeeksContent.appendChild(matchWeekContainer);
+        });
+    } else {
         const noData = document.createElement("h3");
-        noData.appendChild(appendField("Las jornadas aún no están definidas"));
+        noData.innerHTML = "Las jornadas aún no están definidas";
         matchWeeksContent.appendChild(noData);
-    // }
+    }
 })();
 
 function newDesign(matches) {
@@ -38,10 +38,10 @@ function newDesign(matches) {
     container.classList.add("weekContainer");
     matches.forEach((matchHour) => {
         if(matchHour.groupA){
-            // const divRowA = document.createElement("div");
-            // divRowA.innerHTML = createRow(matchHour.groupA, matchHour.hour);
-            // divRowA.classList.add("matchweek_row");
-            // container.appendChild(divRowA);
+            const divRowA = document.createElement("div");
+            divRowA.innerHTML = createRow(matchHour.groupA, matchHour.hour);
+            divRowA.classList.add("matchweek_row");
+            container.appendChild(divRowA);
         }
         const divRowB = document.createElement("div");
         divRowB.innerHTML = createRow(matchHour.groupB, matchHour.hour);
