@@ -2,6 +2,39 @@ import { appendField, sortByGoals } from "./common.js";
 import { url } from "./url.js";
 
 const matchWeeksLoader = document.getElementById("matchWeeksLoader");
+const restTeams = [{
+        name:"Bolivia"
+    },
+    {
+        name: "Peñarol",
+        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395613/WEBP/Penarol_mxpprn_ntraph.webp"
+    },
+    {
+        name: "Cancheritos",
+        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395236/WEBP/Cancheritos_qdbnsw.webp"
+    },
+    {
+        name: "Santa Cruz",
+        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395614/WEBP/Santa_Cruz_jky7ko_lunl5g.webp"
+    },
+    {
+        name: "Estella",
+        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395615/WEBP/estella-bkppfh_od4mmo.webp"
+     },
+     {
+        name: "Spencer",
+        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395615/WEBP/spencer-befvhl_l4fnan.webp"
+     },
+     {
+        name: "Pájaro Azul",
+        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695398424/WEBP/pajaro-azul-qge5bh_xmfsyj.webp"
+      }, 
+      {
+        name: "Amistad"
+      },
+      {
+        name: "Independiente"
+    }];
 
 (async () => {
     const response = await fetch(`${url}matchweeks/getAll`);
@@ -25,6 +58,16 @@ const matchWeeksLoader = document.getElementById("matchWeeksLoader");
             matchWeekContainer.appendChild(newDesign(matchWeek.matches));
 
             matchWeeksContent.appendChild(matchWeekContainer);
+            const restTeam = document.createElement("p");
+            const restTeamLogo = restTeams[index].logo ? restTeams[index].logo : "https://res.cloudinary.com/dzd68sxue/image/upload/v1695396332/WEBP/default-bnoacd-1_qnmcps.webp";
+            const restTeamName = restTeams[index].name;
+            const restTeamTemplate = `
+                <b>Descansa: </b> ${restTeamName}<img src="${restTeamLogo}" class="teamIndexLogo" alt="${restTeamName}" title="${restTeamName}">
+            `;
+            restTeam.innerHTML = restTeamTemplate;
+            restTeam.classList.add("matchweekTeam");
+            restTeam.style.gap = "7px";
+            matchWeeksContent.appendChild(restTeam);
         });
     } else {
         const noData = document.createElement("h3");
