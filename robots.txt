@@ -1,6 +1,2 @@
 User-agent: *
-Disallow: /private/
-Disallow: /admin/
-Disallow: /temp/
-Allow: /public/
-Sitemap: https://www.agrupacionpaternain.es/sitemap.xml
+Disallow: /
