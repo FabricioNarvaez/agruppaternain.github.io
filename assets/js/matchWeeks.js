@@ -33,7 +33,8 @@ const restTeams = [{
         name: "Amistad"
       },
       {
-        name: "Independiente"
+        name: "Independiente",
+        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1708455450/WEBP/Independiente_rixa1u.webp"
     }];
 
 (async () => {
