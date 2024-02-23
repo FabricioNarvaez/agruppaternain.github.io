@@ -229,6 +229,10 @@ body {
     margin: 20px 0px;
 }
 
+.selectMatchweek{
+    margin-top: 30px;
+}
+
 .select2-container--default .select2-selection--single {
     min-width: 150px;
 }
@@ -426,6 +430,14 @@ table tbody tr:hover {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+}
+
+.adminButton{
+    border: 1px solid black;
+    padding: 4px 10px;
+    margin: 6px;
+    text-decoration: none;
+    color: black;
 }
 
 .rejectCookies{

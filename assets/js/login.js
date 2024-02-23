@@ -25,25 +25,25 @@ loginButton.addEventListener("click", () => {
             },
             body: JSON.stringify({ email, password }),
         })
-            .then((response) => {
-                if (!response.ok) {
-                    error.classList.remove("hidden");
-                    errorMessage.innerHTML = "Email o contraseña incorrectos.";
-                } else {
-                    return response.json();
-                }
-            })
-            .then((data) => {
-                if (data) {
-                    document.cookie = `token=${data.token}; path=/;`;
-                    window.location.href = "admin";
-                }
-            })
-            .catch((error) =>
-                console.error(
-                    "There was a problem with the fetch operation:",
-                    error
-                )
-            );
+        .then((response) => {
+            if (!response.ok) {
+                error.classList.remove("hidden");
+                errorMessage.innerHTML = "Email o contraseña incorrectos.";
+            } else {
+                return response.json();
+            }
+        })
+        .then((data) => {
+            if (data) {
+                document.cookie = `token=${data.token}; path=/;`;
+                window.location.href = "admin";
+            }
+        })
+        .catch((error) =>
+            console.error(
+                "There was a problem with the fetch operation:",
+                error
+            )
+        );
     }
 });
