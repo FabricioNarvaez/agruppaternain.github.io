@@ -129,20 +129,20 @@ $(document).ready(async function () {
         return $("<option></option>").val(name).text(name);
     }
 
-    var sendingData = false
+    var sendingData = false;
     $("#sendMatchDataButton").click(function () {
+        var dataToSend = {
+            local: {
+                team: local.val(),
+                players: calculateGoals(selectLocalCounter, "local"),
+            },
+            visitor: {
+                team: visitor.val(),
+                players: calculateGoals(selectVisitorCounter, "visitor"),
+            },
+        };
         if(!sendingData){
             sendingData = true;
-            var dataToSend = {
-                local: {
-                    team: local.val(),
-                    players: calculateGoals(selectLocalCounter, "local"),
-                },
-                visitor: {
-                    team: visitor.val(),
-                    players: calculateGoals(selectVisitorCounter, "visitor"),
-                },
-            };
             $.ajax({
                 type: "PUT",
                 url: `${url}api/update`,
@@ -151,13 +151,13 @@ $(document).ready(async function () {
                 success: function (response) {
                     alert(response);
                     location.reload();
+                    sendingData = false;
                 },
                 error: function (error) {
-                    console.error("Error en la solicitud PUT:", error);
+                    alert(error);
                 },
             });
-        }
-        sendingData = false;
+        };
     });
 
     function calculateGoals(counter, playerType) {
