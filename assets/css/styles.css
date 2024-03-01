@@ -28,12 +28,29 @@ body {
 .header {
     padding: 20px 20px 0px 20px;
     background-color: var(--blueWeb);
+    z-index: 1000;
 }
 
 .footer{
     text-align: center;
-    padding: 20px 0px 10px 0px;
+    padding-bottom: 10px;
     background-color: var(--blueWeb);
+}
+
+.collabTitle{
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.collabImages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.collabImages img{
+    max-width: 150px;
 }
 
 .footer,
@@ -736,5 +753,13 @@ table tbody tr:hover {
 
     .navMenu {
         top: 106px;
+    }
+
+    .collabImages{
+        gap:15px;
+    }
+
+    .collabImages img{
+        max-width: 120px;
     }
 }
