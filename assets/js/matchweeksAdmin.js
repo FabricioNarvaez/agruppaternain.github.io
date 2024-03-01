@@ -132,6 +132,8 @@ $(document).ready(async function () {
     var sendingData = false;
     $("#sendMatchDataButton").click(function () {
         var dataToSend = {
+            matchWeek: jornadaSelect.val(),
+            group: grupoSelect.val(),
             local: {
                 team: local.val(),
                 players: calculateGoals(selectLocalCounter, "local"),
