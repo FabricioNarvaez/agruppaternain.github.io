@@ -28,12 +28,29 @@ body {
 .header {
     padding: 20px 20px 0px 20px;
     background-color: var(--blueWeb);
+    z-index: 1000;
 }
 
 .footer{
     text-align: center;
-    padding: 20px 0px 10px 0px;
+    padding-bottom: 10px;
     background-color: var(--blueWeb);
+}
+
+.collabTitle{
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.collabImages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.collabImages img{
+    max-width: 150px;
 }
 
 .footer,
@@ -173,6 +190,14 @@ body {
     margin-bottom: 10px;
 }
 
+#reglamentoTorneo ul li{
+    padding-bottom: 10px;
+}
+
+#reglamentoTorneo ul li ul li{
+    padding-bottom: 5px;
+}
+
 .matchWeeksResults{
     display: flex;
     height: auto;
@@ -227,6 +252,10 @@ body {
     gap: 20px;
     align-items: center;
     margin: 20px 0px;
+}
+
+.selectMatchweek{
+    margin-top: 30px;
 }
 
 .select2-container--default .select2-selection--single {
@@ -428,6 +457,14 @@ table tbody tr:hover {
     cursor: pointer;
 }
 
+.adminButton{
+    border: 1px solid black;
+    padding: 4px 10px;
+    margin: 6px;
+    text-decoration: none;
+    color: black;
+}
+
 .rejectCookies{
     background-color: rgb(235, 53, 53);
 }
@@ -502,15 +539,30 @@ table tbody tr:hover {
 
 #topButton {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 90px;
+    right: 16px;
     display: none;
     background-color: #007bff;
     color: #fff;
     border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#instagram {
+    position: fixed;
+    bottom: 10px;
+    right: -3px;
+    display: block;
+    border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#instagram img{
+    max-width: 50px;
 }
 
 .matchweek_row{
@@ -724,5 +776,13 @@ table tbody tr:hover {
 
     .navMenu {
         top: 106px;
+    }
+
+    .collabImages{
+        gap:15px;
+    }
+
+    .collabImages img{
+        max-width: 120px;
     }
 }

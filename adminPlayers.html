@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Agrupación Amigos por el Deporte</title>
+    <meta name="description" content="Panel de administración para gestionar y controlar los datos del torneo.">
+    <meta name="author" content="Fabricio Narváez">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin | Agrupación Amigos por el Deporte</title>
     <link rel="stylesheet" href="assets/css/styles.css" /><link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@200&display=swap" rel="stylesheet" defer>
@@ -26,11 +29,15 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-	<script>
-		window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-	</script>
-<script defer src="/_vercel/insights/script.js"></script>
-</head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4554639770069950"
+     crossorigin="anonymous"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -72,19 +79,66 @@
 		</nav>
 	</header>
     <div class="container">
-		<h2 class="subtitle">Login</h2>
-		<div class="form">
-			<div class="inputField">
-				<input id="email" type="email" placeholder="Email" name="email">
-			</div>
-			<div class="inputField">
-				<input id="password" type="password" placeholder="Password" name="password">
-			</div>
-			<button id="loginButton" class="buttons" type="button">Iniciar Sesión</button>
-		</div>
-        <div id="credentialsError" class="hidden">
-			<p id="errorMessage"></p>
-		</div>
+        <div id="adminLoader">
+            <div class="loader"></div>
+        </div>
+		<div id="adminContainer" class="hidden">
+			<h2 class="subtitle">Admin</h2>
+            <div class="adminButtons">
+                <a class="adminButton" href="admin" title="Link a página admin de jornadas">Jornadas</a>
+                <a class="adminButton" href="adminPlayers" title="Link a página admin de jugadores">Jugadores</a>
+            </div>
+            <div class="adminFlex">
+                <h2>Local: </h2>
+                <select id="local" class="select">
+                    <option value="" disabled selected>Elige un equipo Local</option>
+                </select>
+            </div>
+            <div class="localPlayersAndGoals">
+            </div>
+            <button id="addLocalScorer" class="addPlayerBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    <path d="M9 12l6 0" />
+                    <path d="M12 9l0 6" />
+                </svg>
+            </button>
+            <button id="removeLocalScorer" class="removePlayerBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-minus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    <path d="M9 12l6 0" />
+                </svg>
+            </button>
+            <div class="adminFlex">
+                <h2>Visitante: </h2>
+                <select id="visitor" class="select">
+                    <option value="" disabled selected>Elige un equipo Visitante</option>
+                </select>
+            </div>
+            <div class="visitorPlayersAndGoals">
+            </div>
+            <button id="addVisitorScorer" class="addPlayerBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    <path d="M9 12l6 0" />
+                    <path d="M12 9l0 6" />
+                </svg>
+            </button>
+            <button id="removeVisitorScorer" class="removePlayerBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-minus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    <path d="M9 12l6 0" />
+                </svg>
+            </button>
+            <div id="dataError"></div>
+            <div class="flexJustifyCenter">
+                <button id="sendMatchDataButton" class="button" type="button">Enviar</button>
+            </div>
+        </div>
     </div>
 	<footer class="footer">
 		<p class="collabTitle">Colaboradores</p>
@@ -110,7 +164,8 @@
         </div>
     </div>
     <script src="assets/js/cookie.js" type="module" defer></script>
-    <script src="assets/js/login.js" type="module" defer></script>
+    <script src="assets/js/validateToken.js" type="module" defer></script>
+    <script src="assets/js/admin.js" type="module" defer></script>
 	<script src="assets/js/navMenu.js" defer></script>
 </body>
 </html>
