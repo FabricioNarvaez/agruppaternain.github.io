@@ -190,6 +190,14 @@ body {
     margin-bottom: 10px;
 }
 
+#reglamentoTorneo ul li{
+    padding-bottom: 10px;
+}
+
+#reglamentoTorneo ul li ul li{
+    padding-bottom: 5px;
+}
+
 .matchWeeksResults{
     display: flex;
     height: auto;
