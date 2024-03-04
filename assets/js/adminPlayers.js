@@ -45,9 +45,9 @@ $(document).ready(async function () {
         }
         for(let index = 1; index <= 25; index++){
             const player = $(`.player${index}`);
-            const name = player[0].value;
-            if(name.length){
-                const number = player[1].value;
+            const number = parseInt(player[1].value);
+            if(number !== 0){
+                const name = player[0].value;
                 teamPlayersData.players.push({
                     name, number,
                     goals: 0

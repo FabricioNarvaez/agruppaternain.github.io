@@ -13,8 +13,9 @@ const loaderScorers = document.getElementById("loaderScorers");
             const row = document.createElement("tr");
             const pos = index + 1;
             const firstScorer = (pos === 1) ? true : false;
+            const nameOrNumber = player.name?.length ? player.name : player.number;
             row.appendChild(appendField(pos, firstScorer));
-            row.appendChild(appendField(player.name));
+            row.appendChild(appendField(nameOrNumber));
             row.appendChild(appendField(player.team));
             row.appendChild(appendField(player.goals));
 
