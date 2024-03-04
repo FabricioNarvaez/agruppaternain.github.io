@@ -120,7 +120,8 @@ $(document).ready(async function () {
         });
 
         for (const player of teamPlayers) {
-            const newPlayer = createOption(player.name);
+            const nameOrNumber = player.name?.length ? player.name : player.number;
+            const newPlayer = createOption(nameOrNumber);
             selectElement.append(newPlayer);
         }
         div.append(selectElement, inputElement);
