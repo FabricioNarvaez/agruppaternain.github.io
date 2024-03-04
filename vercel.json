@@ -7,6 +7,7 @@
       { "source": "/matchweeks", "destination": "/matchweeks.html" },
       { "source": "/login", "destination": "/login.html" },
       { "source": "/admin", "destination": "/admin.html" },
+      { "source": "/adminPlayers", "destination": "/adminPlayers.html" },
       { "source": "/cookies-policy", "destination": "/cookies-policy.html" },
       { "source": "/index", "destination": "/index.html" },
       { "source": "/privacy", "destination": "/privacy.html" },
