@@ -96,7 +96,7 @@ function newDesign(matches) {
 }
 
 function createRow(matchData, hour) {
-    const hourOrResult = matchData.localResult
+    const hourOrResult = matchData.localResult || matchData.visitorResult
         ? `${matchData.localResult} - ${matchData.visitorResult}`
         : `${hour}`;
     const localLogo = matchData.localLogo ? matchData.localLogo : "https://res.cloudinary.com/dzd68sxue/image/upload/v1695396332/WEBP/default-bnoacd-1_qnmcps.webp";
