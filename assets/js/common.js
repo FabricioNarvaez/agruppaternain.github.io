@@ -34,4 +34,8 @@ function checkCookies(cookieString) {
     return false;
 }
 
-export { appendField, sortByGoals, checkCookies };
+function createOption(name) {
+    return $("<option></option>").val(name).text(name);
+}
+
+export { appendField, sortByGoals, checkCookies, createOption };

@@ -254,6 +254,10 @@ body {
     margin: 20px 0px;
 }
 
+.adminPlayers{
+    margin-top: 20px;
+}
+
 .selectMatchweek{
     margin-top: 30px;
 }

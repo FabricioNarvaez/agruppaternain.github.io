@@ -1,4 +1,6 @@
 import { url } from "./url.js";
+import { createOption } from "./common.js";
+
 $(document).ready(async function () {
     $(".select").select2();
     const matchweekAdmin = await fetch(`${url}api/matchweekAdmin`);
@@ -124,10 +126,6 @@ $(document).ready(async function () {
         div.append(selectElement, inputElement);
         return div;
     };
-
-    function createOption(name) {
-        return $("<option></option>").val(name).text(name);
-    }
 
     var sendingData = false;
     $("#sendMatchDataButton").click(function () {
