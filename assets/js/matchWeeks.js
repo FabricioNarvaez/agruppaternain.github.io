@@ -42,7 +42,8 @@ const restTeams = [{
     matchWeeksLoader.remove();
     const matchWeeksContent = document.getElementById("matchWeeksContent");
     if (matchWeeks.length) {
-        matchWeeks.forEach((matchWeek, index) => {
+        const helper = matchWeeks.slice(0,2);
+        helper.forEach((matchWeek, index) => {
             const matchWeekContainer = document.createElement("div");
             matchWeekContainer.classList.add("tablesMargin");
             const matchWeekTitle = document.createElement("h3");
