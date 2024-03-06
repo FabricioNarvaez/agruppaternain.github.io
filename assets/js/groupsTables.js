@@ -21,14 +21,14 @@ function createRow(team, index) {
     if (calculateDifPos != 0) {
         var className = "";
         var color = "";
-        // if (calculateDifPos < 0) {
-        //     className = "redTriangle";
-        //     color = "red";
-        // } else if (calculateDifPos > 0) {
-        //     className = "greenTriangle";
-        //     color = "green";
-        // }
-        // difPos = Math.abs(calculateDifPos);
+        if (calculateDifPos < 0) {
+            className = "redTriangle";
+            color = "red";
+        } else if (calculateDifPos > 0) {
+            className = "greenTriangle";
+            color = "green";
+        }
+        difPos = Math.abs(calculateDifPos);
     }
     const htmlTemplate = `
         <div class="flexAlignCenter spaceBetween">
