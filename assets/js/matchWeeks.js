@@ -6,36 +6,29 @@ const restTeams = [{
         name:"Bolivia"
     },
     {
-        name: "Peñarol",
-        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395613/WEBP/Penarol_mxpprn_ntraph.webp"
+        name: "Comboloco",
+        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695398424/WEBP/comboloco-yxnvxo_a3ewne.webp"
     },
     {
-        name: "Cancheritos",
-        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395236/WEBP/Cancheritos_qdbnsw.webp"
+        name: "Acorralados"
     },
     {
-        name: "Santa Cruz",
-        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395614/WEBP/Santa_Cruz_jky7ko_lunl5g.webp"
+        name: "El Valle",
+        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395616/WEBP/el-valle-vsd59e_t5fqrg.webp"
     },
     {
-        name: "Estella",
-        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395615/WEBP/estella-bkppfh_od4mmo.webp"
+        name: "Los Panas",
+        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395612/WEBP/Los_Panas_fltebx_ezz2bg.webp"
      },
      {
-        name: "Spencer",
-        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395615/WEBP/spencer-befvhl_l4fnan.webp"
+        name: "Leones",
+        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395613/WEBP/Los_Leones_u4yqpr_cnasv4.webp"
      },
      {
-        name: "Pájaro Azul",
-        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695398424/WEBP/pajaro-azul-qge5bh_xmfsyj.webp"
+        name: "Impersiva",
+        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1695395617/WEBP/Impersiva_rwwguv_zjwd1x.webp"
       }, 
-      {
-        name: "Amistad"
-      },
-      {
-        name: "Independiente",
-        logo: "https://res.cloudinary.com/dzd68sxue/image/upload/v1708455450/WEBP/Independiente_rixa1u.webp"
-    }];
+    ];
 
 (async () => {
     const response = await fetch(`${url}matchweeks/getAll`);
