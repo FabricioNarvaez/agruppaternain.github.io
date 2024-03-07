@@ -1,4 +1,5 @@
 import { appendField } from "./common.js";
+const teamsGroupA = ["Comboloco", "Los Panas", "Atlético Buga", "El Valle", "Impersiva", "Acorralados", "Leones"];
 function createRow(team, index) {
     let row = document.createElement("tr");
 
@@ -59,7 +60,7 @@ function createRow(team, index) {
     } else if (team.GD < 0) {
         row.children[8].style.color = "red";
     }
-    let pts = team.Pts;
+    let pts = teamsGroupA.includes(team.team) ?  team.Pts + 3 : team.Pts;
     row.appendChild(appendField(pts));
     row.children[9].classList.add("lastColumnRows");
 
