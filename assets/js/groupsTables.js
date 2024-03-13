@@ -1,5 +1,5 @@
 import { appendField } from "./common.js";
-const teamsGroupA = ["Comboloco", "Los Panas", "Atlético Buga", "El Valle", "Impersiva", "Acorralados", "Leones"];
+const teamsGroupA = ["Comboloco", "Los Panas", "El Valle", "Impersiva", "Acorralados", "Leones"];
 function createRow(team, index) {
     let row = document.createElement("tr");
 
