@@ -60,8 +60,7 @@ function createRow(team, index) {
     } else if (team.GD < 0) {
         row.children[8].style.color = "red";
     }
-    let pts = teamsGroupA.includes(team.team) ?  team.Pts + 3 : team.Pts;
-    row.appendChild(appendField(pts));
+    row.appendChild(appendField(team.Pts));
     row.children[9].classList.add("lastColumnRows");
 
     return row;
@@ -76,6 +75,9 @@ export function processGroup(group, groupId) {
 
 export function calculatePointsGoalsMatches(team) {
     let puntos = team.PG * 3;
+    if(teamsGroupA.includes(team.team)){
+        puntos += 3;
+    }
     team.Pts = team.PE ? puntos + team.PE : puntos;
 
     const gd = team.GF - team.GC;
