@@ -15,7 +15,7 @@
       { "source": "/classification", "destination": "/classification.html" },
       { "source": "/team", "destination": "/team.html" },
       { "source": "/team/:id", "destination": "/team.html" },
-      { "source": "/amazon", "destination": "/amazon.html" }
+      { "source": "/amazon", "destination": "/amazon.html" },
       { "source": "/sanctions", "destination": "/index.html" }
     ]
 }
