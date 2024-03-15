@@ -16,6 +16,6 @@
       { "source": "/team", "destination": "/team.html" },
       { "source": "/team/:id", "destination": "/team.html" },
       { "source": "/amazon", "destination": "/amazon.html" },
-      { "source": "/sanctions", "destination": "/index.html" }
+      { "source": "/sanctions", "destination": "/sanctions.html" }
     ]
 }
