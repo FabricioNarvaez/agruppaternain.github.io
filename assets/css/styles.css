@@ -258,6 +258,10 @@ body {
     margin-top: 20px;
 }
 
+.sanctionsRed{
+    color:red;
+}
+
 .selectMatchweek{
     margin-top: 30px;
 }
