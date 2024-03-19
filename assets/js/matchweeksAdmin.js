@@ -31,6 +31,7 @@ $(document).ready(async function () {
         });
         const partidos = jornadaFiltrada[0].matches;
         partidos.forEach(match =>{
+            if(!match[grupoSeleccionado]) return false;
             const newOptionLocal = createOption(match[grupoSeleccionado].local);
             const newOptionVisitor = createOption(match[grupoSeleccionado].visitor);
             local.append(newOptionLocal);
