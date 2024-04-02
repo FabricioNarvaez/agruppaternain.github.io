@@ -6,12 +6,15 @@ menuIcon.addEventListener("click", () => {
     navMenu.classList.toggle("activated");
 });
 
-document.querySelectorAll(".navLink").forEach((n) =>
-    n.addEventListener("click", () => {
-        menuIcon.classList.remove("activated");
-        navMenu.classList.remove("activated");
-    })
-);
+document.querySelectorAll(".navLink").forEach((n) => {
+    if (!n.closest('.navDropdown')) {
+        n.addEventListener("click", () => {
+            menuIcon.classList.remove("activated");
+            navMenu.classList.remove("activated");
+        });
+    }
+});
+
 
 window.onscroll = function () {
     if (

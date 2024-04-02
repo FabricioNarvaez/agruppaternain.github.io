@@ -5,6 +5,7 @@
       { "source": "/scorer", "destination": "/scorer.html" },
       { "source": "/rules", "destination": "/rules.html" },
       { "source": "/matchweeks", "destination": "/matchweeks.html" },
+      { "source": "/matchweeksMaster", "destination": "/matchweeksMaster.html" },
       { "source": "/login", "destination": "/login.html" },
       { "source": "/admin", "destination": "/admin.html" },
       { "source": "/adminPlayers", "destination": "/adminPlayers.html" },

@@ -155,6 +155,46 @@ body {
     font-size: 16px;
     font-weight: bold;
     color: var(--white);
+    display: flex;
+    gap: 5px;
+}
+
+.matchweekDropdown{
+    background-color: var(--ligthGrey);
+    position: absolute;
+    max-height: 0;
+    opacity: 0;
+    transition:
+        max-height 0.5s ease-in-out,
+        opacity 0.5s ease-in-out;
+}
+
+.navLinkmatchweekDropdown{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navDropdown:hover .matchweekDropdown{
+    opacity: 1;
+    max-height: 200px;
+    z-index: 1000;
+}
+
+.matchweekDropdown ul{
+    padding-left: 0px;
+}
+
+.matchweekDropdown li:first-child{
+    border-bottom: solid 1px black;
+}
+
+.matchweekDropdown li{
+    padding: 10px;
+    width: max-content;
+    list-style-type: none;
+    text-align: left;
 }
 
 .active a {
