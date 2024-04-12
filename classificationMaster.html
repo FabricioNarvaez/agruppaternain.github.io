@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Explora las emocionantes jornadas de nuestro torneo de fútbol: encuentros repletos de acción y momentos inolvidables. ¡Sumérgete en la pasión del deporte en nuestro evento!">
-	<meta name="author" content="Fabricio Narváez">
+	<meta name="description" content="Consulta las tablas de clasificación actualizadas del torneo. Descubre qué equipos están en la cima y quiénes luchan por acceder a las eliminatorias de champions. Mantente al tanto de los resultados y posiciones de los equipos en tiempo real.">
+    <meta name="author" content="Fabricio Narváez">
 	<meta name="robots" content="index, follow">
-    <title>Jornadas | Agrupación Amigos por el Deporte</title>
+	<title>Clasificación Master 40 | Agrupación Amigos por el Deporte</title>
     <link rel="stylesheet" href="assets/css/styles.css" /><link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@200&display=swap" rel="stylesheet" defer>
@@ -67,11 +67,12 @@
 				<li class="navItem">
 					<a class="navLink" href="rules" title="Página de las reglas del torneo">REGLAMENTO</a>
 				</li>
+				
 				<li class="navItem navDropdown">
 					<span class="navLink" >JORNADAS <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 10l6 6l6 -6h-12" /></svg></span>
                     <div class="matchweekDropdown">
                         <ul>
-                            <li class="active"><a class="navLinkmatchweekDropdown" href="matchweeks" title="Página de las jornadas del torneo">Categoría Libres</a></li>
+                            <li><a class="navLinkmatchweekDropdown" href="matchweeks" title="Página de las jornadas del torneo">Categoría Libres</a></li>
                             <li><a class="navLinkmatchweekDropdown" href="matchweeksMaster" title="Página de las jornadas Master del torneo">Master 40</a></li>
                         </ul>
                     </div>
@@ -85,13 +86,123 @@
 			</ul>
 		</nav>
 	</header>
-	<div class="container ">
-		<h2 class="subtitle">Jornadas - Categoría Libres</h2>
-		<div id="matchWeeksLoader">
-            <div class="loader"></div>
-        </div>
-		
-		<div id="matchWeeksContent">
+	<div class="container">
+		<h2 class="subtitle">Tabla de Clasificación - Master 40</h2>
+		<div class="tablesMargin">
+			<table>
+				<thead>
+					<tr>
+						<th>Pos</th>
+						<th class="spaceBetween">Equipo</th>
+						<th>PJ</th>
+						<th>PG</th>
+						<th>PE</th>
+						<th>PP</th>
+						<th>GF</th>
+						<th>GC</th>
+						<th>GD</th>
+						<th class="lastColumnHeader">Pts.</th>
+					</tr>
+				</thead>
+                <tbody id="groupA">
+                    <tr>
+                        <td class="qualifiedToChampions">1</td>
+                        <td>
+                            <div class="flexAlignCenter spaceBetween">
+                                <div class="flexAlignCenter">
+                                    <img src="https://res.cloudinary.com/dzd68sxue/image/upload/v1695396332/WEBP/default-bnoacd-1_qnmcps.webp"
+                                        class="teamIndexLogo" alt="Atlético Buga" title="Atlético Buga">
+                                    <span>Los Andes</span>
+                                </div>
+                                <div class="flexAlignCenter">
+                                    <span class="triangle undefined"></span>
+                                    <span style="color: undefined"></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td style="font-weight: bold; color: green;">+4</td>
+                        <td class="lastColumnRows">3</td>
+                    </tr>
+                    <tr>
+                        <td class="qualifiedToChampions">2</td>
+                        <td>
+                            <div class="flexAlignCenter spaceBetween">
+                                <div class="flexAlignCenter">
+                                    <img src="https://res.cloudinary.com/dzd68sxue/image/upload/v1695395612/WEBP/Los_Panas_fltebx_ezz2bg.webp"
+                                        class="teamIndexLogo" alt="El Valle" title="El Valle">
+                                    <span>Los Panas</span>
+                                </div>
+                                <div class="flexAlignCenter">
+                                    <span class="triangle undefined"></span>
+                                    <span style="color: undefined"></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td style="font-weight: bold; color: green;">+1</td>
+                        <td class="lastColumnRows">3</td>
+                    </tr>
+                    <tr>
+                        <td class="qualifiedToChampions">3</td>
+                        <td>
+                            <div class="flexAlignCenter spaceBetween">
+                                <div class="flexAlignCenter">
+                                    <img src="https://res.cloudinary.com/dzd68sxue/image/upload/v1695395236/WEBP/Cancheritos_qdbnsw.webp"
+                                        class="teamIndexLogo" alt="Comboloco" title="Comboloco">
+                                    <span>Camcheritos</span>
+                                </div>
+                                <div class="flexAlignCenter">
+                                    <span class="triangle undefined"></span>
+                                    <span style="color: undefined"></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td style="font-weight: bold; color: red;">-1</td>
+                        <td class="lastColumnRows">0</td>
+                    </tr>
+                    <tr>
+                        <td class="qualifiedToChampions">4</td>
+                        <td>
+                            <div class="flexAlignCenter spaceBetween">
+                                <div class="flexAlignCenter">
+                                    <img src="https://res.cloudinary.com/dzd68sxue/image/upload/v1695395613/WEBP/Penarol_mxpprn_ntraph.webp"
+                                        class="teamIndexLogo" alt="Los Panas" title="Los Panas">
+                                    <span>Peñarol</span>
+                                </div>
+                                <div class="flexAlignCenter">
+                                    <span class="triangle undefined"></span>
+                                    <span style="color: undefined"></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>4</td>
+                        <td style="font-weight: bold; color: red;">-4</td>
+                        <td class="lastColumnRows">0</td>
+                    </tr>
+                </tbody>
+			</table>
 		</div>
 	</div>
 	<footer class="footer">
@@ -118,7 +229,6 @@
         </div>
     </div>
     <script src="assets/js/cookie.js" type="module" defer></script>
-	<script src="assets/js/matchWeeks.js" type="module" defer></script>
 	<script src="assets/js/navMenu.js" defer></script>
 </body>
 </html>

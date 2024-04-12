@@ -14,6 +14,7 @@
       { "source": "/privacy", "destination": "/privacy.html" },
       { "source": "/terms", "destination": "/terms.html" },
       { "source": "/classification", "destination": "/classification.html" },
+      { "source": "/classificationMaster", "destination": "/classificationMaster.html" },
       { "source": "/team", "destination": "/team.html" },
       { "source": "/team/:id", "destination": "/team.html" },
       { "source": "/amazon", "destination": "/amazon.html" },
