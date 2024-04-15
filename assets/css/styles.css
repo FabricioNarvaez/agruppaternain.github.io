@@ -633,6 +633,11 @@ table tbody tr:hover {
     padding: 4px 6px;
 }
 
+.pichichi-png{
+    max-width: 1000px;
+    margin: auto;
+}
+
 @media screen and (max-width: 1350px) {
     .container,
     .containerImages{
@@ -751,7 +756,7 @@ table tbody tr:hover {
     }
 
     .pichichi{
-        padding-top: 150px;
+        padding-top: 20px;
     }
 
     .containerImages{
